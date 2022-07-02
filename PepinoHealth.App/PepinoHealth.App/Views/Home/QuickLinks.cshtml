@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Quick Links";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        hideModal('loader');
+    })
+</script>
+
+<div class="p-header">
+    <h2 class="title">
+        Quick Links:
+    </h2>
+</div>
+
+<div class="q-link-container">
+    <div class="q-link">
+        <a href="@Url.Action(MVC.Home.Registration())">
+            <i class="material-icons">assignment</i>
+            <span>Registration</span>
+        </a>
+    </div>
+    <div class="q-link">
+        <a href="#">
+            <i class="material-icons">person</i>
+            <span>In-Patient</span>
+        </a>
+    </div>
+    <div class="q-link">
+        <a href="#">
+            <i class="material-icons">person</i>
+            <span>Out-Patient</span>
+        </a>
+    </div>
+    <div class="q-link">
+        <a href="#">
+            <i class="material-icons">receipt</i>
+            <span>Billing</span>
+        </a>
+    </div>
+    <div class="q-link">
+        <a href="#">
+            <i class="material-icons">perm_data_setting</i>
+            <span>Service 1</span>
+        </a>
+    </div>
+    <div class="q-link">
+        <a href="#">
+            <i class="material-icons">perm_data_setting</i>
+            <span>Service 2</span>
+        </a>
+    </div>
+    <div class="q-link">
+        <a href="#">
+            <i class="material-icons">perm_data_setting</i>
+            <span>Service 3</span>
+        </a>
+    </div>
+    <div class="q-link">
+        <a href="#">
+            <i class="material-icons">perm_data_setting</i>
+            <span>Service 4</span>
+        </a>
+    </div>
+</div>
+

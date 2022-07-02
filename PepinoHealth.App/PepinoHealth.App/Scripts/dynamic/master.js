@@ -1,0 +1,14 @@
+﻿~/Scripts/modernizr/modernizr-2.8.3.min.js
+~/Scripts/jquery/jquery-3.6.0.min.js
+~/Scripts/moment/moment.min.js
+~/Scripts/popper/umd/popper.min.js
+~/Scripts/linq/linq.min.js
+~/Scripts/bootstrap/bootstrap.min.js
+~/Scripts/bootstrap/bootstrap-validator/bootstrap-validator.min.js
+~/Scripts/material/material.min.js
+~/Scripts/material/material-datetimepicker/material-datetimepicker.min.js
+~/Scripts/trumbowyg/trumbowyg.min.js
+~/Scripts/trumbowyg/trumbowyg.table.min.js
+~/Scripts/trumbowyg/trumbowyg.colors.min.js
+~/Scripts/trumbowyg/es.min.js
+~/Scripts/views/common/common.js

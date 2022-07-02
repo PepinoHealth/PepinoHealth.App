@@ -1,0 +1,156 @@
+﻿@using PepinoHealth.App.Helpers
+@using PepinoHealth.CL.Common
+
+@using PepinoHealth.Auth.User;
+
+<!DOCTYPE html>
+<html>
+<head>
+    @* Required Meta Tags *@
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+
+    <title>@ViewBag.Title - @Helper.ApplicationName</title>
+
+    @* Loading Css and Javascript files dynamically *@
+
+    @* Loading dynamic css dynamically *@
+    @Html.WriteStyleInclude(Links.Content.dynamic.master_css)
+
+    @* Loading master js dynamically *@
+    @Html.WriteScriptInclude(Source.master)
+
+    @* OnLoad functions calling *@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            callFuncOnLoad();
+        });
+    </script>
+</head>
+<body>
+    <!-- View initial loader -->
+    <div class="initial-loader">
+        <div class="progress-circular progress-circular-info">
+            <div class="progress-circular-wrapper">
+                <div class="progress-circular-inner">
+                    <div class="progress-circular-left">
+                        <div class="progress-circular-spinner"></div>
+                    </div>
+                    <div class="progress-circular-gap"></div>
+                    <div class="progress-circular-right">
+                        <div class="progress-circular-spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+
+        <div class="logo-container">
+            <div class="container">
+                <div class="logo-block">
+                    <div class="logo">
+                        <img src="~/Content/images/header/pepino-health-logo.png" alt="Pepino Health" />
+                    </div>
+                </div>
+                <div class="toggle-burger">
+                    <i class="material-icons">menu</i>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-block">
+            <div class="container">
+                <ul class="left-menu">
+                    @{
+                        if (Html.ViewContext.Controller.IsLogged())
+                        {
+                            if (Html.ViewContext.Controller.HasAccess(PepinoHealth.CL.Common.Roles.Admin, PepinoHealth.CL.Common.Roles.User))
+                            {
+                                <li class="menu-item" id="menu-quick-links"><a class="menu-link" href="@Url.Action(MVC.Home.QuickLinksV2())"><i class="material-icons">dashboard</i><span>Quick Links</span></a></li>
+                            }
+
+                            if (Html.ViewContext.Controller.HasAccess(PepinoHealth.CL.Common.Roles.Admin))
+                            {
+                                <li class="menu-item" id="menu-registration"><a class="menu-link" href="@Url.Action(MVC.Home.RegistrationV2())"><i class="material-icons">assignment</i><span>Registration</span></a></li>
+                                <li class="menu-item" id="menu-revisit-registration"><a class="menu-link" href="@Url.Action(MVC.Home.RevisitRegistration())"><i class="material-icons">autorenew</i><span>OP Revisit Registration</span></a></li>
+                                <li class="menu-item" id="menu-billing"><a class="menu-link" href="#"><i class="material-icons">receipt</i><span>Billing</span></a></li>
+                                <li class="menu-item sub-nav">
+                                    <div class="sub-nav-block">
+                                        <div class="sub-nav-menu-item">
+                                            <i class="material-icons">home</i>
+                                            <sapn>In House Services</sapn>
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </div>
+
+                                        <ul class="sub-menu">
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Service 1</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Service 2</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Service 3</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Service 4</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            }
+                        }
+                    }
+                </ul>
+
+                <div class="right-menu">
+                    @{
+                        if (Html.ViewContext.Controller.IsLogged())
+                        {
+                            <div class="profile-name" id="profile-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span>John Smith</span>
+                                <i class="material-icons">keyboard_arrow_down</i>
+                            </div>
+
+                            <ul class="dropdown-menu" aria-labelledby="profile-menu">
+                                <li><a class="dropdown-item" href="#"><i class="material-icons">person</i><span>Profile</span></a></li>
+                                <li><a class="dropdown-item" href="#"><i class="material-icons">vpn_key</i><span>Change Password</span></a></li>
+                                <li><a class="dropdown-item" href="@Url.Action(MVC.Home.LogOut())"><i class="material-icons">exit_to_app</i><span>Logout</span></a></li>
+                            </ul>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="body-block">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-block">
+            <div class="container">
+                <span>&copy; @DateTime.Now.Year PepinoHealth.Org. All Rights Reserved. </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- loading panel -->
+    <div class="modal" id="loader">
+        <div class="loader">
+            <div class="progress-circular progress-circular-info">
+                <div class="progress-circular-wrapper">
+                    <div class="progress-circular-inner">
+                        <div class="progress-circular-left">
+                            <div class="progress-circular-spinner"></div>
+                        </div>
+                        <div class="progress-circular-gap"></div>
+                        <div class="progress-circular-right">
+                            <div class="progress-circular-spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

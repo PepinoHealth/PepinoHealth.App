@@ -1,0 +1,116 @@
+[
+  {
+    "outputFileName": "Scripts/jquery/jquery-3.6.0.min.js",
+    "inputFiles": [
+      "Scripts/jquery/jquery-3.6.0.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery/jquery.validate/jquery.validate.min.js",
+    "inputFiles": [
+      "Scripts/jquery/jquery.validate/jquery.validate.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery/jquery.validate-vsdoc/jquery.validate-vsdoc.min.js",
+    "inputFiles": [
+      "Scripts/jquery/jquery.validate-vsdoc/jquery.validate-vsdoc.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery/jquery.validate.unobtrusive/jquery.validate.unobtrusive.min.js",
+    "inputFiles": [
+      "Scripts/jquery/jquery.validate.unobtrusive/jquery.validate.unobtrusive.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/modernizr/modernizr-2.8.3.min.js",
+    "inputFiles": [
+      "Scripts/modernizr/modernizr-2.8.3.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap/bootstrap.min.js",
+    "inputFiles": [
+      "Scripts/bootstrap/bootstrap.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap/bootstrap-validator/bootstrap-validator.min.js",
+    "inputFiles": [
+      "Scripts/bootstrap/bootstrap-validator/bootstrap-validator.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/linq/linq.min.js",
+    "inputFiles": [
+      "Scripts/linq/linq.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/moment/moment-with-locales.min.js",
+    "inputFiles": [
+      "Scripts/moment/moment-with-locales.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/moment/moment.min.js",
+    "inputFiles": [
+      "Scripts/moment/moment.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/trumbowyg/es.min.js",
+    "inputFiles": [
+      "Scripts/trumbowyg/es.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/trumbowyg/trumbowyg.colors.min.js",
+    "inputFiles": [
+      "Scripts/trumbowyg/trumbowyg.colors.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/trumbowyg/trumbowyg.min.js",
+    "inputFiles": [
+      "Scripts/trumbowyg/trumbowyg.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/trumbowyg/trumbowyg.table.min.js",
+    "inputFiles": [
+      "Scripts/trumbowyg/trumbowyg.table.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/views/common/common.min.js",
+    "inputFiles": [
+      "Scripts/views/common/common.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/material/material-datetimepicker/material-datetimepicker.min.js",
+    "inputFiles": [
+      "Scripts/material/material-datetimepicker/material-datetimepicker.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/material/material.min.js",
+    "inputFiles": [
+      "Scripts/material/material.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/views/user/register.min.js",
+    "inputFiles": [
+      "Scripts/views/user/register.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/popper/umd/popper.min.js",
+    "inputFiles": [
+      "Scripts/popper/umd/popper.js"
+    ]
+  }
+]
