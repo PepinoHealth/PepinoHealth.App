@@ -29,6 +29,8 @@ namespace PepinoHealth.CL.Common
         public const string Login = "login";
         public const string Logout = "logout";
 
+        //OPRegistration
+        public const string OPRegistration = "OPRegistration";
         public const string DateMonthFirst = "M/d/yyyy";
 
         public const string ApplicationName = "Pepino Health";

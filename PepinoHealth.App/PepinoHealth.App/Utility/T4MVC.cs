@@ -28,6 +28,7 @@ using T4MVC;
 public static partial class MVC
 {
     public static PepinoHealth.App.Controllers.HomeController Home = new PepinoHealth.App.Controllers.T4MVC_HomeController();
+    public static PepinoHealth.App.Controllers.OutPatientController OutPatient = new PepinoHealth.App.Controllers.T4MVC_OutPatientController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
 
@@ -224,6 +225,14 @@ namespace Links
                 public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
                 public static readonly string common_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/common.min.js") ? Url("common.min.js") : Url("common.js");
                 public static readonly string common_min_js = Url("common.min.js");
+            }
+        
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class outpatient {
+                public const string UrlPath = "~/Scripts/views/outpatient";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string outpatient_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/outpatient.min.js") ? Url("outpatient.min.js") : Url("outpatient.js");
             }
         
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -511,6 +520,13 @@ namespace Links
                     {
                         public static readonly string common_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/common/common.js"); 
                         public static readonly string common_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/common/common.min.js"); 
+                    }
+                }
+                public static partial class outpatient 
+                {
+                    public static class Assets
+                    {
+                        public static readonly string outpatient_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/outpatient/outpatient.js"); 
                     }
                 }
                 public static partial class user 
