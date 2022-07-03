@@ -225,6 +225,7 @@ function getDate() {
     $('#txtDate').val(todaydate);
 }
 function bindgenerateBarcode() {
+    debugger
     $.ajax({
         type: 'POST',
         url: '@Url.Action("generateBarcode", "OutPatient")',

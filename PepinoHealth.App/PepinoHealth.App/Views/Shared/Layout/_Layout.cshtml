@@ -75,30 +75,9 @@
 
                             if (Html.ViewContext.Controller.HasAccess(PepinoHealth.CL.Common.Roles.Admin))
                             {
-                                <li class="menu-item" id="menu-registration"><a class="menu-link" href="@Url.Action(MVC.OutPatient.OPRegistration())"><i class="material-icons">assignment</i><span>Registration</span></a></li>
-                                <li class="menu-item" id="menu-revisit-registration"><a class="menu-link" href="@Url.Action(MVC.Home.RevisitRegistration())"><i class="material-icons">autorenew</i><span>OP Revisit Registration</span></a></li>
-                                <li class="menu-item" id="menu-billing"><a class="menu-link" href="#"><i class="material-icons">receipt</i><span>Billing</span></a></li>
-                                <li class="menu-item sub-nav">
-                                    <div class="sub-nav-block">
-                                        <div class="sub-nav-menu-item">
-                                            <i class="material-icons">home</i>
-                                            <sapn>OP Module</sapn>
-                                            <i class="material-icons">keyboard_arrow_down</i>
-                                        </div>
-
-                                        <ul class="sub-menu">
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OutPatient.OPRegistration())"><i class="material-icons">perm_data_setting</i><span>OP Registration</span></a></li>
-                                            @*<li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Dept Master</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Doctor Master</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Ward Master</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Bed Strength</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>User Settings</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Account Heads</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Patient Search</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Package Settings</span></a></li>*@
-                                        </ul>
-                                    </div>
-                                </li>
+                                @*<li class="menu-item" id="menu-registration"><a class="menu-link" href="@Url.Action(MVC.OutPatient.OPRegistration())"><i class="material-icons">assignment</i><span>Registration</span></a></li>
+                                    <li class="menu-item" id="menu-revisit-registration"><a class="menu-link" href="@Url.Action(MVC.Home.RevisitRegistration())"><i class="material-icons">autorenew</i><span>OP Revisit Registration</span></a></li>
+                                    <li class="menu-item" id="menu-billing"><a class="menu-link" href="#"><i class="material-icons">receipt</i><span>Billing</span></a></li>*@
                                 <li class="menu-item sub-nav">
                                     <div class="sub-nav-block">
                                         <div class="sub-nav-menu-item">
@@ -117,6 +96,76 @@
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Account Heads</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Patient Search</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Package Settings</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item sub-nav">
+                                    <div class="sub-nav-block">
+                                        <div class="sub-nav-menu-item">
+                                            <i class="material-icons">assignment</i>
+                                            <sapn>OP Module</sapn>
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </div>
+
+                                        <ul class="sub-menu">
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OutPatient.OPRegistration())"><i class="material-icons">assignment</i><span>OP Registration</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OutPatient.OPRevisitRegistration())"><i class="material-icons">autorenew</i><span>OP Revisit</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>OP Reports</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Next Visit</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Next Visit Report</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>OP Medical Records</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Doctor Desk</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item sub-nav">
+                                    <div class="sub-nav-block">
+                                        <div class="sub-nav-menu-item">
+                                            <i class="material-icons">assignment</i>
+                                            <sapn>IP Module</sapn>
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </div>
+
+                                        <ul class="sub-menu">
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>IP Registration</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>IP Reports</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>DISCHARGE SUMMARY</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item sub-nav">
+                                    <div class="sub-nav-block">
+                                        <div class="sub-nav-menu-item">
+                                            <i class="material-icons">home</i>
+                                            <sapn>Billing Module</sapn>
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </div>
+
+                                        <ul class="sub-menu">
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Tariff Master</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>OP Billing</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>IP Billing</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Balance Amount Update</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Daily Expenses</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Reports</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>OP IP LAB Collection</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Ref.Collections</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item sub-nav">
+                                    <div class="sub-nav-block">
+                                        <div class="sub-nav-menu-item">
+                                            <i class="material-icons">assignment</i>
+                                            <sapn>OP/IP Reports</sapn>
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </div>
+
+                                        <ul class="sub-menu">
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Out Patient List</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>IPD Patient List</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Patient Discharge List</span></a></li>
                                         </ul>
                                     </div>
                                 </li>

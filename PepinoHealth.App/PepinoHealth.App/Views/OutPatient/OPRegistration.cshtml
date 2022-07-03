@@ -1,4 +1,4 @@
-﻿
+﻿@using PepinoHealth.App.Helpers;
 @{
     ViewBag.Title = "Registration";
 }
@@ -9,14 +9,14 @@
         hideModal('loader');
         //bindGetDepartmentDetails();
         //getDate();
-        //bindgenerateBarcode();
+        bindgenerateBarcode();
     })
 </script>
 
 <div class="p-block v2">
     <div class="p-header">
         <div class="title">
-           OP Registration
+            OP Registration
         </div>
     </div>
     <div class="p-body">
@@ -64,7 +64,7 @@
                                     <label>Barcode</label>
                                     <img id="barcodeImg" name="barcodeImg" src="" type="image" />
                                     @*<label>Prepared By</label>
-        <div class="form-label">Admin</div>*@
+                                        <div class="form-label">Admin</div>*@
                                 </div>
                             </div>
                         </div>

@@ -104,7 +104,8 @@
   {
     "outputFileName": "Scripts/views/user/register.min.js",
     "inputFiles": [
-      "Scripts/views/user/register.js"
+      "Scripts/views/user/register.js",
+      "Scripts/views/outpatient/outpatient.js"
     ]
   },
   {

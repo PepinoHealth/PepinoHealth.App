@@ -76,14 +76,14 @@ namespace PepinoHealth.App.Controllers
         public class ActionNamesClass
         {
             public readonly string OPRegistration = "OPRegistration";
-            public readonly string RevisitRegistration = "RevisitRegistration";
+            public readonly string OPRevisitRegistration = "OPRevisitRegistration";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string OPRegistration = "OPRegistration";
-            public const string RevisitRegistration = "RevisitRegistration";
+            public const string OPRevisitRegistration = "OPRevisitRegistration";
         }
 
 
@@ -120,13 +120,13 @@ namespace PepinoHealth.App.Controllers
         }
 
         [NonAction]
-        partial void RevisitRegistrationOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+        partial void OPRevisitRegistrationOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult RevisitRegistration()
+        public override System.Web.Mvc.ActionResult OPRevisitRegistration()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.RevisitRegistration);
-            RevisitRegistrationOverride(callInfo);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.OPRevisitRegistration);
+            OPRevisitRegistrationOverride(callInfo);
             return callInfo;
         }
 

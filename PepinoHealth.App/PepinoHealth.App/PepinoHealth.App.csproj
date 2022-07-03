@@ -292,8 +292,8 @@
     <Content Include="Views\Home\QuickLinksV2.cshtml" />
     <Content Include="Views\Home\RegistrationV2.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\RevisitRegistration.cshtml" />
     <Content Include="Views\OutPatient\OPRegistration.cshtml" />
+    <Content Include="Views\OutPatient\OPRevisitRegistration.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
