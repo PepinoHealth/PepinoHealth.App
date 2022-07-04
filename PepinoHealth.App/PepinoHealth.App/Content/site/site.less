@@ -48,6 +48,7 @@
 .nav-block {
     background: @bg-color1;
     position: relative;
+    min-height: 30px;
 
     .container {
         position: relative;
@@ -57,8 +58,7 @@
             padding: 0;
             border-radius: 0;
             list-style: none;
-            display: inline-flex;
-            min-height: 24px;
+            display: flex;
 
             li.menu-item {
                 margin-right: .25rem;
@@ -120,10 +120,9 @@
                         z-index: 5;
 
                         li.sub-menu-item {
-                            padding: .25rem .75rem .25rem 2.35rem;
+                            padding: .25rem 1rem;
                             margin-top: 1px;
                             background: @bg-color3;
-                            min-width: 200px;
                             transition: all .25s ease-out;
 
                             &:hover {
@@ -131,7 +130,13 @@
                                 background: @bg-color2;
                             }
 
+                            &:last-child {
+                                border-bottom-left-radius: @br-radius;
+                                border-bottom-right-radius: @br-radius;
+                            }
+
                             a.sub-menu-link {
+                                display: flex;
                                 color: @white-color;
                                 font-size: .875rem;
                                 font-weight: 500;
@@ -141,12 +146,62 @@
                                     font-size: 18px;
                                     margin-right: .25rem;
                                 }
+
+                                span {
+                                    white-space: nowrap;
+                                }
+                            }
+
+                            .sub-child-nav-block {
+                                position: relative;
+                                padding: 0;
+
+                                .sub-child-nav-menu-item {
+                                    color: @white-color;
+                                    font-size: .875rem;
+                                    font-weight: 600;
+
+                                    i {
+                                        font-size: 18px;
+                                    }
+                                }
+
+                                ul.sub-child-menu {
+                                    margin: 0.25rem 0 .25rem .5rem;
+                                    padding: 0;
+                                    border-radius: 0;
+                                    list-style: none;
+                                    display: block;
+                                    z-index: 5;
+
+                                    li.sub-child-menu-item {
+                                        padding: .25rem 1rem;
+                                        margin-top: 1px;
+                                        transition: all .25s ease-out;
+
+                                        a.sub-child-menu-link {
+                                            display: flex;
+                                            color: @white-color;
+                                            font-size: .875rem;
+                                            font-weight: 500;
+                                            cursor: pointer;
+
+                                            i {
+                                                font-size: 18px;
+                                                margin-right: .25rem;
+                                            }
+
+                                            span {
+                                                white-space: nowrap;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
 
                     &:hover {
-
                         ul.sub-menu {
                             display: block;
                             position: absolute;
@@ -168,7 +223,7 @@
                 transition: all .5s ease-out;
 
                 &.show {
-                    max-height: 500px;
+                    max-height: 2500px;
                     transition: all .5s ease-in;
 
 
@@ -228,7 +283,7 @@
         margin-right: 15px;
 
         .profile-name {
-            background: @bg-color2;
+            background: @bg-color3;
             padding: 0.35rem 0 0.3rem 0.5rem;
             color: #fff;
             font-weight: 600;
@@ -240,13 +295,13 @@
         }
 
         ul.dropdown-menu {
-            padding: .5rem 0;
+            padding: .25rem 0;
             list-style: none;
             border-bottom-left-radius: @br-radius;
             border-bottom-right-radius: @br-radius;
 
             &::before {
-                background: @bg-color2;
+                background: @bg-color3;
                 border-bottom-left-radius: @br-radius;
                 border-bottom-right-radius: @br-radius;
                 box-shadow: none;
@@ -256,7 +311,7 @@
                 padding: 2px 0;
 
                 a {
-                    padding: .25rem .5rem;
+                    padding: .1rem .5rem;
 
                     span {
                         color: @white-color;
@@ -271,7 +326,7 @@
                     }
 
                     &:hover {
-                        background: @bg-color1;
+                        background: @bg-color2;
 
                         span,
                         i {
@@ -307,7 +362,7 @@
 
             &:hover {
                 .profile-name {
-                    background: @bg-color2;
+                    background: @bg-color3;
                     border-top-left-radius: @br-radius;
                     border-top-right-radius: @br-radius;
                     transition: all .5s ease-in;
@@ -315,12 +370,17 @@
 
                 ul.dropdown-menu {
                     &::before {
-                        background: @bg-color2;
+                        background: @bg-color3;
                         transition: all .5s ease-in;
                     }
 
                     li {
                         a {
+
+                            &:hover {
+                                background: @bg-color2;
+                            }
+
                             border-radius: @br-radius;
                         }
                     }
