@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IPModuleController.cs" />
     <Compile Include="Controllers\OutPatientController.cs" />
     <Compile Include="Filters\NoAuthAttribute.cs" />
     <Compile Include="Filters\NoCacheAttribute.cs" />
@@ -147,6 +148,9 @@
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\IPModuleController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="Utility\OutPatientController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -294,6 +298,10 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\OutPatient\OPRegistration.cshtml" />
     <Content Include="Views\OutPatient\OPRevisitRegistration.cshtml" />
+    <Content Include="Views\Home\Page1.cshtml" />
+    <Content Include="Views\Home\Page2.cshtml" />
+    <Content Include="Views\IPModule\DischargeSummary.cshtml" />
+    <Content Include="Views\IPModule\ObstetricDischargeSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

@@ -102,6 +102,8 @@ namespace PepinoHealth.App.Controllers
             public readonly string DashBoard = "DashBoard";
             public readonly string QuickLinks = "QuickLinks";
             public readonly string Registration = "Registration";
+            public readonly string Page1 = "Page1";
+            public readonly string Page2 = "Page2";
             public readonly string ValidateUser = "ValidateUser";
             public readonly string GrantAccess = "GrantAccess";
         }
@@ -118,6 +120,8 @@ namespace PepinoHealth.App.Controllers
             public const string DashBoard = "DashBoard";
             public const string QuickLinks = "QuickLinks";
             public const string Registration = "Registration";
+            public const string Page1 = "Page1";
+            public const string Page2 = "Page2";
             public const string ValidateUser = "ValidateUser";
             public const string GrantAccess = "GrantAccess";
         }
@@ -160,20 +164,22 @@ namespace PepinoHealth.App.Controllers
                 public readonly string DashBoard = "DashBoard";
                 public readonly string Index = "Index";
                 public readonly string Login = "Login";
+                public readonly string Page1 = "Page1";
+                public readonly string Page2 = "Page2";
                 public readonly string QuickLinks = "QuickLinks";
                 public readonly string QuickLinksV2 = "QuickLinksV2";
                 public readonly string Registration = "Registration";
                 public readonly string RegistrationV2 = "RegistrationV2";
-                public readonly string RevisitRegistration = "RevisitRegistration";
             }
             public readonly string DashBoard = "~/Views/Home/DashBoard.cshtml";
             public readonly string Index = "~/Views/Home/Index.cshtml";
             public readonly string Login = "~/Views/Home/Login.cshtml";
+            public readonly string Page1 = "~/Views/Home/Page1.cshtml";
+            public readonly string Page2 = "~/Views/Home/Page2.cshtml";
             public readonly string QuickLinks = "~/Views/Home/QuickLinks.cshtml";
             public readonly string QuickLinksV2 = "~/Views/Home/QuickLinksV2.cshtml";
             public readonly string Registration = "~/Views/Home/Registration.cshtml";
             public readonly string RegistrationV2 = "~/Views/Home/RegistrationV2.cshtml";
-            public readonly string RevisitRegistration = "~/Views/Home/RevisitRegistration.cshtml";
         }
     }
 
@@ -279,6 +285,28 @@ namespace PepinoHealth.App.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Registration);
             RegistrationOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void Page1Override(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Page1()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Page1);
+            Page1Override(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void Page2Override(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Page2()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Page2);
+            Page2Override(callInfo);
             return callInfo;
         }
 

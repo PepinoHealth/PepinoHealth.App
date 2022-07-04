@@ -25,13 +25,13 @@ using System.Web.Routing;
 using T4MVC;
 namespace PepinoHealth.App.Controllers
 {
-    public partial class OutPatientController
+    public partial class IPModuleController
     {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public OutPatientController() { }
+        public IPModuleController() { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        protected OutPatientController(Dummy d) { }
+        protected IPModuleController(Dummy d) { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         protected RedirectToRouteResult RedirectToAction(ActionResult result)
@@ -61,13 +61,13 @@ namespace PepinoHealth.App.Controllers
 
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public OutPatientController Actions { get { return MVC.OutPatient; } }
+        public IPModuleController Actions { get { return MVC.IPModule; } }
         [GeneratedCode("T4MVC", "2.0")]
         public readonly string Area = "";
         [GeneratedCode("T4MVC", "2.0")]
-        public readonly string Name = "OutPatient";
+        public readonly string Name = "IPModule";
         [GeneratedCode("T4MVC", "2.0")]
-        public const string NameConst = "OutPatient";
+        public const string NameConst = "IPModule";
         [GeneratedCode("T4MVC", "2.0")]
         static readonly ActionNamesClass s_actions = new ActionNamesClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -75,17 +75,13 @@ namespace PepinoHealth.App.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNamesClass
         {
-            public readonly string OPRegistration = "OPRegistration";
-            public readonly string OPRevisitRegistration = "OPRevisitRegistration";
-            public readonly string generateBarcode = "generateBarcode";
+            public readonly string DischargeSummary = "DischargeSummary";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
-            public const string OPRegistration = "OPRegistration";
-            public const string OPRevisitRegistration = "OPRevisitRegistration";
-            public const string generateBarcode = "generateBarcode";
+            public const string DischargeSummary = "DischargeSummary";
         }
 
 
@@ -99,49 +95,25 @@ namespace PepinoHealth.App.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
-                public readonly string OPRegistration = "OPRegistration";
-                public readonly string OPRevisitRegistration = "OPRevisitRegistration";
+                public readonly string DischargeSummary = "DischargeSummary";
             }
-            public readonly string OPRegistration = "~/Views/OutPatient/OPRegistration.cshtml";
-            public readonly string OPRevisitRegistration = "~/Views/OutPatient/OPRevisitRegistration.cshtml";
+            public readonly string DischargeSummary = "~/Views/IPModule/DischargeSummary.cshtml";
         }
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public partial class T4MVC_OutPatientController : PepinoHealth.App.Controllers.OutPatientController
+    public partial class T4MVC_IPModuleController : PepinoHealth.App.Controllers.IPModuleController
     {
-        public T4MVC_OutPatientController() : base(Dummy.Instance) { }
+        public T4MVC_IPModuleController() : base(Dummy.Instance) { }
 
         [NonAction]
-        partial void OPRegistrationOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+        partial void DischargeSummaryOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult OPRegistration()
+        public override System.Web.Mvc.ActionResult DischargeSummary()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.OPRegistration);
-            OPRegistrationOverride(callInfo);
-            return callInfo;
-        }
-
-        [NonAction]
-        partial void OPRevisitRegistrationOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
-
-        [NonAction]
-        public override System.Web.Mvc.ActionResult OPRevisitRegistration()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.OPRevisitRegistration);
-            OPRevisitRegistrationOverride(callInfo);
-            return callInfo;
-        }
-
-        [NonAction]
-        partial void generateBarcodeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
-
-        [NonAction]
-        public override System.Web.Mvc.ActionResult generateBarcode()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.generateBarcode);
-            generateBarcodeOverride(callInfo);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.DischargeSummary);
+            DischargeSummaryOverride(callInfo);
             return callInfo;
         }
 

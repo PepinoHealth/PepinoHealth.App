@@ -611,6 +611,67 @@
     }
 }
 
+.p-card {
+    margin-bottom: 1rem;
+
+    .p-card-header {
+        background: @bg-color1;
+        border-top-left-radius: @br-radius;
+        border-top-right-radius: @br-radius;
+        padding: .5rem .75rem 0;
+
+        ul.nav {
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                margin-right: .5rem;
+
+                a {
+                    &.active {
+                        color: @bg-color1;
+                        background: @white-color;
+                    }
+
+                    padding: .5rem .75rem .25rem;
+                    color: @white-color;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    border-top-left-radius: @br-radius;
+                    border-top-right-radius: @br-radius;
+                }
+            }
+        }
+    }
+
+    .p-card-body {
+        border-top: none;
+        border: 2px solid @bg-color1;
+        margin-top: -2px;
+        padding: .75rem;
+
+        .tab-content {
+            .tab-pane {
+                min-height: 5rem;
+
+                textarea {
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    padding: .25rem 0;
+                    min-height: 36px;
+                    border-radius: 0;
+                }
+
+                textarea.ta-2 {
+                    min-height: 72px;
+                }
+            }
+        }
+    }
+}
+
 span.required {
     color: red;
 }
@@ -950,3 +1011,255 @@ span.required {
 
 /* Login page style */
 
+/* Page 1 styles */
+
+#formPage1 {
+    .btn-search-icon {
+        padding: 0.25rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        min-height: 35px;
+        min-width: 35px;
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    .form-title {
+        max-width: 50px;
+        margin-right: .5rem;
+    }
+
+    .form-group {
+        margin-bottom: .75rem;
+    }
+
+    .form-label {
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding: .25rem 0;
+    }
+
+    textarea {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding: .25rem 0;
+        min-height: 36px;
+        border-radius: 0;
+    }
+
+    textarea.ta-2 {
+        min-height: 72px;
+    }
+
+    .button-block {
+        text-align: center;
+        margin: .5rem 0 0 .75rem;
+
+        button {
+            margin: 0 .25rem;
+            min-width: 115px;
+        }
+
+        @media(max-width: 992px) {
+
+            button {
+                margin: 0 .25rem .5rem;
+            }
+        }
+    }
+}
+
+/* Page 1 styles */
+
+/* Page 2 styles */
+
+#formPage2 {
+    .btn-search-icon {
+        padding: 0.25rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        min-height: 35px;
+        min-width: 35px;
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    .form-title {
+        max-width: 50px;
+        margin-right: .5rem;
+    }
+
+    .form-group {
+        margin-bottom: .75rem;
+    }
+
+    .form-label {
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding: .25rem 0;
+    }
+
+    textarea {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding: .25rem 0;
+        min-height: 36px;
+        border-radius: 0;
+    }
+
+    textarea.ta-2 {
+        min-height: 72px;
+    }
+
+    .button-block {
+        text-align: center;
+        margin: .5rem 0 0 .75rem;
+
+        button {
+            margin: 0 .25rem;
+            min-width: 115px;
+        }
+
+        @media(max-width: 992px) {
+
+            button {
+                margin: 0 .25rem .5rem;
+            }
+        }
+    }
+}
+
+/* Page 2 styles */
+
+/* Discharge Summary page styles */
+
+#formDischargeSummary {
+    .btn-search-icon {
+        padding: 0.25rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        min-height: 35px;
+        min-width: 35px;
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    .form-title {
+        max-width: 50px;
+        margin-right: .5rem;
+    }
+
+    .form-group {
+        margin-bottom: .75rem;
+    }
+
+    .form-label {
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding: .25rem 0;
+    }
+
+    textarea {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding: .25rem 0;
+        min-height: 36px;
+        border-radius: 0;
+    }
+
+    textarea.ta-2 {
+        min-height: 72px;
+    }
+
+    .button-block {
+        text-align: center;
+        margin: .5rem 0 0 .75rem;
+
+        button {
+            margin: 0 .25rem;
+            min-width: 115px;
+        }
+
+        @media(max-width: 992px) {
+
+            button {
+                margin: 0 .25rem .5rem;
+            }
+        }
+    }
+}
+
+/* Discharge Summary page styles */
+
+
+/* Obstetric Discharge Summary page styles */
+
+#formObstetricDischargeSummary {
+    .btn-search-icon {
+        padding: 0.25rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        min-height: 35px;
+        min-width: 35px;
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    .form-title {
+        max-width: 50px;
+        margin-right: .5rem;
+    }
+
+    .form-group {
+        margin-bottom: .75rem;
+    }
+
+    .form-label {
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding: .25rem 0;
+    }
+
+    textarea {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding: .25rem 0;
+        min-height: 36px;
+        border-radius: 0;
+    }
+
+    textarea.ta-2 {
+        min-height: 72px;
+    }
+
+    .button-block {
+        text-align: center;
+        margin: .5rem 0 0 .75rem;
+
+        button {
+            margin: 0 .25rem;
+            min-width: 115px;
+        }
+
+        @media(max-width: 992px) {
+
+            button {
+                margin: 0 .25rem .5rem;
+            }
+        }
+    }
+}
+
+/* Obstetric Discharge Summary pagestyles */

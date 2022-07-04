@@ -109,6 +109,25 @@ namespace PepinoHealth.App.Controllers
             return View();
         }
 
+        [SessionExpire]
+        [NoCache]
+        [URAC(PepinoHealth.CL.Common.Roles.Admin)]
+        [HttpGet]
+        public virtual ActionResult Page1()
+        {
+            return View();
+        }
+
+        [SessionExpire]
+        [NoCache]
+        [URAC(PepinoHealth.CL.Common.Roles.Admin)]
+        [HttpGet]
+        public virtual ActionResult Page2()
+        {
+            return View();
+        }
+
+
         #endregion
 
         #region Business Methods
