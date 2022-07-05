@@ -152,6 +152,10 @@ function selectMenu(control) {
     $('#' + control).addClass('active');
 }
 
+function setRGBA(depth) {
+    return 'rgba(21, 148, 205,' + depth + ')';
+}
+
 //////////////////////////
 // Common functions end //
 //////////////////////////
@@ -168,6 +172,15 @@ function selectMenu(control) {
 //////////////////////////
 
 
+//////////////////////////////////
+// Notification functions start //
+//////////////////////////////////
+
+
+////////////////////////////////
+// Notification functions end //
+////////////////////////////////
+
 ///////////////////////////
 // OnLoad function start //
 ///////////////////////////
@@ -179,6 +192,10 @@ function callFuncOnLoad() {
 function registerEventsInApp() {
     $('.toggle-burger').on('click', function () {
         $('ul.left-menu,div.right-menu').toggleClass('show');
+    });
+
+    $('.notification-bar i').on('click', function () {
+        $('.notification_dd').toggleClass('active');
     });
 
     $(window).resize(function () {

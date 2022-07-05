@@ -9,6 +9,7 @@ namespace PepinoHealth.App.Helpers
     {
         bootstrap,
         bootstrap_validator,
+        chart,
         master,
         jquery,
         jquery_validate,
@@ -34,6 +35,11 @@ namespace PepinoHealth.App.Helpers
             ///////////////////////////////////////
              { Source.bootstrap,                            Links.Scripts.bootstrap.bootstrap_js }
             ,{ Source.bootstrap_validator,                  Links.Scripts.bootstrap.bootstrap_validator.bootstrap_validator_js }
+
+            ///////////////////////////////////////////////////
+            // ------------------- chart ------------------- //
+            ///////////////////////////////////////////////////
+            ,{ Source.chart,                                Links.Scripts.chart.chart_js}
 
             ///////////////////////////////////////
             // ----------- dynamic ----------- //

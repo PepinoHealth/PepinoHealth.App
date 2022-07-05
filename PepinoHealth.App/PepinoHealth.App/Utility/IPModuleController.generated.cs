@@ -76,12 +76,14 @@ namespace PepinoHealth.App.Controllers
         public class ActionNamesClass
         {
             public readonly string DischargeSummary = "DischargeSummary";
+            public readonly string ObstetricDischargeSummary = "ObstetricDischargeSummary";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string DischargeSummary = "DischargeSummary";
+            public const string ObstetricDischargeSummary = "ObstetricDischargeSummary";
         }
 
 
@@ -96,8 +98,10 @@ namespace PepinoHealth.App.Controllers
             public class _ViewNamesClass
             {
                 public readonly string DischargeSummary = "DischargeSummary";
+                public readonly string ObstetricDischargeSummary = "ObstetricDischargeSummary";
             }
             public readonly string DischargeSummary = "~/Views/IPModule/DischargeSummary.cshtml";
+            public readonly string ObstetricDischargeSummary = "~/Views/IPModule/ObstetricDischargeSummary.cshtml";
         }
     }
 
@@ -114,6 +118,17 @@ namespace PepinoHealth.App.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.DischargeSummary);
             DischargeSummaryOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void ObstetricDischargeSummaryOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult ObstetricDischargeSummary()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ObstetricDischargeSummary);
+            ObstetricDischargeSummaryOverride(callInfo);
             return callInfo;
         }
 

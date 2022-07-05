@@ -194,6 +194,7 @@
     <Content Include="Content\material\material-icons\icons\MaterialIcons-Regular.woff" />
     <Content Include="Content\material\material-icons\icons\MaterialIcons-Regular.woff2" />
     <Content Include="Content\material\material-icons\material-icons.less" />
+    <Content Include="Content\notification\notification.less" />
     <None Include="Scripts\jquery\jquery.validate-vsdoc\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\bootstrap\bootstrap-validator\bootstrap-validator.js" />
     <Content Include="Scripts\bootstrap\bootstrap-validator\bootstrap-validator.min.js">
@@ -202,6 +203,10 @@
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js">
       <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\chart\chart.js" />
+    <Content Include="Scripts\chart\chart.min.js">
+      <DependentUpon>chart.js</DependentUpon>
     </Content>
     <Content Include="Scripts\dynamic\master.js" />
     <Content Include="Scripts\jquery\jquery.validate-vsdoc\jquery.validate-vsdoc.min.js">

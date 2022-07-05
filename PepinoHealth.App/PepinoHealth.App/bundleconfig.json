@@ -113,5 +113,11 @@
     "inputFiles": [
       "Scripts/popper/umd/popper.js"
     ]
+  },
+  {
+    "outputFileName": "Scripts/chart/chart.min.js",
+    "inputFiles": [
+      "Scripts/chart/chart.js"
+    ]
   }
 ]

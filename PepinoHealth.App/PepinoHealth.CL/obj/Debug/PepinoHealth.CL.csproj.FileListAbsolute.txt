@@ -1,0 +1,8 @@
+C:\Users\BALAJI\source\repos\PepinoHealth.App\PepinoHealth.App\PepinoHealth.CL\bin\Debug\PepinoHealth.CL.dll
+C:\Users\BALAJI\source\repos\PepinoHealth.App\PepinoHealth.App\PepinoHealth.CL\bin\Debug\PepinoHealth.CL.pdb
+C:\Users\BALAJI\source\repos\PepinoHealth.App\PepinoHealth.App\PepinoHealth.CL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\BALAJI\source\repos\PepinoHealth.App\PepinoHealth.App\PepinoHealth.CL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\BALAJI\source\repos\PepinoHealth.App\PepinoHealth.App\PepinoHealth.CL\obj\Debug\PepinoHealth.CL.csproj.CoreCompileInputs.cache
+C:\Users\BALAJI\source\repos\PepinoHealth.App\PepinoHealth.App\PepinoHealth.CL\obj\Debug\PepinoHealth.CL.csproj.CopyComplete
+C:\Users\BALAJI\source\repos\PepinoHealth.App\PepinoHealth.App\PepinoHealth.CL\obj\Debug\PepinoHealth.CL.dll
+C:\Users\BALAJI\source\repos\PepinoHealth.App\PepinoHealth.App\PepinoHealth.CL\obj\Debug\PepinoHealth.CL.pdb
