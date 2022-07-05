@@ -93,6 +93,15 @@ namespace Links
         }
     
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class chart {
+            public const string UrlPath = "~/Scripts/chart";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            public static readonly string chart_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/chart.min.js") ? Url("chart.min.js") : Url("chart.js");
+            public static readonly string chart_min_js = Url("chart.min.js");
+        }
+    
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public static class dynamic {
             public const string UrlPath = "~/Scripts/dynamic";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
@@ -366,6 +375,14 @@ namespace Links
         }
     
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class notification {
+            public const string UrlPath = "~/Content/notification";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            public static readonly string notification_less = Url("notification.less");
+        }
+    
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public static class site {
             public const string UrlPath = "~/Content/site";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
@@ -404,6 +421,14 @@ namespace Links
                 {
                     public static readonly string bootstrap_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/bootstrap/bootstrap.js"); 
                     public static readonly string bootstrap_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/bootstrap/bootstrap.min.js"); 
+                }
+            }
+            public static partial class chart 
+            {
+                public static class Assets
+                {
+                    public static readonly string chart_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/chart/chart.js"); 
+                    public static readonly string chart_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/chart/chart.min.js"); 
                 }
             }
             public static partial class dynamic 
@@ -623,6 +648,12 @@ namespace Links
                     {
                     }
                 }
+                public static class Assets
+                {
+                }
+            }
+            public static partial class notification 
+            {
                 public static class Assets
                 {
                 }

@@ -56,9 +56,73 @@
                         <img src="~/Content/images/header/pepino-health-logo.png" alt="Pepino Health" />
                     </div>
                 </div>
-                <div class="toggle-burger">
-                    <i class="material-icons">menu</i>
-                </div>
+
+                @{
+                    if (Html.ViewContext.Controller.IsLogged())
+                    {
+                        <div class="notification-bar">
+                            <i class="material-icons">notifications</i>
+
+                            <div class="notification_dd">
+                                <ul class="notification_ul">
+                                    <li class="starbucks success">
+                                        <div class="notify_data">
+                                            <div class="title">
+                                                Lorem, ipsum dolor.
+                                            </div>
+                                            <div class="sub_title">
+                                                Lorem ipsum dolor sit amet consectetur.
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="baskin_robbins failed">
+                                        <div class="notify_data">
+                                            <div class="title">
+                                                Lorem, ipsum dolor.
+                                            </div>
+                                            <div class="sub_title">
+                                                Lorem ipsum dolor sit amet consectetur.
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mcd success">
+                                        <div class="notify_data">
+                                            <div class="title">
+                                                Lorem, ipsum dolor.
+                                            </div>
+                                            <div class="sub_title">
+                                                Lorem ipsum dolor sit amet consectetur.
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="pizzahut failed">
+                                        <div class="notify_data">
+                                            <div class="title">
+                                                Lorem, ipsum dolor.
+                                            </div>
+                                            <div class="sub_title">
+                                                Lorem ipsum dolor sit amet consectetur.
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="kfc success">
+                                        <div class="notify_data">
+                                            <div class="title">
+                                                Lorem, ipsum dolor.
+                                            </div>
+                                            <div class="sub_title">
+                                                Lorem ipsum dolor sit amet consectetur.
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="toggle-burger">
+                            <i class="material-icons">menu</i>
+                        </div>
+                    }
+                }
             </div>
         </div>
 

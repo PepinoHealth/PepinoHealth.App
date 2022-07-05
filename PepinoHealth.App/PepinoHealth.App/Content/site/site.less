@@ -20,24 +20,40 @@
             }
         }
 
+        .notification-bar {
+            position: absolute;
+            top: 18px;
+            left: auto;
+            right: 49px;
+            bottom: 0;
+            height: max-content;
+            display: inherit;
+            cursor: pointer;
+
+            i {
+                color: @bg-color2;
+                font-size: 22px;
+            }
+        }
+
         .toggle-burger {
             position: absolute;
             top: 18px;
             left: auto;
-            right: 8px;
+            right: 12px;
             bottom: 0;
-            height: 100%;
+            height: max-content;
             display: none;
             cursor: pointer;
 
             i {
+                color: @bg-color1;
                 font-size: 22px;
             }
         }
 
         @media(max-width: 992px) {
             .toggle-burger {
-                right: 12px;
                 display: inherit;
             }
         }
@@ -1263,3 +1279,71 @@ span.required {
 }
 
 /* Obstetric Discharge Summary pagestyles */
+
+/* Dashboard page styles */
+
+#dashboard-section {
+
+    .card-stats {
+        margin-bottom: 1rem;
+        border-radius: 0 0 @br-radius @br-radius;
+        border-top: 1px solid @bg-color1;
+        box-shadow: none;
+    }
+
+    .card-stats .statistics {
+        position: relative;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .card-stats [class*=col-] {
+        border-right: 1px solid @bg-color1;
+    }
+
+    .card-stats [class*=col-]:last-child {
+        border-right: none;
+    }
+
+    @media(max-width:600px) {
+        .card-stats [class*=col-] {
+            border-right: none;
+        }
+    }
+
+    .info .info-title {
+        margin: 5px 0 5px;
+        padding: 0 5px;
+        font-weight: 600;
+    }
+
+    .card-stats .statistics .stats-title {
+        margin-bottom: 5px;
+        color: #9a9a9a;
+        font-weight: 600;
+    }
+
+    .card-stats .icon {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 15px;
+    }
+
+    .card-stats .icon.icon-event {
+        color: #2CD224;
+    }
+
+    .card-stats .icon.icon-event-busy {
+        color: red;
+    }
+
+    .card-stats .icon.icon-user {
+        color: @bg-color1;
+    }
+
+    .card-stats .icon.icon-guest {
+        color: #FF9800;
+    }
+}
+
+/* Dashboard page styles */
