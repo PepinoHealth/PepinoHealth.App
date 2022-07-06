@@ -175,6 +175,13 @@ namespace PepinoHealth.CL.Common
             return roleID;
         }
 
+        public static bool HasSegments()
+        {
+            bool result = HttpContext.Current.Request.Url.AbsolutePath.Contains("SessionHelpers") || HttpContext.Current.Request.Url.Segments.Length > 1;
+            
+            return result;
+        }
+
         public static void ClearCache()
         {
             HttpContext.Current.Session.Remove(CHE_EMAIL);

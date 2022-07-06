@@ -8,6 +8,7 @@
 
 
 /* TempData varaibles to maintain data */
+var primaryColor = null;
 
 
 
@@ -153,7 +154,26 @@ function selectMenu(control) {
 }
 
 function setRGBA(depth) {
-    return 'rgba(21, 148, 205,' + depth + ')';
+    return 'rgba(' + primaryColor + ',' + depth + ')';
+}
+
+function setDays(days) {
+    var date = new Date();
+    date.setDate(date.getDate() + days);
+    return date;
+}
+
+function applyDatePicker(control, results) {
+    $('#' + control).bootstrapMaterialDatePicker({
+        format: 'DD/MM/YYYY hh:mm A',
+        weekStart: 1,
+        time: true,
+        setDate: setDays(0),
+        minDate: setDays(0),
+        switchOnClick: true
+    }).on('change', function (e, date) {
+        results(e, date);
+    });
 }
 
 //////////////////////////

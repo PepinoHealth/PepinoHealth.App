@@ -29,6 +29,7 @@ public static partial class MVC
 {
     public static PepinoHealth.App.Controllers.HomeController Home = new PepinoHealth.App.Controllers.T4MVC_HomeController();
     public static PepinoHealth.App.Controllers.IPModuleController IPModule = new PepinoHealth.App.Controllers.T4MVC_IPModuleController();
+    public static PepinoHealth.App.Controllers.OPBillingController OPBilling = new PepinoHealth.App.Controllers.T4MVC_OPBillingController();
     public static PepinoHealth.App.Controllers.OutPatientController OutPatient = new PepinoHealth.App.Controllers.T4MVC_OutPatientController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }

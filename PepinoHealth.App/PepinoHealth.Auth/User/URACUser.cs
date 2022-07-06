@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Web;
 using System.Linq;
+using System.Drawing;
+using System.Globalization;
 
 namespace PepinoHealth.Auth.User
 {
@@ -36,6 +38,43 @@ namespace PepinoHealth.Auth.User
 
         #region Private Methods
 
+        private Color GetRGB(string hexColor)
+        {
+            int red = 0;
+            int green = 0;
+            int blue = 0;
+
+            try
+            {
+                if (hexColor != null)
+                {
+                    if (hexColor.IndexOf('#') != -1)
+                        hexColor = hexColor.Replace("#", "");
+
+                    if (hexColor.Length == 6)
+                    {
+                        //#RRGGBB
+                        red = int.Parse(hexColor.Substring(0, 2), NumberStyles.AllowHexSpecifier);
+                        green = int.Parse(hexColor.Substring(2, 2), NumberStyles.AllowHexSpecifier);
+                        blue = int.Parse(hexColor.Substring(4, 2), NumberStyles.AllowHexSpecifier);
+                    }
+                    else if (hexColor.Length == 3)
+                    {
+                        //#RGB
+                        red = int.Parse(hexColor[0].ToString() + hexColor[0].ToString(), NumberStyles.AllowHexSpecifier);
+                        green = int.Parse(hexColor[1].ToString() + hexColor[1].ToString(), NumberStyles.AllowHexSpecifier);
+                        blue = int.Parse(hexColor[2].ToString() + hexColor[2].ToString(), NumberStyles.AllowHexSpecifier);
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                Helper.Log(exception);
+            }
+
+            return Color.FromArgb(red, green, blue);
+        }
+
         #endregion
 
         #region Conditional Methods
@@ -53,6 +92,29 @@ namespace PepinoHealth.Auth.User
             }
 
             return userName;
+        }
+
+        public string GetPrimaryColor(bool isRGB = false)
+        {
+            string color = string.Empty;
+
+            try
+            {
+                string primaryColor = "1595CD";
+                
+                var rgb = GetRGB(primaryColor);
+
+                if (isRGB)
+                    color = string.Concat(rgb.R, ",", rgb.G, ",", rgb.B);
+                else
+                    color = primaryColor;
+            }
+            catch (Exception exception)
+            {
+                Helper.Log(exception);
+            }
+
+            return color;
         }
 
         public bool IsUserIn()

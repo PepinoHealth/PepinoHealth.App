@@ -49,7 +49,7 @@ namespace PepinoHealth.Auth.User
 
             try
             {
-                result = new URACUser().HasAccess(roles);
+                result = uRACUser.HasAccess(roles);
             }
             catch (Exception exception)
             {
@@ -57,6 +57,13 @@ namespace PepinoHealth.Auth.User
             }
 
             return result;
+        }
+
+        public static IHtmlString GetPrimaryColor(this HtmlHelper helper, bool isRGB = false)
+        {
+            string color = uRACUser.GetPrimaryColor(isRGB);
+
+            return helper.Raw(color);
         }
 
         #endregion

@@ -28,6 +28,10 @@
             callFuncOnLoad();
         });
     </script>
+
+    <script type="text/javascript">
+        primaryColor                    = '@Html.GetPrimaryColor()';
+    </script>
 </head>
 <body>
     <!-- View initial loader -->
@@ -60,7 +64,7 @@
                 @{
                     if (Html.ViewContext.Controller.IsLogged())
                     {
-                        <div class="notification-bar">
+                        <div class="notification-bar hide">
                             <i class="material-icons">notifications</i>
 
                             <div class="notification_dd">

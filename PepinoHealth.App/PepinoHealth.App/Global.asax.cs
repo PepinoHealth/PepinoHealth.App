@@ -33,5 +33,13 @@ namespace PepinoHealth.App
             cultureInfo.DateTimeFormat.DateSeparator = "/";
             Thread.CurrentThread.CurrentCulture = cultureInfo;
         }
+
+        protected void Application_AcquireRequestState(object sender, EventArgs e)
+        {
+            if (!Helper.HasSegments())
+            {
+                Response.Redirect(string.Concat("/", Helper.Login));
+            }
+        }
     }
 }
