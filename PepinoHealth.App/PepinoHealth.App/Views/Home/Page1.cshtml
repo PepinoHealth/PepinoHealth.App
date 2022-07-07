@@ -5,8 +5,11 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        applyDatePicker('txtDateTime', function (e, date) {
-        });
+        applyDatePicker(
+            'txtDateTime',
+            calendarFormatType.DateTime,
+            function (e, date) {
+            });
         hideModal('loader');
     });
 </script>

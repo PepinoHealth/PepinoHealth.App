@@ -59,6 +59,13 @@ var liveType = {
     Disabled: 'disabled'
 }
 
+var calendarFormatType = {
+    DateTime: 'DD/MM/YYYY hh:mm A',
+    Date: 'DD/MM/YYYY',
+    Year: 'YYYY',
+    Time: 'hh:mm A'
+}
+
 ////////////////////////////
 // Common functions start //
 ////////////////////////////
@@ -163,9 +170,9 @@ function setDays(days) {
     return date;
 }
 
-function applyDatePicker(control, results) {
+function applyDatePicker(control, calendarFormatTypeID, results) {
     $('#' + control).bootstrapMaterialDatePicker({
-        format: 'DD/MM/YYYY hh:mm A',
+        format: calendarFormatTypeID,
         weekStart: 1,
         time: true,
         setDate: setDays(0),
