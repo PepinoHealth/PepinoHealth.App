@@ -30,7 +30,7 @@
     </script>
 
     <script type="text/javascript">
-        primaryColor                    = '@Html.GetPrimaryColor()';
+        primaryColor                    = '@Html.GetPrimaryColor(true)';
     </script>
 </head>
 <body>
@@ -64,7 +64,7 @@
                 @{
                     if (Html.ViewContext.Controller.IsLogged())
                     {
-                        <div class="notification-bar hide">
+                        <div class="notification-bar">
                             <i class="material-icons">notifications</i>
 
                             <div class="notification_dd">
@@ -209,9 +209,9 @@
                                         </div>
 
                                         <ul class="sub-menu">
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">assignment</i><span>IP Registration</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.IPModule.ObstetricDischargeSummary())"><i class="material-icons">assignment</i><span>IP Registration</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">insert_chart</i><span>IP Reports</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">assignment</i><span>Discharge Summary</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.IPModule.DischargeSummary())"><i class="material-icons">assignment</i><span>Discharge Summary</span></a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -224,11 +224,11 @@
                                         </div>
 
                                         <ul class="sub-menu">
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Tariff Master</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">receipt</i><span>OP Billing</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">receipt</i><span>IP Billing</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Balance Amount Update</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">list</i><span>Daily Expenses</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OPBilling.DebitDetails())"><i class="material-icons">perm_data_setting</i><span>Tariff Master</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OPBilling.OPBilling())"><i class="material-icons">receipt</i><span>OP Billing</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OPBilling.IPDayWiseBilling())"><i class="material-icons">receipt</i><span>IP Billing</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OPBilling.DischargeBilling())"><i class="material-icons">perm_data_setting</i><span>Balance Amount Update</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OPBilling.PatientCashRefund())"><i class="material-icons">list</i><span>Daily Expenses</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">insert_chart</i><span>Reports</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">list</i><span>OP IP LAB Collection</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">check</i><span>Ref.Collections</span></a></li>
