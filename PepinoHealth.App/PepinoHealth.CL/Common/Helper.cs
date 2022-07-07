@@ -28,7 +28,10 @@ namespace PepinoHealth.CL.Common
         public const string RevisitRegistration = "revisit-registration";
         public const string Login = "login";
         public const string Logout = "logout";
-
+        //Reports
+        public const string IPDPatientRegistration = "IPDPatientRegistration";
+        public const string OutPatientRegistration = "OutPatientRegistration";
+        public const string PatientDischarge = "PatientDischarge";
         //OPRegistration
         public const string OPRegistration = "opregistration";
         public const string OPRevisitRegistration = "oprevisitRegistration";
