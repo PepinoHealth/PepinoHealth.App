@@ -171,16 +171,73 @@ function setDays(days) {
 }
 
 function applyDatePicker(control, calendarFormatTypeID, results) {
-    $('#' + control).bootstrapMaterialDatePicker({
+    let controlObject = $('#' + control),
+        datePickerValues = getDatePickerValues(calendarFormatTypeID);
+
+    controlObject.bootstrapMaterialDatePicker({
         format: calendarFormatTypeID,
         weekStart: 1,
-        time: true,
+        year: datePickerValues.Year,
+        date: datePickerValues.Date,
+        time: datePickerValues.Time,
         setDate: setDays(0),
         minDate: setDays(0),
+        clearButton: true,
+        nowButton: true,
         switchOnClick: true
     }).on('change', function (e, date) {
         results(e, date);
     });
+
+    /* Support Events */
+    controlObject.parents('.input-group').find('button').on('click', function () {
+        controlObject.trigger('focus');
+    });
+
+    /* Support Functions */
+    function getDatePickerValues(calendarFormatTypeID) {
+        let year,
+            date,
+            time;
+
+        switch (calendarFormatTypeID) {
+            case calendarFormatType.Date:
+
+                year = true;
+                date = true;
+                time = false;
+
+                break;
+            case calendarFormatType.Year:
+
+                year = true;
+                date = false;
+                time = false;
+
+                break;
+            case calendarFormatType.Time:
+
+                year = false;
+                date = false;
+                time = true;
+
+                break;
+            default:
+
+                year = true;
+                date = true;
+                time = true;
+
+                break;
+
+        }
+
+        return {
+            Year: year,
+            Date: date,
+            Time: time
+        }
+    }
 }
 
 //////////////////////////
@@ -217,6 +274,10 @@ function callFuncOnLoad() {
 }
 
 function registerEventsInApp() {
+    $('.show_less,.show_more').on('click', function (e) {
+        $(e.currentTarget).parents('.notify_data').toggleClass('more');
+    });
+
     $('.toggle-burger').on('click', function () {
         $('ul.left-menu,div.right-menu').toggleClass('show');
     });

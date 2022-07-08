@@ -84,7 +84,7 @@
 
 .notification_dd li {
     border-bottom: 1px solid @bg-color2;
-    padding: 10px 15px;
+    padding: 10px 15px 0;
     display: flex;
     align-items: center;
 }
@@ -94,7 +94,7 @@
 }
 
 .notification_dd li .notify_data {
-    margin: 0;
+    margin: 0 0 10px;
     width: 100%;
 }
 
@@ -111,6 +111,43 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 5px;
+}
+
+.notification_dd li .notify_data .sub_title .message {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 20px;
+    transition: all 0.25s ease-out;
+}
+
+.notification_dd li .notify_data.more .sub_title .message {
+    white-space: initial;
+    max-height: 2000px;
+    transition: all 0.25s ease-in;
+}
+
+.notification_dd li .notify_data .sub_title .show_less {
+    text-align: right;
+    color: @bg-color1;
+    margin-top: .25rem;
+    font-size: .75rem;
+    display: none;
+}
+
+.notification_dd li .notify_data.more .sub_title .show_less {
+    display: inherit;
+}
+
+.notification_dd li .notify_data .sub_title .show_more {
+    text-align: right;
+    color: @bg-color1;
+    margin-top: .25rem;
+    font-size: .75rem;
+}
+
+.notification_dd li .notify_data.more .sub_title .show_more {
+    display: none;
 }
 
 .notification_dd li.show_all {

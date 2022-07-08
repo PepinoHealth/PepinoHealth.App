@@ -157,6 +157,49 @@
                                 border-bottom-right-radius: @br-radius;
                             }
 
+                            &.cascade {
+                                background: none;
+                                padding: 0;
+
+                                &:hover {
+                                    .sub-child-nav-block {
+                                        .sub-child-nav-menu-item {
+                                            background: @bg-color2;
+                                        }
+
+                                        ul.sub-child-menu {
+
+                                            li.sub-child-menu-item {
+                                                background: @bg-color2;
+                                                padding: .25rem 1rem .25rem 2.25rem;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .sub-child-nav-block {
+
+                                    .sub-child-nav-menu-item {
+                                        padding: .25rem 1rem;
+                                        background: @bg-color3;
+                                    }
+
+                                    ul.sub-child-menu {
+                                        margin: 0;
+
+                                        li.sub-child-menu-item {
+                                            background: @bg-color3;
+                                            padding: .25rem 1rem .25rem 2.25rem;
+                                        }
+
+                                        li.sub-child-menu-item.b-rounded {
+                                            border-bottom-left-radius: @br-radius;
+                                            border-bottom-right-radius: @br-radius;
+                                        }
+                                    }
+                                }
+                            }
+
                             a.sub-menu-link {
                                 display: flex;
                                 color: @white-color;
@@ -283,6 +326,53 @@
                                 &:hover {
                                     border-radius: @br-radius;
                                 }
+
+                                &.cascade {
+                                    background: none;
+                                    padding: 0;
+
+                                    &:hover {
+                                        .sub-child-nav-block {
+                                            .sub-child-nav-menu-item {
+                                                background: none;
+                                            }
+
+                                            ul.sub-child-menu {
+
+                                                li.sub-child-menu-item {
+                                                    background: none;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .sub-child-nav-block {
+
+                                        .sub-child-nav-menu-item {
+                                            padding: .25rem .75rem;
+                                            background: none;
+                                        }
+
+                                        ul.sub-child-menu {
+                                            margin: 0;
+
+                                            li.sub-child-menu-item {
+                                                background: none;
+                                                padding: .25rem 1rem .25rem 2.25rem;
+                                            }
+
+                                            li.sub-child-menu-item.b-rounded {
+                                                border-bottom-left-radius: @br-radius;
+                                                border-bottom-right-radius: @br-radius;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.cascade:hover {
+                                    background: @bg-color2;
+                                    border-radius: @br-radius;
+                                }
                             }
                         }
 
@@ -317,20 +407,25 @@
         }
 
         ul.dropdown-menu {
-            padding: .25rem 0;
+            padding: 0 0;
             list-style: none;
-            border-bottom-left-radius: @br-radius;
-            border-bottom-right-radius: @br-radius;
+
 
             &::before {
-                background: @bg-color3;
-                border-bottom-left-radius: @br-radius;
-                border-bottom-right-radius: @br-radius;
+                background: none;
                 box-shadow: none;
             }
 
             li {
-                padding: 2px 0;
+                padding: 0 0;
+                background: @bg-color3;
+                margin-top: 1px;
+
+                &:last-child,
+                &:last-child:hover {
+                    border-bottom-left-radius: @br-radius;
+                    border-bottom-right-radius: @br-radius;
+                }
 
                 a {
                     padding: .1rem .5rem;
@@ -349,6 +444,8 @@
 
                     &:hover {
                         background: @bg-color2;
+                        border-bottom-left-radius: @br-radius;
+                        border-bottom-right-radius: @br-radius;
 
                         span,
                         i {
@@ -393,6 +490,8 @@
                 ul.dropdown-menu {
                     &::before {
                         background: @bg-color3;
+                        border-bottom-left-radius: @br-radius;
+                        border-bottom-right-radius: @br-radius;
                         transition: all .5s ease-in;
                     }
 
@@ -412,7 +511,7 @@
             .profile-name {
                 visibility: hidden;
                 background: none;
-                padding-left: 1rem;
+                padding-left: .75rem;
                 transition: all .5s ease-out;
             }
 
@@ -424,11 +523,13 @@
 
                 visibility: hidden;
                 position: relative !important;
-                padding: 0.25rem 0.75rem 0.25rem 1.65rem !important;
+                padding: 0.25rem 0.75rem 0.5rem 1.65rem !important;
                 float: none !important;
                 display: block !important;
 
                 li {
+                    background: none;
+
 
                     a {
                         padding: 0.1rem 0.5rem;

@@ -30,7 +30,7 @@
     </script>
 
     <script type="text/javascript">
-        primaryColor                    = '@Html.GetPrimaryColor()';
+        primaryColor                    = '@Html.GetPrimaryColor(true)';
     </script>
 </head>
 <body>
@@ -64,58 +64,74 @@
                 @{
                     if (Html.ViewContext.Controller.IsLogged())
                     {
-                        <div class="notification-bar hide">
+                        <div class="notification-bar">
                             <i class="material-icons">notifications</i>
 
                             <div class="notification_dd">
                                 <ul class="notification_ul">
-                                    <li class="starbucks success">
+                                    <li class="starbucks">
                                         <div class="notify_data">
                                             <div class="title">
                                                 Lorem, ipsum dolor.
                                             </div>
                                             <div class="sub_title">
-                                                Lorem ipsum dolor sit amet consectetur.
+                                                <div class="message">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="baskin_robbins failed">
+                                    <li class="baskin_robbins">
                                         <div class="notify_data">
                                             <div class="title">
                                                 Lorem, ipsum dolor.
                                             </div>
                                             <div class="sub_title">
-                                                Lorem ipsum dolor sit amet consectetur.
+                                                <div class="message">
+                                                    Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
+                                                </div>
+                                                <div class="show_less">
+                                                    Show less
+                                                </div>
+                                                <div class="show_more">
+                                                    Show more
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="mcd success">
+                                    <li class="mcd">
                                         <div class="notify_data">
                                             <div class="title">
                                                 Lorem, ipsum dolor.
                                             </div>
                                             <div class="sub_title">
-                                                Lorem ipsum dolor sit amet consectetur.
+                                                <div class="message">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="pizzahut failed">
+                                    <li class="pizzahut">
                                         <div class="notify_data">
                                             <div class="title">
                                                 Lorem, ipsum dolor.
                                             </div>
                                             <div class="sub_title">
-                                                Lorem ipsum dolor sit amet consectetur.
+                                                <div class="message">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="kfc success">
+                                    <li class="kfc">
                                         <div class="notify_data">
                                             <div class="title">
                                                 Lorem, ipsum dolor.
                                             </div>
                                             <div class="sub_title">
-                                                Lorem ipsum dolor sit amet consectetur.
+                                                <div class="message">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -163,7 +179,7 @@
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">settings</i><span>Package Settings</span></a></li>
 
 
-                                            <li class="sub-menu-item">
+                                            <li class="sub-menu-item cascade">
                                                 <div class="sub-child-nav-block">
                                                     <div class="sub-child-nav-menu-item">
                                                         <i class="material-icons">home</i>
@@ -173,7 +189,7 @@
 
                                                     <ul class="sub-child-menu">
                                                         <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Lorem Ipsum Carlo Siano 1</span></a></li>
-                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Lorem Ipsum Carlo Siano 2</span></a></li>
+                                                        <li class="sub-child-menu-item b-rounded"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Lorem Ipsum Carlo Siano 2</span></a></li>
                                                     </ul>
                                                 </div>
                                             </li>
