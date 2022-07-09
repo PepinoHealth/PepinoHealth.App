@@ -66,6 +66,16 @@ var calendarFormatType = {
     Time: 'hh:mm A'
 }
 
+var actionType = {
+    Save: 1,
+    Refresh: 2,
+    Print: 3,
+    SaveAndPrint: 4,
+    Modify: 5,
+    Delete: 6
+}
+
+
 ////////////////////////////
 // Common functions start //
 ////////////////////////////

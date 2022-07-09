@@ -14,17 +14,31 @@ var addOPRegURL = null;
 // OPRegistration view functions start //
 ////////////////////////////////
 
+function bindControlsOnLoadInOPRegistration() {
+    registerEventsInOPRegistration();
+
+    bindGetDepartmentDetails();
+    bindgenerateBarcode();
+    applyDatePicker(
+        'txtDateTime',
+        calendarFormatType.Date,
+        function (e, date) {
+        });
+    hideModal('loader');
+}
+
 function bindgenerateBarcode() {
     result = false;
     var data = JSON.stringify('');
     callAPI(validateOPUrl, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
         function (data) {
-            
+
             $('#barcodeImg').attr('src', "data:image/png;base64," + data);
         });
 
     return result;
 }
+
 function bindGetDepartmentDetails() {
     var data = JSON.stringify('');
     callAPI(deptUrl, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
@@ -39,8 +53,9 @@ function bindGetDepartmentDetails() {
         });
 
 }
+
 function addOPRegistrationDetails() {
-    var data= JSON.stringify({
+    var data = JSON.stringify({
         OP_NO: $('#txtOPNo').val(),
         OP_DATE: $('#txtDate').val(),
         UHID: $('#txtUHID').val(),
@@ -102,6 +117,52 @@ function addOPRegistrationDetails() {
                 });
             }
         });
+}
+
+function processOPRegistrationAction(object) {
+    let actionTypeID = parseInt(object.data('action-id'));
+
+    switch (actionTypeID) {
+        case actionType.Save:
+
+            alert('This action is from Save button.');
+
+            break;
+        case actionType.Refresh:
+
+            alert('This action is from Refresh button.');
+
+            break;
+        case actionType.Print:
+
+            alert('This action is from Print button.');
+
+            break;
+        case actionType.SaveAndPrint:
+
+            alert('This action is from SaveAndPrint button.');
+
+            break;
+        case actionType.Modify:
+
+            alert('This action is from Modify button.');
+
+            break;
+        case actionType.Delete:
+
+            alert('This action is from Delete button.');
+
+            break;
+    }
+}
+
+/////////////////////////
+// Events Registration //
+/////////////////////////
+function registerEventsInOPRegistration() {
+    $('#formRegistration .button-block button').on('click', function (e) {
+        processOPRegistrationAction($(e.currentTarget));
+    });
 }
 //////////////////////////////
 // OPRegistration view functions end //

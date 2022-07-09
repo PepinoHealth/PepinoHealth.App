@@ -25,5 +25,15 @@ namespace PepinoHealth.CL.Common
         User = 2
     }
 
+    public enum ActionType
+    {
+        Save = 1,
+        Refresh = 2,
+        Print = 3,
+        SaveAndPrint = 4,
+        Modify = 5,
+        Delete = 6
+    }
+
     #endregion
 }
