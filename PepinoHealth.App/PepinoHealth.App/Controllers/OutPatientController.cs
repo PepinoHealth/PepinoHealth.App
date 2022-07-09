@@ -61,7 +61,7 @@ namespace PepinoHealth.App.Controllers
 
         #region bindGenerateBarcode
         [HttpPost]
-        public virtual ActionResult bindGenerateBarcode()
+        public virtual ActionResult GenerateBarcode()
         {
             string barcodeimg = "";
             try
@@ -119,7 +119,25 @@ namespace PepinoHealth.App.Controllers
 
 
         #endregion
+        #region GetOutPatientDepartmentDetails
+        [HttpPost]
+        public virtual ActionResult GetOutPatientDepartmentDetails()
+        {
+            try
+            {
+                var result = OutPatientRepositary().GetOutPatientDepartmentDetails();
 
+                var jsonResult = Json(result, JsonRequestBehavior.AllowGet);
+                jsonResult.MaxJsonLength = int.MaxValue;
+                return jsonResult;
+            }
+            catch (Exception ex)
+            {
+            }
+            return returnNull;
+
+        }
+        #endregion
         #endregion
     }
 }

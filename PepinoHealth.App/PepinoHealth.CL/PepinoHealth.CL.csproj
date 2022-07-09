@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AdminModal.cs" />
     <Compile Include="Common\Enumeration.cs" />
     <Compile Include="Common\Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

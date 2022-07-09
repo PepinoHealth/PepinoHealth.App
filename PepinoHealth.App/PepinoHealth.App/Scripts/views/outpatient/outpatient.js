@@ -5,12 +5,13 @@
 
 // Action contol url variables to perform ajax calls
 var validateOPUrl = null;
+var deptUrl = null;
 
 // Alert  messages
 
 
 ////////////////////////////////
-// Login view functions start //
+// OPRegistration view functions start //
 ////////////////////////////////
 
 function bindgenerateBarcode() {
@@ -24,6 +25,20 @@ function bindgenerateBarcode() {
 
     return result;
 }
+function bindGetDepartmentDetails() {
+    var data = JSON.stringify('');
+    callAPI(deptUrl, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
+        function (data) {
+            if (data != null) {
+                //$('#ddlDepartment').empty();
+                $.each(data, function (key, value) {
+
+                    $('#ddlDepartmentName').append($("<option></option>").val(data[key].DeptName).html(data[key].DeptName));
+                });
+            }
+        });
+
+}
 //////////////////////////////
-// Login view functions end //
+// OPRegistration view functions end //
 //////////////////////////////

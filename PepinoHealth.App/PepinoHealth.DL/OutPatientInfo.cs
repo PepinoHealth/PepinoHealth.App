@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Collections.Generic;
 using PepinoHealth.DL.Common;
+using PepinoHealth.CL.Admin;
 
 namespace PepinoHealth.DL
 {
@@ -41,6 +42,8 @@ namespace PepinoHealth.DL
                 sqlConnection.Open();
             }
         }
+
+        
 
         private void CheckNClose()
         {
@@ -82,6 +85,44 @@ namespace PepinoHealth.DL
             }
 
             return result;
+        }
+        public List<AdminModal.DepotMaster> GetOutPatientDepartmentDetails()
+        {
+            List<AdminModal.DepotMaster> details = null;
+
+            try
+            {
+                sqlConnection = AccessToDB();
+
+                sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "SELECT Dept_Code,Dept_Name FROM [dbo].[Department_Master]";
+                sqlCommand.CommandType = CommandType.Text;
+                CheckNOpen();
+
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                details = new List<AdminModal.DepotMaster>();
+                while (sqlDataReader.Read())
+                {
+                    details.Add(new AdminModal.DepotMaster()
+                    {
+                        DeptCode = Convert.ToString(sqlDataReader["Dept_Code"]),
+                        DeptName = Convert.ToString(sqlDataReader["Dept_Name"])
+                    });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ExceptionLogging.SendErrorToText(ex, "GetOutPatientDepartmentDetails");
+            }
+            finally
+            {
+                CheckNClose();
+            }
+
+            return details;
         }
         #endregion
     }

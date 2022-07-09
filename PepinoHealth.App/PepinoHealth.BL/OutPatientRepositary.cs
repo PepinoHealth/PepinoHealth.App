@@ -1,4 +1,5 @@
-﻿using PepinoHealth.DL;
+﻿using PepinoHealth.CL.Admin;
+using PepinoHealth.DL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,21 @@ namespace PepinoHealth.BL
             {
             }
             return result;
+        }
+
+        public List<AdminModal.DepotMaster> GetOutPatientDepartmentDetails()
+        {
+            List<AdminModal.DepotMaster> depotMaster = null;
+
+            try
+            {
+                depotMaster = OutPatientInfo().GetOutPatientDepartmentDetails();
+            }
+            catch (Exception Ex)
+            {
+            }
+
+            return depotMaster;
         }
         #endregion
     }

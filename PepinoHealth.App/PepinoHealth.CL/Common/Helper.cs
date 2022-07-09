@@ -37,6 +37,7 @@ namespace PepinoHealth.CL.Common
         public const string OPRevisitRegistration = "oprevisitRegistration";
 
         public const string bindGenerateBarcode = "bindGenerateBarcode";
+        public const string GetOutPatientDepartmentDetails = "getOutPatientDepartmentDetails";
 
         public const string DateMonthFirst = "M/d/yyyy";
 

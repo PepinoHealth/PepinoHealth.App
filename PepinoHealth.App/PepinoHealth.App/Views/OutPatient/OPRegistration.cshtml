@@ -10,15 +10,20 @@
     $(document).ready(function () {
         selectMenu('menu-registration');
 
-        //bindGetDepartmentDetails();
+        bindGetDepartmentDetails();
         //getDate();
         bindgenerateBarcode();
-
+        applyDatePicker(
+            'txtDateTime',
+            calendarFormatType.Date,
+            function (e, date) {
+            });
         hideModal('loader');
     })
 </script>
 <script type="text/javascript">
-    validateOPUrl         = '@Url.Action(MVC.OutPatient.bindGenerateBarcode())';
+    validateOPUrl = '@Url.Action(MVC.OutPatient.GenerateBarcode())';
+    deptUrl='@Url.Action(MVC.OutPatient.GetOutPatientDepartmentDetails())';
 </script>
 <div class="p-block v2">
     <div class="p-header">
@@ -93,8 +98,7 @@
                                 <div class="form-group">
                                     <label>Department Name <span class="required">*</span></label>
                                     <select class="form-control" id="ddlDepartmentName" name="ddlDepartmentName">
-                                        <option>Gynaecology</option>
-                                        <option>Rheumatology</option>
+                                       
                                     </select>
                                 </div>
                             </div>
