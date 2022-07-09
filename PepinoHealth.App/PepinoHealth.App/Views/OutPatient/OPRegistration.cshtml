@@ -1,18 +1,25 @@
 ﻿@using PepinoHealth.App.Helpers;
+
 @{
     ViewBag.Title = "Registration";
 }
 
+@Html.WriteScriptInclude(Source.view_outpatient_outpatient)
+
 <script type="text/javascript">
     $(document).ready(function () {
         selectMenu('menu-registration');
-        hideModal('loader');
+
         //bindGetDepartmentDetails();
         //getDate();
         bindgenerateBarcode();
+
+        hideModal('loader');
     })
 </script>
-
+<script type="text/javascript">
+    validateOPUrl         = '@Url.Action(MVC.OutPatient.bindGenerateBarcode())';
+</script>
 <div class="p-block v2">
     <div class="p-header">
         <div class="title">

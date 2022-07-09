@@ -59,9 +59,9 @@ namespace PepinoHealth.App.Controllers
 
         #region Business Methods
 
-        #region generateBarcode
+        #region bindGenerateBarcode
         [HttpPost]
-        public virtual ActionResult generateBarcode()
+        public virtual ActionResult bindGenerateBarcode()
         {
             string barcodeimg = "";
             try

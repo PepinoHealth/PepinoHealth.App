@@ -30,6 +30,7 @@ public static partial class MVC
     public static PepinoHealth.App.Controllers.HomeController Home = new PepinoHealth.App.Controllers.T4MVC_HomeController();
     public static PepinoHealth.App.Controllers.IPModuleController IPModule = new PepinoHealth.App.Controllers.T4MVC_IPModuleController();
     public static PepinoHealth.App.Controllers.OPBillingController OPBilling = new PepinoHealth.App.Controllers.T4MVC_OPBillingController();
+    public static PepinoHealth.App.Controllers.OPIPReportsController OPIPReports = new PepinoHealth.App.Controllers.T4MVC_OPIPReportsController();
     public static PepinoHealth.App.Controllers.OutPatientController OutPatient = new PepinoHealth.App.Controllers.T4MVC_OutPatientController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
@@ -236,6 +237,15 @@ namespace Links
                 public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
                 public static readonly string common_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/common.min.js") ? Url("common.min.js") : Url("common.js");
                 public static readonly string common_min_js = Url("common.min.js");
+            }
+        
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class opipviews {
+                public const string UrlPath = "~/Scripts/views/opipviews";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string opipviews_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/opipviews.min.js") ? Url("opipviews.min.js") : Url("opipviews.js");
+                public static readonly string opipviews_min_js = Url("opipviews.min.js");
             }
         
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -547,6 +557,14 @@ namespace Links
                     {
                         public static readonly string common_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/common/common.js"); 
                         public static readonly string common_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/common/common.min.js"); 
+                    }
+                }
+                public static partial class opipviews 
+                {
+                    public static class Assets
+                    {
+                        public static readonly string opipviews_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/opipviews/opipviews.js"); 
+                        public static readonly string opipviews_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/opipviews/opipviews.min.js"); 
                     }
                 }
                 public static partial class outpatient 

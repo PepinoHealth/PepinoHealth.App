@@ -15,7 +15,7 @@ using PepinoHealth.BL;
 
 namespace PepinoHealth.App.Controllers
 {
-    public class OPIPReportsController : Controller
+    public partial class OPIPReportsController : Controller
     {
         #region View Action Methods
 

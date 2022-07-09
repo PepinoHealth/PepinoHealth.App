@@ -77,7 +77,7 @@ namespace PepinoHealth.App.Controllers
         {
             public readonly string OPRegistration = "OPRegistration";
             public readonly string OPRevisitRegistration = "OPRevisitRegistration";
-            public readonly string generateBarcode = "generateBarcode";
+            public readonly string bindGenerateBarcode = "bindGenerateBarcode";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -85,7 +85,7 @@ namespace PepinoHealth.App.Controllers
         {
             public const string OPRegistration = "OPRegistration";
             public const string OPRevisitRegistration = "OPRevisitRegistration";
-            public const string generateBarcode = "generateBarcode";
+            public const string bindGenerateBarcode = "bindGenerateBarcode";
         }
 
 
@@ -135,13 +135,13 @@ namespace PepinoHealth.App.Controllers
         }
 
         [NonAction]
-        partial void generateBarcodeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+        partial void bindGenerateBarcodeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult generateBarcode()
+        public override System.Web.Mvc.ActionResult bindGenerateBarcode()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.generateBarcode);
-            generateBarcodeOverride(callInfo);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.bindGenerateBarcode);
+            bindGenerateBarcodeOverride(callInfo);
             return callInfo;
         }
 

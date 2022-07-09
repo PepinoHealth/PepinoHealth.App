@@ -119,5 +119,11 @@
     "inputFiles": [
       "Scripts/chart/chart.js"
     ]
+  },
+  {
+    "outputFileName": "Scripts/views/opipviews/opipviews.min.js",
+    "inputFiles": [
+      "Scripts/views/opipviews/opipviews.js"
+    ]
   }
 ]
