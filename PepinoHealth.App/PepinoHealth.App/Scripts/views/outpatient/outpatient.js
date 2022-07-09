@@ -6,7 +6,7 @@
 // Action contol url variables to perform ajax calls
 var validateOPUrl = null;
 var deptUrl = null;
-
+var addOPRegURL = null;
 // Alert  messages
 
 
@@ -38,6 +38,70 @@ function bindGetDepartmentDetails() {
             }
         });
 
+}
+function addOPRegistrationDetails() {
+    var data= JSON.stringify({
+        OP_NO: $('#txtOPNo').val(),
+        OP_DATE: $('#txtDate').val(),
+        UHID: $('#txtUHID').val(),
+        OP_PREPARED_BY: "Admin",
+        OP_PRINT_COUNT: "",
+        OP_YEAR: $('#txtYear').val(),
+        OP_TIME: $('#txtTime').val(),
+        OP_MODIFIED_BY: "Admin",
+        NAME_SUR: $('#ddlNameTitle').val(),
+        OP_NAME: $('#txtName').val(),
+        OP_FATHER_NAME: $('#txtFatherName').val(),
+        OP_HUSBAND: $('#txtHusbandName').val(),
+        OP_AddRESS: $('#txtAddress').val(),
+        OP_PLACE: "",
+        OP_PHONE_NUM: $('#txtPhoneNo').val(),
+        OP_RELIGION: "",
+        OP_SUBCAST: "",
+        OP_CATEGORY: $('#ddlCategory').val(),
+        OP_GENDER: $('#ddlGender').val(),
+        OP_DEPT_NAME: $('#ddlDepartment').val(),
+        OP_UNIT_NO: "",
+        OP_DOB: "",
+        OP_AGE: $('#ddlAge').val(),
+        OP_AGE1: $('#ddlYear').val(),
+        OP_ROOM_NO: "",
+        OP_OCCUPATION: "",
+        OP_INCOME: "",
+        OP_FEES: $('#txtCharge').val(),
+        OP_REF_DOCTOR: $('#ddlRefDoctor').val(),
+        OP_MARRRIED: $('#ddlMaritalStatus').val(),
+        OP_COPERATE: "",
+        DUMMYYN: "",
+        OP_MONTH: "",
+        LABYN: "",
+        RAD_AGE: "",
+        CARD_NUMBER: "",
+        ALT_PHNO: $('#txtAlternatePhoneNo').val(),
+        Token_No: $('#txtTokenNo').val(),
+        ConsultantDR: $('#ddlConsultantDoctor').val(),
+        Location: "",
+        Barcode_No: "",
+        Barcode_Image: "",
+        MailID: "",
+        AadhaarID: $('#txtAadhaarID').val(),
+        OPID: "",
+        COMPLAINTS: "",
+        ONEXAMINATIONS: "",
+        ADVICE: "",
+        PatientType: $('#ddlPatientType').val(),
+        MODE: 'SAVE'
+    });
+    callAPI(addOPRegURL, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
+        function (data) {
+            if (data != null) {
+                //$('#ddlDepartment').empty();
+                $.each(data, function (key, value) {
+
+                    $('#ddlDepartmentName').append($("<option></option>").val(data[key].DeptName).html(data[key].DeptName));
+                });
+            }
+        });
 }
 //////////////////////////////
 // OPRegistration view functions end //

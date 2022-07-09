@@ -35,7 +35,7 @@ namespace PepinoHealth.CL.Common
         //OPRegistration
         public const string OPRegistration = "opregistration";
         public const string OPRevisitRegistration = "oprevisitRegistration";
-
+        public const string addOPRegistrationDetails = "addOPRegistrationDetails";
         public const string bindGenerateBarcode = "bindGenerateBarcode";
         public const string GetOutPatientDepartmentDetails = "getOutPatientDepartmentDetails";
 

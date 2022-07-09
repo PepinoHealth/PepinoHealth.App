@@ -48,6 +48,7 @@
     <Compile Include="Admin\AdminModal.cs" />
     <Compile Include="Common\Enumeration.cs" />
     <Compile Include="Common\Helper.cs" />
+    <Compile Include="OPModal\OutPatientModal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\Profile.cs" />
   </ItemGroup>

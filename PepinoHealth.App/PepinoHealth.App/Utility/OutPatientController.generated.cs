@@ -59,6 +59,12 @@ namespace PepinoHealth.App.Controllers
             return RedirectToActionPermanent(taskResult.Result);
         }
 
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult CRUDOPRegistrationDetails()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.CRUDOPRegistrationDetails);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public OutPatientController Actions { get { return MVC.OutPatient; } }
@@ -79,6 +85,7 @@ namespace PepinoHealth.App.Controllers
             public readonly string OPRevisitRegistration = "OPRevisitRegistration";
             public readonly string GenerateBarcode = "GenerateBarcode";
             public readonly string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
+            public readonly string CRUDOPRegistrationDetails = "CRUDOPRegistrationDetails";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -88,9 +95,18 @@ namespace PepinoHealth.App.Controllers
             public const string OPRevisitRegistration = "OPRevisitRegistration";
             public const string GenerateBarcode = "GenerateBarcode";
             public const string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
+            public const string CRUDOPRegistrationDetails = "CRUDOPRegistrationDetails";
         }
 
 
+        static readonly ActionParamsClass_CRUDOPRegistrationDetails s_params_CRUDOPRegistrationDetails = new ActionParamsClass_CRUDOPRegistrationDetails();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_CRUDOPRegistrationDetails CRUDOPRegistrationDetailsParams { get { return s_params_CRUDOPRegistrationDetails; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_CRUDOPRegistrationDetails
+        {
+            public readonly string outPatientRegistration = "outPatientRegistration";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -155,6 +171,18 @@ namespace PepinoHealth.App.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetOutPatientDepartmentDetails);
             GetOutPatientDepartmentDetailsOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void CRUDOPRegistrationDetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, PepinoHealth.CL.OPModal.OutPatientModal.OutPatientRegistration outPatientRegistration);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult CRUDOPRegistrationDetails(PepinoHealth.CL.OPModal.OutPatientModal.OutPatientRegistration outPatientRegistration)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.CRUDOPRegistrationDetails);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "outPatientRegistration", outPatientRegistration);
+            CRUDOPRegistrationDetailsOverride(callInfo, outPatientRegistration);
             return callInfo;
         }
 

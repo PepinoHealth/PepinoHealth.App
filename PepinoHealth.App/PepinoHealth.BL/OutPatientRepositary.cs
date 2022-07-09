@@ -1,4 +1,5 @@
 ﻿using PepinoHealth.CL.Admin;
+using PepinoHealth.CL.OPModal;
 using PepinoHealth.DL;
 using System;
 using System.Collections.Generic;
@@ -45,6 +46,20 @@ namespace PepinoHealth.BL
             }
 
             return depotMaster;
+        }
+
+        public List<OutPatientModal.OutPatientRegistration> CRUDOPRegistrationDetails(OutPatientModal.OutPatientRegistration outPatientRegistration)
+        {
+            List<OutPatientModal.OutPatientRegistration> result = null;
+
+            try
+            {
+                result = OutPatientInfo().CRUDOPRegistrationDetails(outPatientRegistration);
+            }
+            catch (Exception Ex)
+            {
+            }
+            return result;
         }
         #endregion
     }

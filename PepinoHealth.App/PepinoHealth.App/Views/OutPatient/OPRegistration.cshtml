@@ -23,7 +23,8 @@
 </script>
 <script type="text/javascript">
     validateOPUrl = '@Url.Action(MVC.OutPatient.GenerateBarcode())';
-    deptUrl='@Url.Action(MVC.OutPatient.GetOutPatientDepartmentDetails())';
+    deptUrl = '@Url.Action(MVC.OutPatient.GetOutPatientDepartmentDetails())';
+    //addOPRegURL= '@Url.Action(MVC.OutPatient.CRUDOPRegistrationDetails())';
 </script>
 <div class="p-block v2">
     <div class="p-header">
@@ -141,8 +142,11 @@
                                     <label>Name <span class="required">*</span></label>
 
                                     <div class="input-group">
-                                        <select class="form-control form-title" id="ddlTitle" name="ddlTitle">
-                                            <option>Mr.</option>
+                                        <select class="form-control form-title" id="ddlNameTitle" name="ddlNameTitle">
+                                            <option value="MR" selected>MR</option>
+                                            <option value="MRs">MRs</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MISS">MISS</option>
                                         </select>
                                         <input type="text" class="form-control" id="txtName" name="txtName" />
                                     </div>
@@ -154,8 +158,8 @@
                                         <div class="form-group">
                                             <label>Gender <span class="required">*</span></label>
                                             <select class="form-control" id="ddlGender" name="ddlGender">
-                                                <option>Male</option>
-                                                <option>Female</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
                                             </select>
                                         </div>
                                     </div>
@@ -185,10 +189,10 @@
                             <div class="col-sm-6 col-md-3">
                                 <div class="form-group">
                                     <label>Marital Status <span class="required">*</span></label>
-                                    <select class="form-control" id="txtMaritalStatus" name="txtMaritalStatus">
-                                        <option>Single</option>
-                                        <option>Married</option>
-                                        <option>Single Parent</option>
+                                    <select class="form-control" id="ddlMaritalStatus" name="ddlMaritalStatus">
+                                        <option value="Married">Married</option>
+                                        <option value="Single">Single</option>
+                                        <option value="SingleParent">Single Parent</option>
                                     </select>
                                 </div>
                             </div>
@@ -277,8 +281,9 @@
                                         </div>
                                         <div class="col">
                                             <label>Pay Mode</label>
-                                            <select type="text" class="form-control" id="ddlPaymentMode" name="ddlPaymentMode">
-                                                <option>Cash</option>
+                                            <select type="text" class="form-control" id="ddlCustomerPhoneType2" name="ddlCustomerPhoneType2">
+                                                <option value="CASH">CASH</option>
+                                                <option value="CHECK">CHECK</option>
                                             </select>
                                         </div>
                                     </div>
@@ -295,7 +300,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="button-block">
-                                <button type="button" class="btn btn-success btn-sm">
+                                <button type="button" onclick="@Url.Action(MVC.OutPatient.CRUDOPRegistrationDetails())" class="btn btn-success btn-sm">
                                     Save
                                 </button>
                                 <button type="button" class="btn btn-secondary btn-sm">
