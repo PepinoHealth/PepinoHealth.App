@@ -82,6 +82,15 @@ namespace Links
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class bootstrap_datetimepicker {
+                public const string UrlPath = "~/Scripts/bootstrap/bootstrap-datetimepicker";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string bootstrap_datetimepicker_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/bootstrap-datetimepicker.min.js") ? Url("bootstrap-datetimepicker.min.js") : Url("bootstrap-datetimepicker.js");
+                public static readonly string bootstrap_datetimepicker_min_js = Url("bootstrap-datetimepicker.min.js");
+            }
+        
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
             public static class bootstrap_validator {
                 public const string UrlPath = "~/Scripts/bootstrap/bootstrap-validator";
                 public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
@@ -161,15 +170,6 @@ namespace Links
             public const string UrlPath = "~/Scripts/material";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
-            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-            public static class material_datetimepicker {
-                public const string UrlPath = "~/Scripts/material/material-datetimepicker";
-                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
-                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
-                public static readonly string material_datetimepicker_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/material-datetimepicker.min.js") ? Url("material-datetimepicker.min.js") : Url("material-datetimepicker.js");
-                public static readonly string material_datetimepicker_min_js = Url("material-datetimepicker.min.js");
-            }
-        
             public static readonly string material_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/material.min.js") ? Url("material.min.js") : Url("material.js");
             public static readonly string material_min_js = Url("material.min.js");
         }
@@ -280,6 +280,14 @@ namespace Links
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class bootstrap_datetimepicker {
+                public const string UrlPath = "~/Content/bootstrap/bootstrap-datetimepicker";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string bootstrap_datetimepicker_less = Url("bootstrap-datetimepicker.less");
+            }
+        
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
             public static class bootstrap_validator {
                 public const string UrlPath = "~/Content/bootstrap/bootstrap-validator";
                 public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
@@ -305,6 +313,27 @@ namespace Links
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
             public static readonly string master_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/master.min.css") ? Url("master.min.css") : Url("master.css");
             public static readonly string master_less = Url("master.less");
+        }
+    
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class font_awesome_v4_7 {
+            public const string UrlPath = "~/Content/font-awesome-v4.7";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            public static readonly string font_awesome_v4_7_less = Url("font-awesome-v4.7.less");
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class icons {
+                public const string UrlPath = "~/Content/font-awesome-v4.7/icons";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string fontawesome_webfont_eot = Url("fontawesome-webfont.eot");
+                public static readonly string fontawesome_webfont_svg = Url("fontawesome-webfont.svg");
+                public static readonly string fontawesome_webfont_ttf = Url("fontawesome-webfont.ttf");
+                public static readonly string fontawesome_webfont_woff = Url("fontawesome-webfont.woff");
+                public static readonly string fontawesome_webfont_woff2 = Url("fontawesome-webfont.woff2");
+                public static readonly string FontAwesome_otf = Url("FontAwesome.otf");
+            }
+        
         }
     
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -355,14 +384,6 @@ namespace Links
             public const string UrlPath = "~/Content/material";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
-            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-            public static class material_datetimepicker {
-                public const string UrlPath = "~/Content/material/material-datetimepicker";
-                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
-                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
-                public static readonly string material_datetimepicker_less = Url("material-datetimepicker.less");
-            }
-        
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
             public static class material_icons {
                 public const string UrlPath = "~/Content/material/material-icons";
@@ -420,6 +441,14 @@ namespace Links
         {
             public static partial class bootstrap 
             {
+                public static partial class bootstrap_datetimepicker 
+                {
+                    public static class Assets
+                    {
+                        public static readonly string bootstrap_datetimepicker_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/bootstrap/bootstrap-datetimepicker/bootstrap-datetimepicker.js"); 
+                        public static readonly string bootstrap_datetimepicker_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/bootstrap/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"); 
+                    }
+                }
                 public static partial class bootstrap_validator 
                 {
                     public static class Assets
@@ -489,14 +518,6 @@ namespace Links
             }
             public static partial class material 
             {
-                public static partial class material_datetimepicker 
-                {
-                    public static class Assets
-                    {
-                        public static readonly string material_datetimepicker_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/material/material-datetimepicker/material-datetimepicker.js"); 
-                        public static readonly string material_datetimepicker_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/material/material-datetimepicker/material-datetimepicker.min.js"); 
-                    }
-                }
                 public static class Assets
                 {
                     public static readonly string material_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/material/material.js"); 
@@ -594,6 +615,12 @@ namespace Links
         {
             public static partial class bootstrap 
             {
+                public static partial class bootstrap_datetimepicker 
+                {
+                    public static class Assets
+                    {
+                    }
+                }
                 public static partial class bootstrap_validator 
                 {
                     public static class Assets
@@ -615,6 +642,18 @@ namespace Links
                 public static class Assets
                 {
                     public static readonly string master_css = T4MVCHelpers.ProcessAssetPath("~/Content/dynamic/master.css");
+                }
+            }
+            public static partial class font_awesome_v4_7 
+            {
+                public static partial class icons 
+                {
+                    public static class Assets
+                    {
+                    }
+                }
+                public static class Assets
+                {
                 }
             }
             public static partial class fonts 
@@ -649,12 +688,6 @@ namespace Links
             }
             public static partial class material 
             {
-                public static partial class material_datetimepicker 
-                {
-                    public static class Assets
-                    {
-                    }
-                }
                 public static partial class material_icons 
                 {
                     public static partial class icons 

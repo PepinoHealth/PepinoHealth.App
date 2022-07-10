@@ -9,6 +9,7 @@ namespace PepinoHealth.App.Helpers
     {
         bootstrap,
         bootstrap_validator,
+        bootstrap_datetimepicker,
         chart,
         master,
         jquery,
@@ -37,6 +38,7 @@ namespace PepinoHealth.App.Helpers
             ///////////////////////////////////////
              { Source.bootstrap,                            Links.Scripts.bootstrap.bootstrap_js }
             ,{ Source.bootstrap_validator,                  Links.Scripts.bootstrap.bootstrap_validator.bootstrap_validator_js }
+            ,{ Source.bootstrap_datetimepicker,             Links.Scripts.bootstrap.bootstrap_datetimepicker.bootstrap_datetimepicker_js }
 
             ///////////////////////////////////////////////////
             // ------------------- chart ------------------- //

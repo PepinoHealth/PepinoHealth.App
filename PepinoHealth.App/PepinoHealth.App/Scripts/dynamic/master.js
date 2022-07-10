@@ -5,8 +5,8 @@
 ~/Scripts/linq/linq.min.js
 ~/Scripts/bootstrap/bootstrap.min.js
 ~/Scripts/bootstrap/bootstrap-validator/bootstrap-validator.min.js
+~/Scripts/bootstrap/bootstrap-datetimepicker/bootstrap-datetimepicker.js
 ~/Scripts/material/material.min.js
-~/Scripts/material/material-datetimepicker/material-datetimepicker.min.js
 ~/Scripts/trumbowyg/trumbowyg.min.js
 ~/Scripts/trumbowyg/trumbowyg.table.min.js
 ~/Scripts/trumbowyg/trumbowyg.colors.min.js

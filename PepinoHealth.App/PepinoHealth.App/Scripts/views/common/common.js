@@ -180,74 +180,33 @@ function setDays(days) {
     return date;
 }
 
-function applyDatePicker(control, calendarFormatTypeID, results) {
-    let controlObject = $('#' + control),
-        datePickerValues = getDatePickerValues(calendarFormatTypeID);
+function applyDateTimePicker(control, calendarFormatTypeID, results) {
+    let controlObject = $('#' + control);
 
-    controlObject.bootstrapMaterialDatePicker({
+    controlObject.datetimepicker({
         format: calendarFormatTypeID,
-        weekStart: 1,
-        year: datePickerValues.Year,
-        date: datePickerValues.Date,
-        time: datePickerValues.Time,
-        setDate: setDays(0),
-        minDate: setDays(0),
-        clearButton: true,
-        nowButton: true,
-        switchOnClick: true
-    }).on('change', function (e, date) {
-        results(e, date);
+        icons: {
+            time: 'fa fa-clock-o',
+            date: 'fa fa-calendar',
+            up: 'fa fa-chevron-up',
+            down: 'fa fa-chevron-down',
+            previous: 'fa fa-chevron-left',
+            next: 'fa fa-chevron-right',
+            today: 'fa fa-crosshairs',
+            clear: 'fa fa-trash-o',
+            close: 'fa fa-times'
+        },
+        showTodayButton: true,
+        showClear: true,
+        showClose: true,
+    }).on("dp.change", function (e) {
+        results(e);
     });
 
     /* Support Events */
     controlObject.parents('.input-group').find('button').on('click', function () {
         controlObject.trigger('focus');
     });
-
-    /* Support Functions */
-    function getDatePickerValues(calendarFormatTypeID) {
-        let year,
-            date,
-            time;
-
-        switch (calendarFormatTypeID) {
-            case calendarFormatType.Date:
-
-                year = true;
-                date = true;
-                time = false;
-
-                break;
-            case calendarFormatType.Year:
-
-                year = true;
-                date = false;
-                time = false;
-
-                break;
-            case calendarFormatType.Time:
-
-                year = false;
-                date = false;
-                time = true;
-
-                break;
-            default:
-
-                year = true;
-                date = true;
-                time = true;
-
-                break;
-
-        }
-
-        return {
-            Year: year,
-            Date: date,
-            Time: time
-        }
-    }
 }
 
 //////////////////////////
