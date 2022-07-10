@@ -177,6 +177,7 @@
       <DependentUpon>PepinoHealth.mdf</DependentUpon>
     </Content>
     <Content Include="Content\dynamic\master.css" />
+    <Content Include="Content\font-awesome-v4.7\icons\fontawesome-webfont.svg" />
     <Content Include="Content\images\common\loader.gif" />
     <Content Include="Content\images\common\loader.svg" />
     <Content Include="Content\images\header\pepino-health-logo.png" />
@@ -196,7 +197,6 @@
     <Content Include="Content\fonts\google-hind-siliguri\HindSiliguri-SemiBold.ttf" />
     <Content Include="Content\site\site.less" />
     <Content Include="Content\material\material.less" />
-    <Content Include="Content\material\material-datetimepicker\material-datetimepicker.less" />
     <Content Include="Content\material\material-icons\icons\MaterialIcons-Regular.eot" />
     <Content Include="Content\material\material-icons\icons\MaterialIcons-Regular.ttf" />
     <Content Include="Content\material\material-icons\icons\MaterialIcons-Regular.woff" />
@@ -207,7 +207,18 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="Content\font-awesome-v4.7\icons\fontawesome-webfont.eot" />
+    <Content Include="Content\font-awesome-v4.7\icons\fontawesome-webfont.ttf" />
+    <Content Include="Content\font-awesome-v4.7\icons\fontawesome-webfont.woff" />
+    <Content Include="Content\font-awesome-v4.7\icons\fontawesome-webfont.woff2" />
+    <Content Include="Content\font-awesome-v4.7\icons\FontAwesome.otf" />
+    <Content Include="Content\bootstrap\bootstrap-datetimepicker\bootstrap-datetimepicker.less" />
+    <None Include="Content\font-awesome-v4.7\font-awesome-v4.7.less" />
     <None Include="Scripts\jquery\jquery.validate-vsdoc\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-datetimepicker\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-datetimepicker\bootstrap-datetimepicker.min.js">
+      <DependentUpon>bootstrap-datetimepicker.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\bootstrap\bootstrap-validator\bootstrap-validator.js" />
     <Content Include="Scripts\bootstrap\bootstrap-validator\bootstrap-validator.min.js">
       <DependentUpon>bootstrap-validator.js</DependentUpon>
@@ -239,10 +250,6 @@
     <Content Include="Scripts\linq\linq.js" />
     <Content Include="Scripts\linq\linq.min.js">
       <DependentUpon>linq.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\material\material-datetimepicker\material-datetimepicker.js" />
-    <Content Include="Scripts\material\material-datetimepicker\material-datetimepicker.min.js">
-      <DependentUpon>material-datetimepicker.js</DependentUpon>
     </Content>
     <Content Include="Scripts\material\material.js" />
     <Content Include="Scripts\material\material.min.js">

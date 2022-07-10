@@ -90,7 +90,6 @@
                                 <div class="form-group">
                                     <label>Department Name <span class="required">*</span></label>
                                     <select class="form-control" id="ddlDepartmentName" name="ddlDepartmentName">
-                                       
                                     </select>
                                 </div>
                             </div>
@@ -106,12 +105,19 @@
                             <div class="col-sm-6 col-md-3">
                                 <div class="form-group">
                                     <label>Date Time</label>
-                                    <div class="input-group">
+                                    @*<div class="input-group">
+                                            <input type="text" class="form-control" id="txtDateTime" name="txtDateTime" />
+                                            <button class="btn btn-info btn-sm btn-search-icon" type="button">
+                                                <i class="material-icons">date_range</i>
+                                            </button>
+                                        </div>*@
+                                    <div class="input-group date" id="example">
                                         <input type="text" class="form-control" id="txtDateTime" name="txtDateTime" />
                                         <button class="btn btn-info btn-sm btn-search-icon" type="button">
                                             <i class="material-icons">date_range</i>
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -302,7 +308,7 @@
                                 </button>
                                 <button type="button" class="btn btn-success btn-sm" data-action-id="@((int)ActionType.SaveAndPrint)">
                                     Save & Print
-                                </button> 
+                                </button>
                                 <button type="button" class="btn btn-warning btn-sm" data-action-id="@((int)ActionType.Modify)">
                                     Modify
                                 </button>

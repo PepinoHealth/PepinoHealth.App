@@ -19,11 +19,12 @@ function bindControlsOnLoadInOPRegistration() {
 
     bindGetDepartmentDetails();
     bindgenerateBarcode();
-    applyDatePicker(
+    applyDateTimePicker(
         'txtDateTime',
-        calendarFormatType.Date,
-        function (e, date) {
-        });
+        calendarFormatType.DateTime,
+        function (e) {
+        }
+    );
     hideModal('loader');
 }
 

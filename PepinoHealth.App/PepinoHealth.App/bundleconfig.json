@@ -125,5 +125,11 @@
     "inputFiles": [
       "Scripts/views/opipviews/opipviews.js"
     ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js",
+    "inputFiles": [
+      "Scripts/bootstrap/bootstrap-datetimepicker/bootstrap-datetimepicker.js"
+    ]
   }
 ]
