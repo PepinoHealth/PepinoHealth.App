@@ -11,6 +11,7 @@ using System.Drawing.Imaging;
 using System;
 using PepinoHealth.BL;
 using PepinoHealth.CL.OPModal;
+using System.Web;
 
 namespace PepinoHealth.App.Controllers
 {
@@ -59,7 +60,29 @@ namespace PepinoHealth.App.Controllers
         #endregion
 
         #region Business Methods
+        #region GetMaxOutPatientId
+        [HttpPost]
+        public virtual ActionResult GetMaxOutPatientId()
+        {
+            try
+            {
+                var result = OutPatientRepositary().GetMaxOutPatientId();
 
+                var jsonResult = Json(result, JsonRequestBehavior.AllowGet);
+                jsonResult.MaxJsonLength = int.MaxValue;
+                return jsonResult;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
+            return returnNull;
+        }
+        #endregion
         #region bindGenerateBarcode
         [HttpPost]
         public virtual ActionResult GenerateBarcode()
@@ -148,6 +171,7 @@ namespace PepinoHealth.App.Controllers
             try
             {
                 outPatientRegistration.Barcode_Image = (byte[])TempData["barcodeImg"];
+               
                 var result = OutPatientRepositary().CRUDOPRegistrationDetails(outPatientRegistration);
 
                 var jsonResult = Json(result, JsonRequestBehavior.AllowGet);

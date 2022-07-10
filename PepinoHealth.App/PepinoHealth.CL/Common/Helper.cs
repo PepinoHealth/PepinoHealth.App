@@ -32,6 +32,8 @@ namespace PepinoHealth.CL.Common
         public const string IPDPatientRegistration = "IPDPatientRegistration";
         public const string OutPatientRegistration = "OutPatientRegistration";
         public const string PatientDischarge = "PatientDischarge";
+        public const string GetIPDRegistrationDetails = "GetIPDRegistrationDetails";
+
         //OPRegistration
         public const string OPRegistration = "opregistration";
         public const string OPRevisitRegistration = "oprevisitRegistration";

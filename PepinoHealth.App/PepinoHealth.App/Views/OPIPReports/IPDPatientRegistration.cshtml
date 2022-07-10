@@ -1,20 +1,20 @@
-﻿
+﻿@using PepinoHealth.App.Helpers
+@using PepinoHealth.CL.Common
 @{
     ViewBag.Title = "IPDPatientRegistration";
 }
-
+@Html.WriteScriptInclude(Source.view_opipviews_opipreports)
 <script type="text/javascript">
     $(document).ready(function () {
-        applyDatePicker(
-            'txtStartDateTime',
-            'txtEndDateTime',
-            calendarFormatType.Date,
-            function (e, date) {
-            });
-        hideModal('loader');
+        bindControlsOnLoadInOPOPReports();
+        bindGetIPDDepartmentDetails();
+       
     });
 </script>
-
+<script type="text/javascript">
+    deptUrl                 = '@Url.Action(MVC.OPIPReports.GetOutPatientDepartmentDetails())';
+    IPDRegUrl               = '@Url.Action(MVC.OPIPReports.GetIPDRegistrationDetails())';
+</script>
 <div class="p-block v2">
     <div class="p-header">
         <div class="title">
@@ -23,7 +23,7 @@
     </div>
     <div class="p-body">
         <div class="p-body-content">
-            <form id="formDebitDetails">
+            <form id="formDebitDetails"  class="v2">
                 <section>
 
                     <div class="body">
@@ -64,9 +64,9 @@
                                     </div>
                                     <div class="col-md-3">
                                         <label></label>
-                                        <div class="input-group">
-                                            <button type="button" class="btn btn-success btn-sm">
-                                                Save
+                                        <div class="button-block">
+                                            <button type="button" class="btn btn-success btn-sm" data-action-id="@((int)ActionType.Save)">
+                                                Search..
                                             </button>
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@
                                         <div class="page-title" style="text-align:center">
                                             <h5 class="text-uppercase pagetitle">NEW VISIT PATIENT DETAILS</h5>
                                         </div>
-                                       
+
                                         <table class="table table-striped table-bordered nowrap t-voucher" cellspacing="0" width="100%" id="tbl-ipdregistration">
                                             <thead>
                                                 <tr>

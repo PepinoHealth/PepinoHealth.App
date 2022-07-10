@@ -83,6 +83,7 @@ namespace PepinoHealth.App.Controllers
         {
             public readonly string OPRegistration = "OPRegistration";
             public readonly string OPRevisitRegistration = "OPRevisitRegistration";
+            public readonly string GetMaxOutPatientId = "GetMaxOutPatientId";
             public readonly string GenerateBarcode = "GenerateBarcode";
             public readonly string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
             public readonly string CRUDOPRegistrationDetails = "CRUDOPRegistrationDetails";
@@ -93,6 +94,7 @@ namespace PepinoHealth.App.Controllers
         {
             public const string OPRegistration = "OPRegistration";
             public const string OPRevisitRegistration = "OPRevisitRegistration";
+            public const string GetMaxOutPatientId = "GetMaxOutPatientId";
             public const string GenerateBarcode = "GenerateBarcode";
             public const string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
             public const string CRUDOPRegistrationDetails = "CRUDOPRegistrationDetails";
@@ -149,6 +151,17 @@ namespace PepinoHealth.App.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.OPRevisitRegistration);
             OPRevisitRegistrationOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void GetMaxOutPatientIdOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult GetMaxOutPatientId()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetMaxOutPatientId);
+            GetMaxOutPatientIdOverride(callInfo);
             return callInfo;
         }
 

@@ -46,6 +46,7 @@
     <Compile Include="Common\DBConnection.cs" />
     <Compile Include="Common\DBObjects.cs" />
     <Compile Include="Common\ExceptionLogging.cs" />
+    <Compile Include="OPIPReportsInfo.cs" />
     <Compile Include="OutPatientInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

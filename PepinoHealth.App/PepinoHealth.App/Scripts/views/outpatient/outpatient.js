@@ -5,8 +5,9 @@
 
 // Action contol url variables to perform ajax calls
 var validateOPUrl = null;
-var deptUrl = null;
-var addOPRegURL = null;
+var deptUrl       = null;
+var addOPRegURL   = null;
+var maxOPID       = null;
 // Alert  messages
 
 
@@ -28,7 +29,6 @@ function bindControlsOnLoadInOPRegistration() {
 }
 
 function bindgenerateBarcode() {
-    result = false;
     var data = JSON.stringify('');
     callAPI(validateOPUrl, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
         function (data) {
@@ -36,9 +36,17 @@ function bindgenerateBarcode() {
             $('#barcodeImg').attr('src', "data:image/png;base64," + data);
         });
 
-    return result;
 }
+function bindGetMaxOutPatientId() {
+    var data = JSON.stringify('');
+    callAPI(maxOPID, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
+        function (data) {
+            $('#txtOPNo').html(data);
+            var res = parseInt(data)+1;
+            $('#txtNextUHID').html("SPG0122"+res);
+        });
 
+}
 function bindGetDepartmentDetails() {
     var data = JSON.stringify('');
     callAPI(deptUrl, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
@@ -124,8 +132,8 @@ function processOPRegistrationAction(object) {
 
     switch (actionTypeID) {
         case actionType.Save:
-
-            alert('This action is from Save button.');
+            addOPRegistrationDetails();
+           // alert('This action is from Save button.');
 
             break;
         case actionType.Refresh:

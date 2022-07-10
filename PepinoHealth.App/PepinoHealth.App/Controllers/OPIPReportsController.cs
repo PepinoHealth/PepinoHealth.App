@@ -49,5 +49,59 @@ namespace PepinoHealth.App.Controllers
             return View();
         }
         #endregion
+
+        #region Common Action Methods
+        dynamic returnNull = null;
+        private OPIPReportsRepositary OPIPReportsRepositary()
+        {
+            return new OPIPReportsRepositary();
+        }
+        private OutPatientRepositary OutPatientRepositary()
+        {
+            return new OutPatientRepositary();
+        }
+
+        #endregion
+
+        #region Other Action Methods
+
+        #region GetOutPatientDepartmentDetails
+        [HttpPost]
+        public virtual ActionResult GetOutPatientDepartmentDetails()
+        {
+            try
+            {
+                var result = OutPatientRepositary().GetOutPatientDepartmentDetails();
+
+                var jsonResult = Json(result, JsonRequestBehavior.AllowGet);
+                jsonResult.MaxJsonLength = int.MaxValue;
+                return jsonResult;
+            }
+            catch (Exception ex)
+            {
+            }
+            return returnNull;
+
+        }
+        #region GetIPDRegistrationDetails
+        [HttpPost]
+        public virtual ActionResult GetIPDRegistrationDetails(string Department, DateTime StartDate, DateTime EndDate)
+        {
+            try
+            {
+                var result = OPIPReportsRepositary().GetIPDRegistrationDetails(Department, StartDate, EndDate);
+
+                var jsonResult = Json(result, JsonRequestBehavior.AllowGet);
+                jsonResult.MaxJsonLength = int.MaxValue;
+                return jsonResult;
+            }
+            catch (Exception ex)
+            {
+            }
+            return returnNull;
+        }
+        #endregion
+        #endregion
+        #endregion
     }
 }

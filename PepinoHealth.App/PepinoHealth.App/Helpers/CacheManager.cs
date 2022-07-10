@@ -22,7 +22,8 @@ namespace PepinoHealth.App.Helpers
         trumbowyg,
         view_common_common,
         view_user_register,
-        view_outpatient_outpatient
+        view_outpatient_outpatient,
+        view_opipviews_opipreports
     }
 
     public static class CacheManager
@@ -69,7 +70,8 @@ namespace PepinoHealth.App.Helpers
             ///////////////////////////////////
             ,{ Source.view_common_common,                   Links.Scripts.views.common.common_js }
             ,{ Source.view_user_register,                   Links.Scripts.views.user.register_js }
-            ,{Source.view_outpatient_outpatient,            Links.Scripts.views.outpatient.outpatient_js}
+            ,{ Source.view_outpatient_outpatient,           Links.Scripts.views.outpatient.outpatient_js}
+            ,{ Source.view_opipviews_opipreports,           Links.Scripts.views.opipviews.opipviews_js}
         };
 
         #endregion

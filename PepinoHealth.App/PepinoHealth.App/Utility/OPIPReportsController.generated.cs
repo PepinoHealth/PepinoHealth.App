@@ -59,6 +59,12 @@ namespace PepinoHealth.App.Controllers
             return RedirectToActionPermanent(taskResult.Result);
         }
 
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult GetIPDRegistrationDetails()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetIPDRegistrationDetails);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public OPIPReportsController Actions { get { return MVC.OPIPReports; } }
@@ -78,6 +84,8 @@ namespace PepinoHealth.App.Controllers
             public readonly string IPDPatientRegistration = "IPDPatientRegistration";
             public readonly string OutPatientRegistration = "OutPatientRegistration";
             public readonly string PatientDischarge = "PatientDischarge";
+            public readonly string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
+            public readonly string GetIPDRegistrationDetails = "GetIPDRegistrationDetails";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -86,9 +94,21 @@ namespace PepinoHealth.App.Controllers
             public const string IPDPatientRegistration = "IPDPatientRegistration";
             public const string OutPatientRegistration = "OutPatientRegistration";
             public const string PatientDischarge = "PatientDischarge";
+            public const string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
+            public const string GetIPDRegistrationDetails = "GetIPDRegistrationDetails";
         }
 
 
+        static readonly ActionParamsClass_GetIPDRegistrationDetails s_params_GetIPDRegistrationDetails = new ActionParamsClass_GetIPDRegistrationDetails();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_GetIPDRegistrationDetails GetIPDRegistrationDetailsParams { get { return s_params_GetIPDRegistrationDetails; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_GetIPDRegistrationDetails
+        {
+            public readonly string Department = "Department";
+            public readonly string StartDate = "StartDate";
+            public readonly string EndDate = "EndDate";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -144,6 +164,31 @@ namespace PepinoHealth.App.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.PatientDischarge);
             PatientDischargeOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void GetOutPatientDepartmentDetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult GetOutPatientDepartmentDetails()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetOutPatientDepartmentDetails);
+            GetOutPatientDepartmentDetailsOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void GetIPDRegistrationDetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string Department, System.DateTime StartDate, System.DateTime EndDate);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult GetIPDRegistrationDetails(string Department, System.DateTime StartDate, System.DateTime EndDate)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetIPDRegistrationDetails);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "Department", Department);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "StartDate", StartDate);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "EndDate", EndDate);
+            GetIPDRegistrationDetailsOverride(callInfo, Department, StartDate, EndDate);
             return callInfo;
         }
 
