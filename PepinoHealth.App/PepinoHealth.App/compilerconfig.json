@@ -2,5 +2,9 @@
   {
     "outputFile": "Scripts/views/opipviews/opipviews.es5.js",
     "inputFile": "Scripts/views/opipviews/opipviews.js"
+  },
+  {
+    "outputFile": "Scripts/views/opbilling/opbilling.es5.js",
+    "inputFile": "Scripts/views/opbilling/opbilling.js"
   }
 ]

@@ -131,5 +131,11 @@
     "inputFiles": [
       "Scripts/bootstrap/bootstrap-datetimepicker/bootstrap-datetimepicker.js"
     ]
+  },
+  {
+    "outputFileName": "Scripts/views/opbilling/opbilling.min.js",
+    "inputFiles": [
+      "Scripts/views/opbilling/opbilling.js"
+    ]
   }
 ]

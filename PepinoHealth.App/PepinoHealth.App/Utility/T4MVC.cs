@@ -240,6 +240,14 @@ namespace Links
             }
         
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class opbilling {
+                public const string UrlPath = "~/Scripts/views/opbilling";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string opbilling_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/opbilling.min.js") ? Url("opbilling.min.js") : Url("opbilling.js");
+            }
+        
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
             public static class opipviews {
                 public const string UrlPath = "~/Scripts/views/opipviews";
                 public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
@@ -578,6 +586,13 @@ namespace Links
                     {
                         public static readonly string common_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/common/common.js"); 
                         public static readonly string common_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/common/common.min.js"); 
+                    }
+                }
+                public static partial class opbilling 
+                {
+                    public static class Assets
+                    {
+                        public static readonly string opbilling_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/opbilling/opbilling.js"); 
                     }
                 }
                 public static partial class opipviews 

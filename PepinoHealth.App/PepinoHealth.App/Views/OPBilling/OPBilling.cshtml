@@ -1,11 +1,15 @@
-﻿
+﻿@using PepinoHealth.CL.Common
+@using PepinoHealth.App.Helpers
+
 @{
     ViewBag.Title = "OP Billing";
 }
 
+@Html.WriteScriptInclude(Source.view_opbilling_opbilling)
+
 <script type="text/javascript">
     $(document).ready(function () {
-        hideModal('loader');
+        bindControlsOnLoadInOPBilling();
     })
 </script>
 
@@ -219,7 +223,7 @@
                                             <tr>
                                                 <td>1.</td>
                                                 <td>
-                                                    <input type="text" class="form-control" />
+                                                    <input list="services" class="form-control" />
                                                 </td>
                                                 <td>
                                                     <input type="text" class="form-control" />
@@ -235,7 +239,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="action">
-                                                        <div class="add">
+                                                        <div class="add" data-operation-id="@((int)OperationType.Add)">
                                                             <i class="material-icons">add</i>
                                                         </div>
                                                     </div>
@@ -244,7 +248,7 @@
                                             <tr>
                                                 <td>2.</td>
                                                 <td>
-                                                    <input type="text" class="form-control" />
+                                                    <input list="services" class="form-control" />
                                                 </td>
                                                 <td>
                                                     <input type="text" class="form-control" />
@@ -260,7 +264,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="action">
-                                                        <div class="remove">
+                                                        <div class="remove" data-operation-id="@((int)OperationType.Remove)">
                                                             <i class="material-icons">remove</i>
                                                         </div>
                                                     </div>
@@ -269,7 +273,7 @@
                                             <tr>
                                                 <td>3.</td>
                                                 <td>
-                                                    <input type="text" class="form-control" />
+                                                    <input list="services" class="form-control" />
                                                 </td>
                                                 <td>
                                                     <input type="text" class="form-control" />
@@ -285,7 +289,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="action">
-                                                        <div class="remove">
+                                                        <div class="remove" data-operation-id="@((int)OperationType.Remove)">
                                                             <i class="material-icons">remove</i>
                                                         </div>
                                                     </div>
@@ -294,7 +298,7 @@
                                             <tr>
                                                 <td>4.</td>
                                                 <td>
-                                                    <input type="text" class="form-control" />
+                                                    <input list="services" class="form-control" />
                                                 </td>
                                                 <td>
                                                     <input type="text" class="form-control" />
@@ -310,7 +314,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="action">
-                                                        <div class="remove">
+                                                        <div class="remove" data-operation-id="@((int)OperationType.Remove)">
                                                             <i class="material-icons">remove</i>
                                                         </div>
                                                     </div>
@@ -319,7 +323,7 @@
                                             <tr>
                                                 <td>5.</td>
                                                 <td>
-                                                    <input type="text" class="form-control" />
+                                                    <input list="services" class="form-control" />
                                                 </td>
                                                 <td>
                                                     <input type="text" class="form-control" />
@@ -335,7 +339,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="action">
-                                                        <div class="remove">
+                                                        <div class="remove" data-operation-id="@((int)OperationType.Remove)">
                                                             <i class="material-icons">remove</i>
                                                         </div>
                                                     </div>
@@ -496,3 +500,12 @@
         </div>
     </div>
 </div>
+
+@* Service Lis t*@
+<datalist id="services">
+    <option value="Service 1">
+    <option value="Service 2">
+    <option value="Service 3">
+    <option value="Service 4">
+    <option value="Service 5">
+</datalist>

@@ -35,5 +35,11 @@ namespace PepinoHealth.CL.Common
         Delete = 6
     }
 
+    public enum OperationType
+    {
+        Add = 1,
+        Remove = 2
+    }
+
     #endregion
 }

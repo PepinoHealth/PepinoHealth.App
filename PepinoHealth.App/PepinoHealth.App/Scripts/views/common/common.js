@@ -75,6 +75,10 @@ var actionType = {
     Delete: 6
 }
 
+var operationType = {
+    Add: 1,
+    Remove: 2
+}
 
 ////////////////////////////
 // Common functions start //
