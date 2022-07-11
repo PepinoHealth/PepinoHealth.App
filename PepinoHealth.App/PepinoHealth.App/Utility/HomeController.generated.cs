@@ -104,6 +104,7 @@ namespace PepinoHealth.App.Controllers
             public readonly string Registration = "Registration";
             public readonly string Page1 = "Page1";
             public readonly string Page2 = "Page2";
+            public readonly string Datatable = "Datatable";
             public readonly string ValidateUser = "ValidateUser";
             public readonly string GrantAccess = "GrantAccess";
         }
@@ -122,6 +123,7 @@ namespace PepinoHealth.App.Controllers
             public const string Registration = "Registration";
             public const string Page1 = "Page1";
             public const string Page2 = "Page2";
+            public const string Datatable = "Datatable";
             public const string ValidateUser = "ValidateUser";
             public const string GrantAccess = "GrantAccess";
         }
@@ -162,6 +164,7 @@ namespace PepinoHealth.App.Controllers
             public class _ViewNamesClass
             {
                 public readonly string DashBoard = "DashBoard";
+                public readonly string Datatable = "Datatable";
                 public readonly string Index = "Index";
                 public readonly string Login = "Login";
                 public readonly string Page1 = "Page1";
@@ -172,6 +175,7 @@ namespace PepinoHealth.App.Controllers
                 public readonly string RegistrationV2 = "RegistrationV2";
             }
             public readonly string DashBoard = "~/Views/Home/DashBoard.cshtml";
+            public readonly string Datatable = "~/Views/Home/Datatable.cshtml";
             public readonly string Index = "~/Views/Home/Index.cshtml";
             public readonly string Login = "~/Views/Home/Login.cshtml";
             public readonly string Page1 = "~/Views/Home/Page1.cshtml";
@@ -307,6 +311,17 @@ namespace PepinoHealth.App.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Page2);
             Page2Override(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void DatatableOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Datatable()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Datatable);
+            DatatableOverride(callInfo);
             return callInfo;
         }
 

@@ -7,6 +7,11 @@
 ~/Scripts/bootstrap/bootstrap-validator/bootstrap-validator.min.js
 ~/Scripts/bootstrap/bootstrap-datetimepicker/bootstrap-datetimepicker.js
 ~/Scripts/material/material.min.js
+~/Scripts/datatable/jquery.dataTables.min.js
+~/Scripts/datatable/dataTables.material.min.js
+~/Scripts/datatable/dataTables.rowReorder.min.js
+~/Scripts/datatable/dataTables.responsive.min.js
+~/Scripts/datatable/fnFilterClear.min.js
 ~/Scripts/trumbowyg/trumbowyg.min.js
 ~/Scripts/trumbowyg/trumbowyg.table.min.js
 ~/Scripts/trumbowyg/trumbowyg.colors.min.js

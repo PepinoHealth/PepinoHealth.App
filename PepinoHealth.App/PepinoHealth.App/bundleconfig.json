@@ -137,5 +137,83 @@
     "inputFiles": [
       "Scripts/views/opbilling/opbilling.js"
     ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/buttons.flash.min.js",
+    "inputFiles": [
+      "Scripts/datatable/buttons.flash.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/buttons.html5.min.js",
+    "inputFiles": [
+      "Scripts/datatable/buttons.html5.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/buttons.print.min.js",
+    "inputFiles": [
+      "Scripts/datatable/buttons.print.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/dataTables.buttons.min.js",
+    "inputFiles": [
+      "Scripts/datatable/dataTables.buttons.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/dataTables.material.min.js",
+    "inputFiles": [
+      "Scripts/datatable/dataTables.material.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/dataTables.responsive.min.js",
+    "inputFiles": [
+      "Scripts/datatable/dataTables.responsive.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/dataTables.rowGroup.min.js",
+    "inputFiles": [
+      "Scripts/datatable/dataTables.rowGroup.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/dataTables.rowReorder.min.js",
+    "inputFiles": [
+      "Scripts/datatable/dataTables.rowReorder.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/fnFilterClear.min.js",
+    "inputFiles": [
+      "Scripts/datatable/fnFilterClear.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/jquery.dataTables.min.js",
+    "inputFiles": [
+      "Scripts/datatable/jquery.dataTables.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/jszip.min.js",
+    "inputFiles": [
+      "Scripts/datatable/jszip.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/pdfmake.min.js",
+    "inputFiles": [
+      "Scripts/datatable/pdfmake.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/vfs_fonts.min.js",
+    "inputFiles": [
+      "Scripts/datatable/vfs_fonts.js"
+    ]
   }
 ]

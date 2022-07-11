@@ -113,6 +113,39 @@ namespace Links
         }
     
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class datatable {
+            public const string UrlPath = "~/Scripts/datatable";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            public static readonly string buttons_flash_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/buttons.flash.min.js") ? Url("buttons.flash.min.js") : Url("buttons.flash.js");
+            public static readonly string buttons_flash_min_js = Url("buttons.flash.min.js");
+            public static readonly string buttons_html5_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/buttons.html5.min.js") ? Url("buttons.html5.min.js") : Url("buttons.html5.js");
+            public static readonly string buttons_html5_min_js = Url("buttons.html5.min.js");
+            public static readonly string buttons_print_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/buttons.print.min.js") ? Url("buttons.print.min.js") : Url("buttons.print.js");
+            public static readonly string buttons_print_min_js = Url("buttons.print.min.js");
+            public static readonly string dataTables_buttons_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/dataTables.buttons.min.js") ? Url("dataTables.buttons.min.js") : Url("dataTables.buttons.js");
+            public static readonly string dataTables_buttons_min_js = Url("dataTables.buttons.min.js");
+            public static readonly string dataTables_material_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/dataTables.material.min.js") ? Url("dataTables.material.min.js") : Url("dataTables.material.js");
+            public static readonly string dataTables_material_min_js = Url("dataTables.material.min.js");
+            public static readonly string dataTables_responsive_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/dataTables.responsive.min.js") ? Url("dataTables.responsive.min.js") : Url("dataTables.responsive.js");
+            public static readonly string dataTables_responsive_min_js = Url("dataTables.responsive.min.js");
+            public static readonly string dataTables_rowGroup_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/dataTables.rowGroup.min.js") ? Url("dataTables.rowGroup.min.js") : Url("dataTables.rowGroup.js");
+            public static readonly string dataTables_rowGroup_min_js = Url("dataTables.rowGroup.min.js");
+            public static readonly string dataTables_rowReorder_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/dataTables.rowReorder.min.js") ? Url("dataTables.rowReorder.min.js") : Url("dataTables.rowReorder.js");
+            public static readonly string dataTables_rowReorder_min_js = Url("dataTables.rowReorder.min.js");
+            public static readonly string fnFilterClear_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/fnFilterClear.min.js") ? Url("fnFilterClear.min.js") : Url("fnFilterClear.js");
+            public static readonly string fnFilterClear_min_js = Url("fnFilterClear.min.js");
+            public static readonly string jquery_dataTables_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/jquery.dataTables.min.js") ? Url("jquery.dataTables.min.js") : Url("jquery.dataTables.js");
+            public static readonly string jquery_dataTables_min_js = Url("jquery.dataTables.min.js");
+            public static readonly string jszip_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/jszip.min.js") ? Url("jszip.min.js") : Url("jszip.js");
+            public static readonly string jszip_min_js = Url("jszip.min.js");
+            public static readonly string pdfmake_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/pdfmake.min.js") ? Url("pdfmake.min.js") : Url("pdfmake.js");
+            public static readonly string pdfmake_min_js = Url("pdfmake.min.js");
+            public static readonly string vfs_fonts_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/vfs_fonts.min.js") ? Url("vfs_fonts.min.js") : Url("vfs_fonts.js");
+            public static readonly string vfs_fonts_min_js = Url("vfs_fonts.min.js");
+        }
+    
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public static class dynamic {
             public const string UrlPath = "~/Scripts/dynamic";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
@@ -245,6 +278,7 @@ namespace Links
                 public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
                 public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
                 public static readonly string opbilling_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/opbilling.min.js") ? Url("opbilling.min.js") : Url("opbilling.js");
+                public static readonly string opbilling_min_js = Url("opbilling.min.js");
             }
         
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -312,6 +346,18 @@ namespace Links
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
             public static readonly string common_less = Url("common.less");
+        }
+    
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class datatable {
+            public const string UrlPath = "~/Content/datatable";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            public static readonly string buttons_dataTables_less = Url("buttons.dataTables.less");
+            public static readonly string dataTables_material_less = Url("dataTables.material.less");
+            public static readonly string responsive_dataTables_less = Url("responsive.dataTables.less");
+            public static readonly string rowGroup_dataTables_less = Url("rowGroup.dataTables.less");
+            public static readonly string rowReorder_dataTables_less = Url("rowReorder.dataTables.less");
         }
     
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -479,6 +525,38 @@ namespace Links
                     public static readonly string chart_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/chart/chart.min.js"); 
                 }
             }
+            public static partial class datatable 
+            {
+                public static class Assets
+                {
+                    public static readonly string buttons_flash_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/buttons.flash.js"); 
+                    public static readonly string buttons_flash_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/buttons.flash.min.js"); 
+                    public static readonly string buttons_html5_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/buttons.html5.js"); 
+                    public static readonly string buttons_html5_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/buttons.html5.min.js"); 
+                    public static readonly string buttons_print_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/buttons.print.js"); 
+                    public static readonly string buttons_print_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/buttons.print.min.js"); 
+                    public static readonly string dataTables_buttons_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/dataTables.buttons.js"); 
+                    public static readonly string dataTables_buttons_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/dataTables.buttons.min.js"); 
+                    public static readonly string dataTables_material_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/dataTables.material.js"); 
+                    public static readonly string dataTables_material_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/dataTables.material.min.js"); 
+                    public static readonly string dataTables_responsive_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/dataTables.responsive.js"); 
+                    public static readonly string dataTables_responsive_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/dataTables.responsive.min.js"); 
+                    public static readonly string dataTables_rowGroup_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/dataTables.rowGroup.js"); 
+                    public static readonly string dataTables_rowGroup_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/dataTables.rowGroup.min.js"); 
+                    public static readonly string dataTables_rowReorder_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/dataTables.rowReorder.js"); 
+                    public static readonly string dataTables_rowReorder_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/dataTables.rowReorder.min.js"); 
+                    public static readonly string fnFilterClear_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/fnFilterClear.js"); 
+                    public static readonly string fnFilterClear_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/fnFilterClear.min.js"); 
+                    public static readonly string jquery_dataTables_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/jquery.dataTables.js"); 
+                    public static readonly string jquery_dataTables_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/jquery.dataTables.min.js"); 
+                    public static readonly string jszip_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/jszip.js"); 
+                    public static readonly string jszip_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/jszip.min.js"); 
+                    public static readonly string pdfmake_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/pdfmake.js"); 
+                    public static readonly string pdfmake_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/pdfmake.min.js"); 
+                    public static readonly string vfs_fonts_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/vfs_fonts.js"); 
+                    public static readonly string vfs_fonts_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/datatable/vfs_fonts.min.js"); 
+                }
+            }
             public static partial class dynamic 
             {
                 public static class Assets
@@ -593,6 +671,7 @@ namespace Links
                     public static class Assets
                     {
                         public static readonly string opbilling_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/opbilling/opbilling.js"); 
+                        public static readonly string opbilling_min_js_ = T4MVCHelpers.ProcessAssetPath("~/Scripts/views/opbilling/opbilling.min.js"); 
                     }
                 }
                 public static partial class opipviews 
@@ -647,6 +726,12 @@ namespace Links
                 }
             }
             public static partial class common 
+            {
+                public static class Assets
+                {
+                }
+            }
+            public static partial class datatable 
             {
                 public static class Assets
                 {

@@ -127,6 +127,11 @@ namespace PepinoHealth.App.Controllers
             return View();
         }
 
+        public virtual ActionResult Datatable()
+        {
+            return View();
+        }
+
         #endregion
 
         #region Business Methods

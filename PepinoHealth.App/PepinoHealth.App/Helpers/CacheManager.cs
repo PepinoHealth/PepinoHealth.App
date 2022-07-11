@@ -11,6 +11,19 @@ namespace PepinoHealth.App.Helpers
         bootstrap_validator,
         bootstrap_datetimepicker,
         chart,
+        datatable_roworder,
+        datatable_responsive,
+        datatable_rowgroup,
+        datatable_material,
+        datatable_buttons_html5,
+        datatable_buttons,
+        datatable_jszip,
+        datatable_buttons_flash,
+        datatable_buttons_print,
+        datatable_pdfmake,
+        datatable_vfs_fonts,
+        jquery_datatable,
+        fnFilterClear,
         master,
         jquery,
         jquery_validate,
@@ -45,6 +58,23 @@ namespace PepinoHealth.App.Helpers
             // ------------------- chart ------------------- //
             ///////////////////////////////////////////////////
             ,{ Source.chart,                                Links.Scripts.chart.chart_js}
+
+            ////////////////////////////////////////////////////////
+            // ------------------- datatable -------------------- //
+            ////////////////////////////////////////////////////////
+            ,{ Source.jquery_datatable,                     Links.Scripts.datatable.jquery_dataTables_js }
+            ,{ Source.datatable_roworder,                   Links.Scripts.datatable.dataTables_rowReorder_js }
+            ,{ Source.datatable_responsive,                 Links.Scripts.datatable.dataTables_responsive_js }
+            ,{ Source.datatable_rowgroup,                   Links.Scripts.datatable.dataTables_rowGroup_js }
+            ,{ Source.datatable_material,                   Links.Scripts.datatable.dataTables_material_js }
+            ,{ Source.datatable_buttons_html5,              Links.Scripts.datatable.buttons_html5_js }
+            ,{ Source.datatable_buttons,                    Links.Scripts.datatable.dataTables_buttons_js }
+            ,{ Source.datatable_jszip,                      Links.Scripts.datatable.jszip_js }
+            ,{ Source.datatable_buttons_flash,              Links.Scripts.datatable.buttons_flash_js }
+            ,{ Source.datatable_buttons_print,              Links.Scripts.datatable.buttons_print_js }
+            ,{ Source.datatable_pdfmake,                    Links.Scripts.datatable.pdfmake_js }
+            ,{ Source.datatable_vfs_fonts,                  Links.Scripts.datatable.vfs_fonts_js }
+            ,{ Source.fnFilterClear,                        Links.Scripts.datatable.fnFilterClear_js }
 
             ///////////////////////////////////////
             // ----------- dynamic ----------- //

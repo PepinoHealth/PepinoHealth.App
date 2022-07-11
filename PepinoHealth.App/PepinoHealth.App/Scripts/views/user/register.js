@@ -261,3 +261,25 @@ function bindAppointmentChart() {
 /////////////////////////////
 // Dashboard functions end //
 /////////////////////////////
+
+
+///////////////////////////////
+// Datatable functions start //
+///////////////////////////////
+
+function bindControlsOnLoadInDatatable() {
+    bindDatatable();
+    hideModal('loader');
+}
+
+function bindDatatable() {
+    $('#tbl-datatable').DataTable({
+        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+        responsive: true,
+        "order": [[0, "asc"]]
+    });
+}
+
+/////////////////////////////
+// Datatable functions end //
+/////////////////////////////
