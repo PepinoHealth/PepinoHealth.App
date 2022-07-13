@@ -20,7 +20,7 @@ namespace PepinoHealth.App.Helpers
 
             StringBuilder stringBuilder = new StringBuilder();
 
-            if (fileName.Contains(Helper.Master))
+            if (fileName.Contains(Helper.Master) ||  fileName.Contains(Helper.Export))
             {
                 filePaths = File.ReadAllLines(fileName);
 

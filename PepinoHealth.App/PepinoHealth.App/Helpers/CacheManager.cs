@@ -24,6 +24,7 @@ namespace PepinoHealth.App.Helpers
         datatable_vfs_fonts,
         jquery_datatable,
         fnFilterClear,
+        export,
         master,
         jquery,
         jquery_validate,
@@ -79,6 +80,7 @@ namespace PepinoHealth.App.Helpers
             ///////////////////////////////////////
             // ----------- dynamic ----------- //
             ///////////////////////////////////////
+            ,{ Source.export,                               Links.Scripts.dynamic.export_js }
             ,{ Source.master,                               Links.Scripts.dynamic.master_js }
             
             ////////////////////////////////////

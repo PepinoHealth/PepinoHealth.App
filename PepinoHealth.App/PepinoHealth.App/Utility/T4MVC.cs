@@ -150,6 +150,7 @@ namespace Links
             public const string UrlPath = "~/Scripts/dynamic";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            public static readonly string export_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/export.min.js") ? Url("export.min.js") : Url("export.js");
             public static readonly string master_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/master.min.js") ? Url("master.min.js") : Url("master.js");
         }
     
@@ -561,6 +562,7 @@ namespace Links
             {
                 public static class Assets
                 {
+                    public static readonly string export_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/dynamic/export.js"); 
                     public static readonly string master_js = T4MVCHelpers.ProcessAssetPath("~/Scripts/dynamic/master.js"); 
                 }
             }

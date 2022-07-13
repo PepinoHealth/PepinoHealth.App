@@ -247,6 +247,12 @@ function callFuncOnLoad() {
 }
 
 function registerEventsInApp() {
+    $('header, .body-block, footer').on('click', function (e) {
+        $('.notification_dd').removeClass('active');
+    }).find('.notification-bar').on('click', function (e) {
+        e.stopPropagation();
+    });
+
     $('.show_less,.show_more').on('click', function (e) {
         $(e.currentTarget).parents('.notify_data').toggleClass('more');
     });

@@ -1004,7 +1004,7 @@ exports.generateWorker = function (zip, options, comment) {
  * @constructor
  */
 function JSZip() {
-    // if this constructor isÂ used withoutÂ `new`, itÂ adds `new` beforeÂ itself:
+    // if this constructor is used without `new`, it adds `new` before itself:
     if(!(this instanceof JSZip)) {
         return new JSZip();
     }
@@ -3718,7 +3718,7 @@ ZipEntries.prototype = {
             // console.warn(extraBytes, "extra bytes at beginning or within zipfile");
             if (this.isSignature(endOfCentralDirOffset, sig.CENTRAL_FILE_HEADER)) {
                 // The offsets seem wrong, but we have something at the specified offset.
-                // Soâ€¦ we keep it.
+                // So… we keep it.
             } else {
                 // the offset is wrong, update the "zero" of the reader
                 // this happens if data has been prepended (crx files for example)

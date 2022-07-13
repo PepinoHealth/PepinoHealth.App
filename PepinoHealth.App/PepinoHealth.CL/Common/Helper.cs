@@ -46,6 +46,7 @@ namespace PepinoHealth.CL.Common
         public const string ApplicationName = "Pepino Health";
 
         public const string Master = "master";
+        public const string Export = "export";
 
         public const int PageCacheTimeOut = 31536000;
         public const int PostCacheTimeOut = 86400;
