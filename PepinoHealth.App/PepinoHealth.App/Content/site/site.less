@@ -959,6 +959,87 @@ table.t-voucher {
     }
 }
 
+#mdl-id-details {
+    &.show {
+        pointer-events: all;
+    }
+
+    .modal-dialog {
+        max-width: 1000px;
+
+        .modal-content {
+            background: @bg-color1;
+            border-top-left-radius: @br-radius;
+            border-top-right-radius: @br-radius;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            .modal-header {
+                padding: .5rem .5rem .25rem;
+
+                .modal-title {
+                    color: @white-color;
+                    font-weight: 500;
+                }
+
+                .btn-close {
+                    color: @white-color;
+                    cursor: pointer;
+                }
+            }
+
+            .modal-body {
+                padding: .5rem;
+                margin: 0 .5rem;
+                background: @white-color;
+                border-top-left-radius: @br-radius;
+                border-top-right-radius: @br-radius;
+                color: #000;
+
+                .btn-search-icon {
+                    padding: 0.25rem;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    min-height: 35px;
+                    min-width: 35px;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .modal-footer {
+                background: @bg-color1;
+                padding: 0;
+                min-height: .5rem;
+            }
+        }
+    }
+
+    @media(max-width: 992px) {
+        .modal-dialog {
+            max-width: ~"calc(100% - 3rem)" !important;
+            max-width: ~"calc(100% - 3rem)" !important;
+        }
+    }
+}
+
+.mdl-block {
+    .mdl-header {
+        .title {
+            margin-bottom: 0;
+        }
+    }
+
+    .mdl-body {
+        min-height: 200px;
+    }
+
+    .mdl-footer {
+    }
+}
+
 span.required {
     color: red;
 }
@@ -2309,3 +2390,114 @@ span.required {
 }
 
 /* Debit Details page styles */
+
+/* Advance Receipt page styles */
+
+#formAdvanceReceipt {
+    .btn-search-icon {
+        padding: 0.25rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        min-height: 35px;
+        min-width: 35px;
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    .form-title {
+        max-width: 50px;
+        margin-right: .5rem;
+    }
+
+    .form-group {
+        margin-bottom: .75rem;
+    }
+
+    .form-label {
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding: .25rem 0;
+    }
+
+    .form-currency {
+        text-align: right;
+    }
+
+    textarea {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding: .25rem 0;
+        min-height: 36px;
+        border-radius: 0;
+    }
+
+    textarea.ta-2 {
+        min-height: 72px;
+    }
+
+    .input-group-addon {
+        font-size: .875rem;
+    }
+
+    .custom-radio {
+        margin-right: 0;
+    }
+
+    .button-block {
+        text-align: center;
+        margin: .5rem 0 0 .75rem;
+
+        button {
+            margin: 0 .25rem;
+            min-width: 75px;
+        }
+
+        @media(max-width: 1200px) {
+
+            button {
+                margin: 0 .25rem .5rem;
+            }
+        }
+    }
+
+
+    .voucher-seperetor {
+        border-left: 1px solid @bg-color1;
+        padding-left: 1rem;
+        height: 100%;
+        width: 100%;
+    }
+
+    @media(max-width: 1200px) {
+        .voucher-seperetor {
+            margin-top: .25rem;
+            padding-left: 0;
+            padding-top: .5rem;
+            border-left: 0;
+            border-top: 1px solid @bg-color1;
+        }
+    }
+}
+
+.ar-btn-view {
+    margin-top: 1.5rem;
+}
+
+@media(max-width: 600px) {
+    .ar-btn-view {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: inherit;
+    }
+}
+
+#tbl-ad_paginate {
+    top: unset;
+}
+
+
+/* Advance Receipt page styles */

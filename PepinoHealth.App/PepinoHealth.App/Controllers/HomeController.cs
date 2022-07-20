@@ -132,6 +132,11 @@ namespace PepinoHealth.App.Controllers
             return View();
         }
 
+        public virtual ActionResult AdvanceReceipt()
+        {
+            return View();
+        }
+
         #endregion
 
         #region Business Methods
