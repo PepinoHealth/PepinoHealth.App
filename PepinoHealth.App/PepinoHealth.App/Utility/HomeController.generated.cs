@@ -105,6 +105,7 @@ namespace PepinoHealth.App.Controllers
             public readonly string Page1 = "Page1";
             public readonly string Page2 = "Page2";
             public readonly string Datatable = "Datatable";
+            public readonly string AdvanceReceipt = "AdvanceReceipt";
             public readonly string ValidateUser = "ValidateUser";
             public readonly string GrantAccess = "GrantAccess";
         }
@@ -124,6 +125,7 @@ namespace PepinoHealth.App.Controllers
             public const string Page1 = "Page1";
             public const string Page2 = "Page2";
             public const string Datatable = "Datatable";
+            public const string AdvanceReceipt = "AdvanceReceipt";
             public const string ValidateUser = "ValidateUser";
             public const string GrantAccess = "GrantAccess";
         }
@@ -322,6 +324,17 @@ namespace PepinoHealth.App.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Datatable);
             DatatableOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void AdvanceReceiptOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult AdvanceReceipt()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.AdvanceReceipt);
+            AdvanceReceiptOverride(callInfo);
             return callInfo;
         }
 
