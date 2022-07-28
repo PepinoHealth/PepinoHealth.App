@@ -211,7 +211,7 @@
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">autorenew</i><span>Next Visit</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">autorenew</i><span>Next Visit Report</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">insert_chart</i><span>OP Medical Records</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">person</i><span>Doctor Desk</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OutPatient.DoctorDesk())"><i class="material-icons">person</i><span>Doctor Desk</span></a></li>
 
                                         </ul>
                                     </div>
@@ -225,9 +225,14 @@
                                         </div>
 
                                         <ul class="sub-menu">
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.IPModule.ObstetricDischargeSummary())"><i class="material-icons">assignment</i><span>IP Registration</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.IPModule.IPDRegistration())"><i class="material-icons">assignment</i><span>IP Registration</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">insert_chart</i><span>IP Reports</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.IPModule.DischargeSummary())"><i class="material-icons">assignment</i><span>Discharge Summary</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.IPModule.ObstetricDischargeSummary())"><i class="material-icons">assignment</i><span>OBG Discharge Summary</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.IPModule.DischargeSummary())"><i class="material-icons">assignment</i><span>CaseSheet</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.IPModule.DischargeSummary())"><i class="material-icons">assignment</i><span>Concent Reports</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.IPModule.DischargeSummary())"><i class="material-icons">assignment</i><span>SONO Graphy</span></a></li>
+                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.IPModule.DischargeSummary())"><i class="material-icons">assignment</i><span>GYNEC</span></a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -242,10 +247,57 @@
                                         <ul class="sub-menu">
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OPBilling.DebitDetails())"><i class="material-icons">perm_data_setting</i><span>Tariff Master</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OPBilling.OPBilling())"><i class="material-icons">receipt</i><span>OP Billing</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OPBilling.IPDayWiseBilling())"><i class="material-icons">receipt</i><span>IP Billing</span></a></li>
+                                            <li class="sub-menu-item cascade">
+                                                <div class="sub-child-nav-block">
+                                                    <div class="sub-child-nav-menu-item">
+                                                        <i class="material-icons">receipt</i>
+                                                        <sapn>IP Billing</sapn>
+                                                        <i class="material-icons">keyboard_arrow_down</i>
+                                                    </div>
+
+                                                    <ul class="sub-child-menu">
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>IP Advance</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>IP Charges</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>IP Cash Bill</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>IP Discharge Bill</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>IP Refund</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Insurance Bill</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Insurance Payment</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>IP Breakup Bill</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Insureance Receipt</span></a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OPBilling.DischargeBilling())"><i class="material-icons">perm_data_setting</i><span>Balance Amount Update</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="@Url.Action(MVC.OPBilling.PatientCashRefund())"><i class="material-icons">list</i><span>Daily Expenses</span></a></li>
-                                            <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">insert_chart</i><span>Reports</span></a></li>
+                                            <li class="sub-menu-item cascade">
+                                                <div class="sub-child-nav-block">
+                                                    <div class="sub-child-nav-menu-item">
+                                                        <i class="material-icons">insert_chart</i>
+                                                        <sapn>Reports</sapn>
+                                                        <i class="material-icons">keyboard_arrow_down</i>
+                                                    </div>
+
+                                                    <ul class="sub-child-menu">
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>General Cash Register</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Monthly Cash Register Abstract</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>TestName Wise Collections</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Consultation Charges</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>IPD Collections</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>General Cash Register Abstract</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Head Wise Collections</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Sample Outsourced</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Receptionst Collections</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Doctor Wise Collections</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Daily Expenses Details</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Package Collectons</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Pay Mode Wise Collections</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Balance Amount Details</span></a></li>
+                                                        <li class="sub-child-menu-item"><a class="sub-child-menu-link" href="#"><i class="material-icons">perm_data_setting</i><span>Balance Amount Collected</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">list</i><span>OP IP LAB Collection</span></a></li>
                                             <li class="sub-menu-item"><a class="sub-menu-link" href="#"><i class="material-icons">check</i><span>Ref.Collections</span></a></li>
                                         </ul>

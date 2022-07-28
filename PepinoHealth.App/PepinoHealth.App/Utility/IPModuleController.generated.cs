@@ -75,6 +75,7 @@ namespace PepinoHealth.App.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNamesClass
         {
+            public readonly string IPDRegistration = "IPDRegistration";
             public readonly string DischargeSummary = "DischargeSummary";
             public readonly string ObstetricDischargeSummary = "ObstetricDischargeSummary";
         }
@@ -82,6 +83,7 @@ namespace PepinoHealth.App.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
+            public const string IPDRegistration = "IPDRegistration";
             public const string DischargeSummary = "DischargeSummary";
             public const string ObstetricDischargeSummary = "ObstetricDischargeSummary";
         }
@@ -98,9 +100,11 @@ namespace PepinoHealth.App.Controllers
             public class _ViewNamesClass
             {
                 public readonly string DischargeSummary = "DischargeSummary";
+                public readonly string IPDRegistration = "IPDRegistration";
                 public readonly string ObstetricDischargeSummary = "ObstetricDischargeSummary";
             }
             public readonly string DischargeSummary = "~/Views/IPModule/DischargeSummary.cshtml";
+            public readonly string IPDRegistration = "~/Views/IPModule/IPDRegistration.cshtml";
             public readonly string ObstetricDischargeSummary = "~/Views/IPModule/ObstetricDischargeSummary.cshtml";
         }
     }
@@ -109,6 +113,17 @@ namespace PepinoHealth.App.Controllers
     public partial class T4MVC_IPModuleController : PepinoHealth.App.Controllers.IPModuleController
     {
         public T4MVC_IPModuleController() : base(Dummy.Instance) { }
+
+        [NonAction]
+        partial void IPDRegistrationOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult IPDRegistration()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.IPDRegistration);
+            IPDRegistrationOverride(callInfo);
+            return callInfo;
+        }
 
         [NonAction]
         partial void DischargeSummaryOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);

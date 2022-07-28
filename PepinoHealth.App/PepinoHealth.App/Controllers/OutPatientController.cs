@@ -40,7 +40,15 @@ namespace PepinoHealth.App.Controllers
         {
             return View();
         }
-
+        [SessionExpire]
+        [NoCache]
+        [URAC(PepinoHealth.CL.Common.Roles.Admin)]
+        [HttpGet]
+        [Route(Helper.DoctorDesk)]
+        public virtual ActionResult DoctorDesk()
+        {
+            return View();
+        }
         #endregion
 
         #region Common Action Methods

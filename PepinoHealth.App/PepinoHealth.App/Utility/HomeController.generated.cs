@@ -165,25 +165,19 @@ namespace PepinoHealth.App.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
-                public readonly string AdvanceReceipt = "AdvanceReceipt";
                 public readonly string DashBoard = "DashBoard";
                 public readonly string Datatable = "Datatable";
                 public readonly string Index = "Index";
                 public readonly string Login = "Login";
-                public readonly string Page1 = "Page1";
-                public readonly string Page2 = "Page2";
                 public readonly string QuickLinks = "QuickLinks";
                 public readonly string QuickLinksV2 = "QuickLinksV2";
                 public readonly string Registration = "Registration";
                 public readonly string RegistrationV2 = "RegistrationV2";
             }
-            public readonly string AdvanceReceipt = "~/Views/Home/AdvanceReceipt.cshtml";
             public readonly string DashBoard = "~/Views/Home/DashBoard.cshtml";
             public readonly string Datatable = "~/Views/Home/Datatable.cshtml";
             public readonly string Index = "~/Views/Home/Index.cshtml";
             public readonly string Login = "~/Views/Home/Login.cshtml";
-            public readonly string Page1 = "~/Views/Home/Page1.cshtml";
-            public readonly string Page2 = "~/Views/Home/Page2.cshtml";
             public readonly string QuickLinks = "~/Views/Home/QuickLinks.cshtml";
             public readonly string QuickLinksV2 = "~/Views/Home/QuickLinksV2.cshtml";
             public readonly string Registration = "~/Views/Home/Registration.cshtml";

@@ -80,6 +80,7 @@ namespace PepinoHealth.App.Controllers
             public readonly string DischargeBilling = "DischargeBilling";
             public readonly string PatientCashRefund = "PatientCashRefund";
             public readonly string DebitDetails = "DebitDetails";
+            public readonly string AdvanceReceipt = "AdvanceReceipt";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -90,6 +91,7 @@ namespace PepinoHealth.App.Controllers
             public const string DischargeBilling = "DischargeBilling";
             public const string PatientCashRefund = "PatientCashRefund";
             public const string DebitDetails = "DebitDetails";
+            public const string AdvanceReceipt = "AdvanceReceipt";
         }
 
 
@@ -103,12 +105,14 @@ namespace PepinoHealth.App.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string AdvanceReceipt = "AdvanceReceipt";
                 public readonly string DebitDetails = "DebitDetails";
                 public readonly string DischargeBilling = "DischargeBilling";
                 public readonly string IPDayWiseBilling = "IPDayWiseBilling";
                 public readonly string OPBilling = "OPBilling";
                 public readonly string PatientCashRefund = "PatientCashRefund";
             }
+            public readonly string AdvanceReceipt = "~/Views/OPBilling/AdvanceReceipt.cshtml";
             public readonly string DebitDetails = "~/Views/OPBilling/DebitDetails.cshtml";
             public readonly string DischargeBilling = "~/Views/OPBilling/DischargeBilling.cshtml";
             public readonly string IPDayWiseBilling = "~/Views/OPBilling/IPDayWiseBilling.cshtml";
@@ -174,6 +178,17 @@ namespace PepinoHealth.App.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.DebitDetails);
             DebitDetailsOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void AdvanceReceiptOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult AdvanceReceipt()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.AdvanceReceipt);
+            AdvanceReceiptOverride(callInfo);
             return callInfo;
         }
 

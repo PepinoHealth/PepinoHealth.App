@@ -83,6 +83,7 @@ namespace PepinoHealth.App.Controllers
         {
             public readonly string OPRegistration = "OPRegistration";
             public readonly string OPRevisitRegistration = "OPRevisitRegistration";
+            public readonly string DoctorDesk = "DoctorDesk";
             public readonly string GetMaxOutPatientId = "GetMaxOutPatientId";
             public readonly string GenerateBarcode = "GenerateBarcode";
             public readonly string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
@@ -94,6 +95,7 @@ namespace PepinoHealth.App.Controllers
         {
             public const string OPRegistration = "OPRegistration";
             public const string OPRevisitRegistration = "OPRevisitRegistration";
+            public const string DoctorDesk = "DoctorDesk";
             public const string GetMaxOutPatientId = "GetMaxOutPatientId";
             public const string GenerateBarcode = "GenerateBarcode";
             public const string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
@@ -119,9 +121,11 @@ namespace PepinoHealth.App.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string DoctorDesk = "DoctorDesk";
                 public readonly string OPRegistration = "OPRegistration";
                 public readonly string OPRevisitRegistration = "OPRevisitRegistration";
             }
+            public readonly string DoctorDesk = "~/Views/OutPatient/DoctorDesk.cshtml";
             public readonly string OPRegistration = "~/Views/OutPatient/OPRegistration.cshtml";
             public readonly string OPRevisitRegistration = "~/Views/OutPatient/OPRevisitRegistration.cshtml";
         }
@@ -151,6 +155,17 @@ namespace PepinoHealth.App.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.OPRevisitRegistration);
             OPRevisitRegistrationOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void DoctorDeskOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult DoctorDesk()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.DoctorDesk);
+            DoctorDeskOverride(callInfo);
             return callInfo;
         }
 
