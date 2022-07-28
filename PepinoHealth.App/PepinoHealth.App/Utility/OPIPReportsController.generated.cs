@@ -65,6 +65,24 @@ namespace PepinoHealth.App.Controllers
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetIPDRegistrationDetails);
         }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult GetNewVisitPatientDetails()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetNewVisitPatientDetails);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult GetReVisitPatientDetails()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetReVisitPatientDetails);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult GetBothVisitPatientDetails()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetBothVisitPatientDetails);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public OPIPReportsController Actions { get { return MVC.OPIPReports; } }
@@ -86,6 +104,9 @@ namespace PepinoHealth.App.Controllers
             public readonly string PatientDischarge = "PatientDischarge";
             public readonly string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
             public readonly string GetIPDRegistrationDetails = "GetIPDRegistrationDetails";
+            public readonly string GetNewVisitPatientDetails = "GetNewVisitPatientDetails";
+            public readonly string GetReVisitPatientDetails = "GetReVisitPatientDetails";
+            public readonly string GetBothVisitPatientDetails = "GetBothVisitPatientDetails";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -96,6 +117,9 @@ namespace PepinoHealth.App.Controllers
             public const string PatientDischarge = "PatientDischarge";
             public const string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
             public const string GetIPDRegistrationDetails = "GetIPDRegistrationDetails";
+            public const string GetNewVisitPatientDetails = "GetNewVisitPatientDetails";
+            public const string GetReVisitPatientDetails = "GetReVisitPatientDetails";
+            public const string GetBothVisitPatientDetails = "GetBothVisitPatientDetails";
         }
 
 
@@ -105,6 +129,39 @@ namespace PepinoHealth.App.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionParamsClass_GetIPDRegistrationDetails
         {
+            public readonly string Department = "Department";
+            public readonly string StartDate = "StartDate";
+            public readonly string EndDate = "EndDate";
+        }
+        static readonly ActionParamsClass_GetNewVisitPatientDetails s_params_GetNewVisitPatientDetails = new ActionParamsClass_GetNewVisitPatientDetails();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_GetNewVisitPatientDetails GetNewVisitPatientDetailsParams { get { return s_params_GetNewVisitPatientDetails; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_GetNewVisitPatientDetails
+        {
+            public readonly string Visit = "Visit";
+            public readonly string Department = "Department";
+            public readonly string StartDate = "StartDate";
+            public readonly string EndDate = "EndDate";
+        }
+        static readonly ActionParamsClass_GetReVisitPatientDetails s_params_GetReVisitPatientDetails = new ActionParamsClass_GetReVisitPatientDetails();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_GetReVisitPatientDetails GetReVisitPatientDetailsParams { get { return s_params_GetReVisitPatientDetails; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_GetReVisitPatientDetails
+        {
+            public readonly string Visit = "Visit";
+            public readonly string Department = "Department";
+            public readonly string StartDate = "StartDate";
+            public readonly string EndDate = "EndDate";
+        }
+        static readonly ActionParamsClass_GetBothVisitPatientDetails s_params_GetBothVisitPatientDetails = new ActionParamsClass_GetBothVisitPatientDetails();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_GetBothVisitPatientDetails GetBothVisitPatientDetailsParams { get { return s_params_GetBothVisitPatientDetails; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_GetBothVisitPatientDetails
+        {
+            public readonly string Visit = "Visit";
             public readonly string Department = "Department";
             public readonly string StartDate = "StartDate";
             public readonly string EndDate = "EndDate";
@@ -179,16 +236,61 @@ namespace PepinoHealth.App.Controllers
         }
 
         [NonAction]
-        partial void GetIPDRegistrationDetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string Department, System.DateTime StartDate, System.DateTime EndDate);
+        partial void GetIPDRegistrationDetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string Department, string StartDate, string EndDate);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult GetIPDRegistrationDetails(string Department, System.DateTime StartDate, System.DateTime EndDate)
+        public override System.Web.Mvc.ActionResult GetIPDRegistrationDetails(string Department, string StartDate, string EndDate)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetIPDRegistrationDetails);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "Department", Department);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "StartDate", StartDate);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "EndDate", EndDate);
             GetIPDRegistrationDetailsOverride(callInfo, Department, StartDate, EndDate);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void GetNewVisitPatientDetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string Visit, string Department, string StartDate, string EndDate);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult GetNewVisitPatientDetails(string Visit, string Department, string StartDate, string EndDate)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetNewVisitPatientDetails);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "Visit", Visit);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "Department", Department);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "StartDate", StartDate);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "EndDate", EndDate);
+            GetNewVisitPatientDetailsOverride(callInfo, Visit, Department, StartDate, EndDate);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void GetReVisitPatientDetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string Visit, string Department, string StartDate, string EndDate);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult GetReVisitPatientDetails(string Visit, string Department, string StartDate, string EndDate)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetReVisitPatientDetails);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "Visit", Visit);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "Department", Department);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "StartDate", StartDate);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "EndDate", EndDate);
+            GetReVisitPatientDetailsOverride(callInfo, Visit, Department, StartDate, EndDate);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void GetBothVisitPatientDetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string Visit, string Department, string StartDate, string EndDate);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult GetBothVisitPatientDetails(string Visit, string Department, string StartDate, string EndDate)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetBothVisitPatientDetails);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "Visit", Visit);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "Department", Department);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "StartDate", StartDate);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "EndDate", EndDate);
+            GetBothVisitPatientDetailsOverride(callInfo, Visit, Department, StartDate, EndDate);
             return callInfo;
         }
 

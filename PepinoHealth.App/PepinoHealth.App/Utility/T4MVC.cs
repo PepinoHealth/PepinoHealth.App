@@ -350,6 +350,18 @@ namespace Links
         }
     
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class datatable {
+            public const string UrlPath = "~/Content/datatable";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            public static readonly string buttons_dataTables_less = Url("buttons.dataTables.less");
+            public static readonly string dataTables_material_less = Url("dataTables.material.less");
+            public static readonly string responsive_dataTables_less = Url("responsive.dataTables.less");
+            public static readonly string rowGroup_dataTables_less = Url("rowGroup.dataTables.less");
+            public static readonly string rowReorder_dataTables_less = Url("rowReorder.dataTables.less");
+        }
+    
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public static class dynamic {
             public const string UrlPath = "~/Content/dynamic";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
@@ -716,6 +728,12 @@ namespace Links
                 }
             }
             public static partial class common 
+            {
+                public static class Assets
+                {
+                }
+            }
+            public static partial class datatable 
             {
                 public static class Assets
                 {

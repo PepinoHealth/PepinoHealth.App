@@ -165,6 +165,7 @@ namespace PepinoHealth.App.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string AdvanceReceipt = "AdvanceReceipt";
                 public readonly string DashBoard = "DashBoard";
                 public readonly string Datatable = "Datatable";
                 public readonly string Index = "Index";
@@ -176,6 +177,7 @@ namespace PepinoHealth.App.Controllers
                 public readonly string Registration = "Registration";
                 public readonly string RegistrationV2 = "RegistrationV2";
             }
+            public readonly string AdvanceReceipt = "~/Views/Home/AdvanceReceipt.cshtml";
             public readonly string DashBoard = "~/Views/Home/DashBoard.cshtml";
             public readonly string Datatable = "~/Views/Home/Datatable.cshtml";
             public readonly string Index = "~/Views/Home/Index.cshtml";

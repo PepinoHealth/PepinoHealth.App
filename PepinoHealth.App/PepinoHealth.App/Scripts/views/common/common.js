@@ -212,7 +212,38 @@ function applyDateTimePicker(control, calendarFormatTypeID, results) {
         controlObject.trigger('focus');
     });
 }
+function formatDate(ms) {
 
+    var pattern = /Date\(([^)]+)\)/;
+    var results = pattern.exec(ms);
+    var date = new Date(parseFloat(results[1]));
+    var hour = date.getHours();
+    var mins = date.getMinutes() + '';
+    var time = "AM";
+
+    // find time
+    if (hour >= 12) {
+        time = "PM";
+    }
+    // fix hours format
+    if (hour > 12) {
+        hour -= 12;
+    }
+    else if (hour == 0) {
+        hour = 12;
+    }
+    // fix minutes format
+    if (mins.length == 1) {
+        mins = "0" + mins;
+    }
+    var vdate = date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
+    var date = date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear() + " " + hour + ":" + mins + " " + time;
+    if (vdate == '1/1/1')
+        date = '';
+
+    return date;
+    // return formatted date time string
+}
 //////////////////////////
 // Common functions end //
 //////////////////////////

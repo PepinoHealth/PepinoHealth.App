@@ -85,7 +85,7 @@ namespace PepinoHealth.App.Controllers
         }
         #region GetIPDRegistrationDetails
         [HttpPost]
-        public virtual ActionResult GetIPDRegistrationDetails(string Department, DateTime StartDate, DateTime EndDate)
+        public virtual ActionResult GetIPDRegistrationDetails(string Department, string StartDate, string EndDate)
         {
             try
             {
@@ -100,6 +100,71 @@ namespace PepinoHealth.App.Controllers
             }
             return returnNull;
         }
+        #endregion
+        #region GetRegistrationPatientDetails
+        #region GetNewVisitPatientDetails
+        [HttpPost]
+        public virtual ActionResult GetNewVisitPatientDetails(string Visit, string Department, string StartDate, string EndDate)
+        {
+            try
+            {
+                var result = OPIPReportsRepositary().GetNewVisitPatientDetails(Visit, Department, StartDate, EndDate);
+
+                var jsonResult = Json(result, JsonRequestBehavior.AllowGet);
+                jsonResult.MaxJsonLength = int.MaxValue;
+                return jsonResult;
+            }
+
+
+            catch (Exception ex)
+            {
+            }
+
+            return returnNull;
+        }
+        #endregion
+        #region GetReVisitPatientDetails
+        [HttpPost]
+        public virtual ActionResult GetReVisitPatientDetails(string Visit, string Department, string StartDate, string EndDate)
+        {
+            try
+            {
+                var result = OPIPReportsRepositary().GetReVisitPatientDetails(Visit, Department, StartDate, EndDate);
+
+                var jsonResult = Json(result, JsonRequestBehavior.AllowGet);
+                jsonResult.MaxJsonLength = int.MaxValue;
+                return jsonResult;
+            }
+
+
+            catch (Exception ex)
+            {
+            }
+
+            return returnNull;
+        }
+        #endregion
+        #region GetBothVisitPatientDetails
+        [HttpPost]
+        public virtual ActionResult GetBothVisitPatientDetails(string Visit, string Department, string StartDate, string EndDate)
+        {
+            try
+            {
+                var result = OPIPReportsRepositary().GetBothVisitPatientDetails(Visit, Department, StartDate, EndDate);
+
+                var jsonResult = Json(result, JsonRequestBehavior.AllowGet);
+                jsonResult.MaxJsonLength = int.MaxValue;
+                return jsonResult;
+            }
+
+
+            catch (Exception ex)
+            {
+            }
+
+            return returnNull;
+        }
+        #endregion
         #endregion
         #endregion
         #endregion

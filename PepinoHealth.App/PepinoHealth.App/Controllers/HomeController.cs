@@ -148,7 +148,7 @@ namespace PepinoHealth.App.Controllers
 
             if (profile != null)
             {
-                valid = ((profile.Username.Equals("admin@abc.com") || profile.Username.Equals("user@abc.com")) && profile.Password.Equals("123456"));
+                valid = ((profile.Username.Equals("admin") || profile.Username.Equals("user")) && profile.Password.Equals("123"));
             }
 
             return Json(
