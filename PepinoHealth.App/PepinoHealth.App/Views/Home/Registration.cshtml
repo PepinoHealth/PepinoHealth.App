@@ -1,0 +1,254 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        hideModal('loader');
+    })
+</script>
+
+<div class="p-block">
+    <div class="p-header">
+        <div class="title">
+            Registration
+        </div>
+    </div>
+    <div class="p-body">
+        <form id="formRegistration">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Appointment ID</label>
+                        <select class="form-control form-control-sm">
+                            <option>123456</option>
+                            <option>789123</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>OP No</label>
+                        <input type="text" id="txtOPNo" name="txtOPNo" class="form-control form-control-sm"
+                               placeholder="OP No" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Next UHID</label>
+                        <div class="input-group">
+                            <input type="text" id="txtNextUHID" style="color:orange;border:none" name="txtNextUHID"  class="form-control form-control-sm"
+                                   disabled>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>UHID</label>
+                        <div class="input-group">
+                            <input type="text" id="txtUHID" name="txtUHID" class="form-control form-control-sm"
+                                   disabled>
+                            <button class="btn btn-info btn-sm btn-search-icon" type="button">
+                                <i class="material-icons">search</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Department Name <span class="required">*</span></label>
+                        <select class="form-control form-control-sm" id="ddlDepartment" name="ddlDepartment">
+                           
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Token</label>
+                        <div class="input-group">
+                            <input type="text" id="txtTokenNo" name="txtTokenNo" class="form-control form-control-sm mr-2" />
+                            <select class="form-control form-control-sm"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Date Time</label>
+                        <input type="text" id="txtDate" name="txtDate" class="form-control form-control-sm" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Name <span class="required">*</span></label>
+
+                        <div class="input-group">
+                            <select class="form-control form-control-sm form-title" id="ddlNameTitle" name="ddlNameTitle">
+                                <option value="MR" selected>MR</option>
+                                <option value="MRs">MRs</option>
+                                <option value="MS">MS</option>
+                                <option value="MISS">MISS</option>
+                            </select>
+                            <input type="text" class="form-control form-control-sm" id="txtName" name="txtName" placeholder="Name"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Gender <span class="required">*</span></label>
+                                <select class="form-control form-control-sm">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Age <span class="required">*</span></label>
+                                <input type="text" id="txtAge" name="txtAge" class="form-control form-control-sm" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Father Name</label>
+                        <input type="text" id="txtFatherName" name="txtFatherName"  class="form-control form-control-sm" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Husband Name</label>
+                        <input type="text" id="txtHusbandName" name="txtHusbandName" class="form-control form-control-sm" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Marital Status <span class="required">*</span></label>
+                        <select class="form-control form-control-sm">
+                            <option>Single</option>
+                            <option>Married</option>
+                            <option>Single Parent</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text"  id="txtAddress" name="txtAddress" class="form-control form-control-sm" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" id="txtPhoneNo" name="txtPhoneNo" class="form-control form-control-sm" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Aadhaar ID</label>
+                        <input type="text" id="txtAadhaarID" name="txtAadhaarID" class="form-control form-control-sm" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Patient Type</label>
+                        <select type="text" class="form-control form-control-sm" id="ddlPatientType" name="ddlPatientType">
+                            <option value="Hospital Patient">Hospital Patient</option>
+                            <option value="Single">Single</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select type="text" id="ddlCategory" name="ddlCategory" class="form-control form-control-sm">
+                            <option value="Regular">Regular</option>
+                            <option value="Duty">Duty</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Consultant Doctor</label>
+                        <select type="text" class="form-control form-control-sm" id="ddlConsultantDoctor" name="ddlConsultantDoctor">
+                            <option value="DR Ramesh">DR Ramesh</option>
+                            <option value="DR Ravi">DR Ravi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Reference Doctor</label>
+                        <select type="text" class="form-control form-control-sm" id="ddlRefDoctor" name="ddlRefDoctor">
+                            <option value="MR.Chandra">MR.Chandra</option>
+                            <option value="MRS.Busan">MRS.Busan</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Charge</label>
+
+                        <div class="row">
+                            <div class="col">
+                                <input type="text"  id="txtCharge" name="txtCharge"  value="150.00" class="form-control form-control-sm" />
+                            </div>
+                            <div class="col">
+                                <select type="text" class="form-control form-control-sm" id="ddlCustomerPhoneType2" name="ddlCustomerPhoneType2">
+                                    <option value="CASH">CASH</option>
+                                    <option value="CHECK">CHECK</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Pay Reference Number</label>
+                        <input type="text" class="form-control form-control-sm"  id="txtPayRefNo" name="txtPayRefNo" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="button-block">
+                        <button type="button" class="btn btn-success btn-sm">
+                            Save
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-sm">
+                            Refresh (New)
+                        </button>
+                        <button type="button" class="btn btn-primary btn-sm">
+                            Print
+                        </button>
+                        <button type="button" class="btn btn-success btn-sm">
+                            Save & Print
+                        </button>
+                        <button type="button" class="btn btn-warning btn-sm">
+                            Modify
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

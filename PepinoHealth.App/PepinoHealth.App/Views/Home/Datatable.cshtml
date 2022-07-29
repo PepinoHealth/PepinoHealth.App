@@ -1,0 +1,143 @@
+﻿@using PepinoHealth.App.Helpers
+
+@{
+    ViewBag.Title = "Datatable";
+}
+
+@Html.WriteScriptInclude(Source.export)
+
+@Html.WriteScriptInclude(Source.view_user_register)
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        bindControlsOnLoadInDatatable();
+    })
+</script>
+
+<div class="p-block v2">
+    <div class="p-header">
+        <div class="title">
+            Datatable
+        </div>
+    </div>
+    <div class="p-body">
+        <div class="p-body-content">
+            <table class="table table-striped table-hover table-rounded dataTable" id="tbl-datatable">
+                <thead>
+                    <tr>
+                        <th>Service Name</th>
+                        <th>Doctor</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Service 1
+                        </td>
+                        <td>
+                            Doctor 1
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Service 2
+                        </td>
+                        <td>
+                            Doctor 2
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Service 3
+                        </td>
+                        <td>
+                            Doctor 3
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Service 4
+                        </td>
+                        <td>
+                            Doctor 4
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Service 5
+                        </td>
+                        <td>
+                            Doctor 5
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Primary 6
+                        </td>
+                        <td>
+                            Doctor 6
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            10
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,219 @@
+[
+  {
+    "outputFileName": "Scripts/jquery/jquery-3.6.0.min.js",
+    "inputFiles": [
+      "Scripts/jquery/jquery-3.6.0.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery/jquery.validate/jquery.validate.min.js",
+    "inputFiles": [
+      "Scripts/jquery/jquery.validate/jquery.validate.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery/jquery.validate-vsdoc/jquery.validate-vsdoc.min.js",
+    "inputFiles": [
+      "Scripts/jquery/jquery.validate-vsdoc/jquery.validate-vsdoc.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery/jquery.validate.unobtrusive/jquery.validate.unobtrusive.min.js",
+    "inputFiles": [
+      "Scripts/jquery/jquery.validate.unobtrusive/jquery.validate.unobtrusive.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/modernizr/modernizr-2.8.3.min.js",
+    "inputFiles": [
+      "Scripts/modernizr/modernizr-2.8.3.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap/bootstrap.min.js",
+    "inputFiles": [
+      "Scripts/bootstrap/bootstrap.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap/bootstrap-validator/bootstrap-validator.min.js",
+    "inputFiles": [
+      "Scripts/bootstrap/bootstrap-validator/bootstrap-validator.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/linq/linq.min.js",
+    "inputFiles": [
+      "Scripts/linq/linq.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/moment/moment-with-locales.min.js",
+    "inputFiles": [
+      "Scripts/moment/moment-with-locales.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/moment/moment.min.js",
+    "inputFiles": [
+      "Scripts/moment/moment.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/trumbowyg/es.min.js",
+    "inputFiles": [
+      "Scripts/trumbowyg/es.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/trumbowyg/trumbowyg.colors.min.js",
+    "inputFiles": [
+      "Scripts/trumbowyg/trumbowyg.colors.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/trumbowyg/trumbowyg.min.js",
+    "inputFiles": [
+      "Scripts/trumbowyg/trumbowyg.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/trumbowyg/trumbowyg.table.min.js",
+    "inputFiles": [
+      "Scripts/trumbowyg/trumbowyg.table.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/views/common/common.min.js",
+    "inputFiles": [
+      "Scripts/views/common/common.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/material/material-datetimepicker/material-datetimepicker.min.js",
+    "inputFiles": [
+      "Scripts/material/material-datetimepicker/material-datetimepicker.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/material/material.min.js",
+    "inputFiles": [
+      "Scripts/material/material.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/views/user/register.min.js",
+    "inputFiles": [
+      "Scripts/views/user/register.js",
+      "Scripts/views/outpatient/outpatient.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/popper/umd/popper.min.js",
+    "inputFiles": [
+      "Scripts/popper/umd/popper.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/chart/chart.min.js",
+    "inputFiles": [
+      "Scripts/chart/chart.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/views/opipviews/opipviews.min.js",
+    "inputFiles": [
+      "Scripts/views/opipviews/opipviews.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bootstrap/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js",
+    "inputFiles": [
+      "Scripts/bootstrap/bootstrap-datetimepicker/bootstrap-datetimepicker.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/views/opbilling/opbilling.min.js",
+    "inputFiles": [
+      "Scripts/views/opbilling/opbilling.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/buttons.flash.min.js",
+    "inputFiles": [
+      "Scripts/datatable/buttons.flash.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/buttons.html5.min.js",
+    "inputFiles": [
+      "Scripts/datatable/buttons.html5.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/buttons.print.min.js",
+    "inputFiles": [
+      "Scripts/datatable/buttons.print.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/dataTables.buttons.min.js",
+    "inputFiles": [
+      "Scripts/datatable/dataTables.buttons.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/dataTables.material.min.js",
+    "inputFiles": [
+      "Scripts/datatable/dataTables.material.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/dataTables.responsive.min.js",
+    "inputFiles": [
+      "Scripts/datatable/dataTables.responsive.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/dataTables.rowGroup.min.js",
+    "inputFiles": [
+      "Scripts/datatable/dataTables.rowGroup.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/dataTables.rowReorder.min.js",
+    "inputFiles": [
+      "Scripts/datatable/dataTables.rowReorder.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/fnFilterClear.min.js",
+    "inputFiles": [
+      "Scripts/datatable/fnFilterClear.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/jquery.dataTables.min.js",
+    "inputFiles": [
+      "Scripts/datatable/jquery.dataTables.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/jszip.min.js",
+    "inputFiles": [
+      "Scripts/datatable/jszip.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/pdfmake.min.js",
+    "inputFiles": [
+      "Scripts/datatable/pdfmake.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/vfs_fonts.min.js",
+    "inputFiles": [
+      "Scripts/datatable/vfs_fonts.js"
+    ]
+  }
+]
