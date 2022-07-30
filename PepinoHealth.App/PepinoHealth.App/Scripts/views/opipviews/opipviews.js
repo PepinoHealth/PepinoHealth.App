@@ -18,13 +18,13 @@ function bindControlsOnLoadInOPOPReports() {
     registerEventsInOPRegistration();
 
     applyDateTimePicker(
-        'txtStartDateTimeTime',
+        'txtStartDate',
         calendarFormatType.Date,
         function (e) {
         });
     hideModal('loader');
     applyDateTimePicker(
-        'txtEndDateTimeTime',
+        'txtEndDate',
         calendarFormatType.Date,
         function (e) {
         });
@@ -68,7 +68,7 @@ function bindGetIPDDepartmentDetails() {
 }
 function GetIPDRegistrationDetails() {
     var dept = $('#ddlIPDDepartment').val();
-    var data = JSON.stringify({ Department: dept, StartDate: $('#txtStartDateTimeTime').val(), EndDate: $('#txtEndDateTimeTime').val() });
+    var data = JSON.stringify({ Department: dept, StartDate: $('#txtStartDate').val(), EndDate: $('#txtEndDate').val() });
 
     callAPI(IPDRegUrl, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
         function (data) {
