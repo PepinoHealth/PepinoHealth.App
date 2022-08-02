@@ -140,6 +140,8 @@
                         list-style: none;
                         display: none;
                         z-index: 5;
+                        max-height: 400px;
+                        overflow-y: auto;
 
                         li.sub-menu-item {
                             padding: .25rem 1rem;
@@ -186,6 +188,8 @@
 
                                     ul.sub-child-menu {
                                         margin: 0;
+                                        height: 0;
+                                        overflow: hidden;
 
                                         li.sub-child-menu-item {
                                             background: @bg-color3;
@@ -196,6 +200,11 @@
                                             border-bottom-left-radius: @br-radius;
                                             border-bottom-right-radius: @br-radius;
                                         }
+                                    }
+
+                                    ul.sub-child-menu.show {
+                                        height: auto;
+                                        overflow: auto;
                                     }
                                 }
                             }
@@ -317,6 +326,8 @@
                             position: relative;
                             top: 0;
                             display: block;
+                            max-height: unset;
+                            overflow-y: auto;
 
                             li.sub-menu-item {
                                 background: none;
@@ -380,6 +391,8 @@
                             ul.sub-menu {
                                 position: relative;
                                 top: 0;
+                                max-height: unset;
+                                overflow-y: auto;
                             }
                         }
                     }

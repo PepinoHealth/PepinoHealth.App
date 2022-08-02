@@ -212,6 +212,7 @@ function applyDateTimePicker(control, calendarFormatTypeID, results) {
         controlObject.trigger('focus');
     });
 }
+
 function formatDate(ms) {
 
     var pattern = /Date\(([^)]+)\)/;
@@ -244,6 +245,7 @@ function formatDate(ms) {
     return date;
     // return formatted date time string
 }
+
 //////////////////////////
 // Common functions end //
 //////////////////////////
@@ -294,6 +296,14 @@ function registerEventsInApp() {
 
     $('.notification-bar i').on('click', function () {
         $('.notification_dd').toggleClass('active');
+    });
+
+    $('.menu-item').on('mouseleave', function (e) {
+        $('.sub-child-menu').removeClass('show');
+    });
+
+    $('.sub-child-nav-menu-item').on('click', function (e) {
+        $(e.currentTarget).parents('.sub-child-nav-block').find('.sub-child-menu').toggleClass('show');
     });
 
     $(window).resize(function () {
