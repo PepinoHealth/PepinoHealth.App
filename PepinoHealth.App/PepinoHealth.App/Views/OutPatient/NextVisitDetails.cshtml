@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewBag.Title = "Next Visit Details";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        hideModal('loader');
+    })
+</script>
+
+<div class="p-block v2">
+    <div class="p-header">
+        <div class="title">
+            Next Visit Details
+        </div>
+    </div>
+    <div class="p-body">
+        <div class="p-body-content">
+            <form id="formNextVisitDetails" class="v2">
+                <section>
+                    <div class="header">
+                        <div class="title">
+                            Appointment Details:
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>UHID Number</label>
+                                    <input type="text" class="form-control" id="txtUHID" name="txtUHID" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>Next Visit Date</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="txtNextVisitDate" name="txtNextVisitDate" />
+                                        <button class="btn btn-info btn-sm btn-search-icon" type="button">
+                                            <i class="material-icons">date_range</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <section>
+                    <div class="header">
+                        <div class="title">
+                            Patient Details:
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-group">
+                                    <label>Patient Name</label>
+                                    <input type="text" class="form-control" id="txtPatientName" name="txtPatientName" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-group">
+                                    <label>Mobile Number</label>
+                                    <input type="text" class="form-control" id="txtMobileNumber" name="txtMobileNumber" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-group">
+                                    <label>Doctor Name</label>
+                                    <select type="text" class="form-control" id="ddlDoctorName" name="ddlDoctorName">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-group">
+                                    <label>Chief Complaints</label>
+                                    <textarea class="form-control ta-2" id="taChiefComplaints" name="taChiefComplaints" rows="1"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="button-block">
+                                <button type="button" class="btn btn-success btn-sm">
+                                    Save
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm">
+                                    Refresh [New]
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </div>
+</div>
+

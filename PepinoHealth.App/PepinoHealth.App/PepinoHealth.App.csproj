@@ -376,6 +376,8 @@
     <Content Include="Views\OutPatient\DoctorDesk.cshtml" />
     <Content Include="Views\IPModule\IPDRegistration.cshtml" />
     <Content Include="Views\OPBilling\AdvanceReceipt.cshtml" />
+    <Content Include="Views\OutPatient\OutPatientReports.cshtml" />
+    <Content Include="Views\OutPatient\NextVisitDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

@@ -1,0 +1,162 @@
+﻿
+@{
+    ViewBag.Title = "Out Patient Reports";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        hideModal('loader');
+    })
+</script>
+
+<div class="p-block v2">
+    <div class="p-header">
+        <div class="title">
+            Out Patient Reports
+        </div>
+    </div>
+    <div class="p-body">
+        <div class="p-body-content">
+            <form id="formOutPatientReports" class="v2">
+                <section>
+                    <div class="header">
+                        <div class="title">
+                            Report Details:
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="row mb-2">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="mb-2">Visit Type:</label>
+                                    <div class="radio radio-gender cursor-default">
+                                        <label class="custom-control custom-radio">
+                                            <input name="section" type="radio" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">New Visit</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input name="section" type="radio" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Revisit</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input name="section" type="radio" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Both Visit</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>Start Date</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="txtStartDate" name="txtStartDate" />
+                                                <button class="btn btn-info btn-sm btn-search-icon" type="button" onclick="hideModal(" mdl-id-details\");>
+                                                    <i class="material-icons">date_range</i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>End Date</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="txtEndDate" name="txtEndDate" />
+                                                <button class="btn btn-info btn-sm btn-search-icon" type="button">
+                                                    <i class="material-icons">date_range</i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <label class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Category</span>
+                                </label>
+                                <div class="ml-4">
+                                    <div class="form-group">
+                                        <label>&nbsp;</label>
+                                        <select class="form-control"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <label class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Department Wise</span>
+                                </label>
+                                <div class="ml-4">
+                                    <div class="form-group">
+                                        <label>Department Name</label>
+                                        <select class="form-control" id="ddlDepartmentName" name="ddlDepartmentName"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <label class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Gender Wise</span>
+                                </label>
+                                <div class="ml-4">
+                                    <div class="form-group">
+                                        <label>Gender Type</label>
+                                        <select class="form-control" id="ddlGenderType" name="ddlGenderType"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <label class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Count Wise</span>
+                                </label>
+                                <div class="ml-4">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label>From</label>
+                                                <input type="text" class="form-control" placeholder="From" id="txtFrom" name="txtFrom" />
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label>To</label>
+                                                <input type="text" class="form-control" placeholder="To" id="txtTo" name="txtTo" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="button-block">
+                                <button type="button" class="btn btn-success btn-sm">
+                                    Generate
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm">
+                                    Refresh [New]
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </div>
+</div>

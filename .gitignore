@@ -2,7 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+*.suo
 *.user
+/PepinoHealth.App/PepinoHealth.DL/obj
 /PepinoHealth.App/PepinoHealth.App/bin
 /PepinoHealth.App/PepinoHealth.App/obj
 /PepinoHealth.App/PepinoHealth.Auth/bin

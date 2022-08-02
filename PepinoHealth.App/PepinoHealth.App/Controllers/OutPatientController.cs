@@ -40,6 +40,7 @@ namespace PepinoHealth.App.Controllers
         {
             return View();
         }
+
         [SessionExpire]
         [NoCache]
         [URAC(PepinoHealth.CL.Common.Roles.Admin)]
@@ -49,6 +50,27 @@ namespace PepinoHealth.App.Controllers
         {
             return View();
         }
+
+        [SessionExpire]
+        [NoCache]
+        [URAC(PepinoHealth.CL.Common.Roles.Admin)]
+        [HttpGet]
+        [Route(Helper.OutPatientReports)]
+        public virtual ActionResult OutPatientReports()
+        {
+            return View();
+        }
+
+        [SessionExpire]
+        [NoCache]
+        [URAC(PepinoHealth.CL.Common.Roles.Admin)]
+        [HttpGet]
+        [Route(Helper.NextVisitDetails)]
+        public virtual ActionResult NextVisitDetails()
+        {
+            return View();
+        }
+
         #endregion
 
         #region Common Action Methods

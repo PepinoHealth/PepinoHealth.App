@@ -84,6 +84,8 @@ namespace PepinoHealth.App.Controllers
             public readonly string OPRegistration = "OPRegistration";
             public readonly string OPRevisitRegistration = "OPRevisitRegistration";
             public readonly string DoctorDesk = "DoctorDesk";
+            public readonly string OutPatientReports = "OutPatientReports";
+            public readonly string NextVisitDetails = "NextVisitDetails";
             public readonly string GetMaxOutPatientId = "GetMaxOutPatientId";
             public readonly string GenerateBarcode = "GenerateBarcode";
             public readonly string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
@@ -96,6 +98,8 @@ namespace PepinoHealth.App.Controllers
             public const string OPRegistration = "OPRegistration";
             public const string OPRevisitRegistration = "OPRevisitRegistration";
             public const string DoctorDesk = "DoctorDesk";
+            public const string OutPatientReports = "OutPatientReports";
+            public const string NextVisitDetails = "NextVisitDetails";
             public const string GetMaxOutPatientId = "GetMaxOutPatientId";
             public const string GenerateBarcode = "GenerateBarcode";
             public const string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
@@ -122,12 +126,16 @@ namespace PepinoHealth.App.Controllers
             public class _ViewNamesClass
             {
                 public readonly string DoctorDesk = "DoctorDesk";
+                public readonly string NextVisitDetails = "NextVisitDetails";
                 public readonly string OPRegistration = "OPRegistration";
                 public readonly string OPRevisitRegistration = "OPRevisitRegistration";
+                public readonly string OutPatientReports = "OutPatientReports";
             }
             public readonly string DoctorDesk = "~/Views/OutPatient/DoctorDesk.cshtml";
+            public readonly string NextVisitDetails = "~/Views/OutPatient/NextVisitDetails.cshtml";
             public readonly string OPRegistration = "~/Views/OutPatient/OPRegistration.cshtml";
             public readonly string OPRevisitRegistration = "~/Views/OutPatient/OPRevisitRegistration.cshtml";
+            public readonly string OutPatientReports = "~/Views/OutPatient/OutPatientReports.cshtml";
         }
     }
 
@@ -166,6 +174,28 @@ namespace PepinoHealth.App.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.DoctorDesk);
             DoctorDeskOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void OutPatientReportsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult OutPatientReports()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.OutPatientReports);
+            OutPatientReportsOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void NextVisitDetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult NextVisitDetails()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.NextVisitDetails);
+            NextVisitDetailsOverride(callInfo);
             return callInfo;
         }
 
