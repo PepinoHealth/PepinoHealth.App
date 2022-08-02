@@ -3,3 +3,13 @@
 ################################################################################
 
 *.user
+/PepinoHealth.App/PepinoHealth.App/bin
+/PepinoHealth.App/PepinoHealth.App/obj
+/PepinoHealth.App/PepinoHealth.Auth/bin
+/PepinoHealth.App/PepinoHealth.Auth/obj
+/PepinoHealth.App/PepinoHealth.BL/bin
+/PepinoHealth.App/PepinoHealth.BL/obj
+/PepinoHealth.App/PepinoHealth.CL/bin
+/PepinoHealth.App/PepinoHealth.CL/obj
+/PepinoHealth.App/PepinoHealth.DL/bin
+/PepinoHealth.App/PepinoHealth.DL/obj
