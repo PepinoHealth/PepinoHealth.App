@@ -5,9 +5,13 @@
 
 // Action contol url variables to perform ajax calls
 var validateOPUrl = null;
-var deptUrl       = null;
-var addOPRegURL   = null;
-var maxOPID       = null;
+var deptUrl = null;
+var addOPRegURL = null;
+var maxOPID = null;
+var getPatientDetailsUrl = null;
+var managePatientDetailsUrl = null;
+var downloadFileUrl = null;
+var deletePatientFileUrl = null;
 // Alert  messages
 
 
@@ -43,8 +47,8 @@ function bindGetMaxOutPatientId() {
     callAPI(maxOPID, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
         function (data) {
             $('#txtOPNo').html(data);
-            var res = parseInt(data)+1;
-            $('#txtNextUHID').html("SPG0122"+res);
+            var res = parseInt(data) + 1;
+            $('#txtNextUHID').html("SPG0122" + res);
         });
 
 }
@@ -134,7 +138,7 @@ function processOPRegistrationAction(object) {
     switch (actionTypeID) {
         case actionType.Save:
             addOPRegistrationDetails();
-           // alert('This action is from Save button.');
+            // alert('This action is from Save button.');
 
             break;
         case actionType.Refresh:
@@ -176,3 +180,111 @@ function registerEventsInOPRegistration() {
 //////////////////////////////
 // OPRegistration view functions end //
 //////////////////////////////
+
+
+////////////////////////////////////////////
+// Patient Treatment view functions start //
+////////////////////////////////////////////
+
+function bindControlsOnLoadInPatientTreatment() {
+    registerEventsInPatientTreatment();
+    validateNPatientDetails();
+    bindPatientDetails();
+    hideModal('loader');
+}
+
+function validateNPatientDetails() {
+    $('#formPatientTreatment').bootstrapValidator({
+        live: liveType.Disabled,
+        fields: {
+            txtName: {
+                validators: {
+                    notEmpty: {
+                        message: 'Required.'
+                    }
+                }
+            },
+            ddlGender: {
+                validators: {
+                    notEmpty: {
+                        message: 'Required.'
+                    }
+                }
+            },
+            txtAge: {
+                validators: {
+                    notEmpty: {
+                        message: 'Required.'
+                    }
+                }
+            },
+        },
+    }).on('success.form.bv', function (e) {
+        e.preventDefault();
+
+        savePatientDetails();
+    });
+}
+
+function bindPatientDetails() {
+    let filesHtml = '';
+
+    callAPI(getPatientDetailsUrl, apiType.Get, asyncType.False, cacheType.False, JSON.stringify(''), dataNature.Json,
+        function (data) {
+            $(data).each(function (key, fileName) {
+                filesHtml +=
+                    '<li>' +
+                    '<span>' + fileName + '</span> - <small onclick="downloadFile(this);">View/Download</small>' +
+                    '</li>';
+            });
+        });
+
+    if (filesHtml.length > 0) {
+        $('.p-files').html(filesHtml);
+    }
+}
+
+function savePatientDetails() {
+    if (window.FormData != undefined) {
+        let fileUpload = $('#fDocuments').get(0),
+            files = fileUpload.files,
+            formData = new FormData();
+
+        for (var index = 0; index < files.length; index++) {
+            formData.append(files[index].name, files[index]);
+        }
+
+        formData.append("name", "John Smith");
+
+        callFormAPI(managePatientDetailsUrl, apiType.Post, asyncType.False, cacheType.False, formData,
+            function (data) {
+                if (data != null) {
+                    bindPatientDetails();
+                }
+            });
+    }
+}
+
+function downloadFile(object) {
+    let requestUrl = (downloadFileUrl + '?fileName=' + $(object).parent().find('span').text().trim());
+
+    window.location.href = requestUrl;
+}
+
+////////////////////////
+// EventsRegistration //
+////////////////////////
+
+function registerEventsInPatientTreatment() {
+    $('.form-upload').on('click', function (e) {
+        $('#fDocuments').click();
+    });
+
+    $('#fDocuments').on('click', function (e) {
+        e.stopPropagation();
+    });
+}
+
+//////////////////////////////////////////
+// Patient Treatment view functions end //
+//////////////////////////////////////////

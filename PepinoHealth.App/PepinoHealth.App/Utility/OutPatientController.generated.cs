@@ -65,6 +65,24 @@ namespace PepinoHealth.App.Controllers
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.CRUDOPRegistrationDetails);
         }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult ManagePatientDetails()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ManagePatientDetails);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult DownloadFile()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.DownloadFile);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult DeletePatientFile()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.DeletePatientFile);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public OutPatientController Actions { get { return MVC.OutPatient; } }
@@ -86,10 +104,15 @@ namespace PepinoHealth.App.Controllers
             public readonly string DoctorDesk = "DoctorDesk";
             public readonly string OutPatientReports = "OutPatientReports";
             public readonly string NextVisitDetails = "NextVisitDetails";
+            public readonly string PatientTreatment = "PatientTreatment";
             public readonly string GetMaxOutPatientId = "GetMaxOutPatientId";
             public readonly string GenerateBarcode = "GenerateBarcode";
             public readonly string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
             public readonly string CRUDOPRegistrationDetails = "CRUDOPRegistrationDetails";
+            public readonly string GetPatientDetails = "GetPatientDetails";
+            public readonly string ManagePatientDetails = "ManagePatientDetails";
+            public readonly string DownloadFile = "DownloadFile";
+            public readonly string DeletePatientFile = "DeletePatientFile";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -100,10 +123,15 @@ namespace PepinoHealth.App.Controllers
             public const string DoctorDesk = "DoctorDesk";
             public const string OutPatientReports = "OutPatientReports";
             public const string NextVisitDetails = "NextVisitDetails";
+            public const string PatientTreatment = "PatientTreatment";
             public const string GetMaxOutPatientId = "GetMaxOutPatientId";
             public const string GenerateBarcode = "GenerateBarcode";
             public const string GetOutPatientDepartmentDetails = "GetOutPatientDepartmentDetails";
             public const string CRUDOPRegistrationDetails = "CRUDOPRegistrationDetails";
+            public const string GetPatientDetails = "GetPatientDetails";
+            public const string ManagePatientDetails = "ManagePatientDetails";
+            public const string DownloadFile = "DownloadFile";
+            public const string DeletePatientFile = "DeletePatientFile";
         }
 
 
@@ -114,6 +142,30 @@ namespace PepinoHealth.App.Controllers
         public class ActionParamsClass_CRUDOPRegistrationDetails
         {
             public readonly string outPatientRegistration = "outPatientRegistration";
+        }
+        static readonly ActionParamsClass_ManagePatientDetails s_params_ManagePatientDetails = new ActionParamsClass_ManagePatientDetails();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_ManagePatientDetails ManagePatientDetailsParams { get { return s_params_ManagePatientDetails; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_ManagePatientDetails
+        {
+            public readonly string name = "name";
+        }
+        static readonly ActionParamsClass_DownloadFile s_params_DownloadFile = new ActionParamsClass_DownloadFile();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_DownloadFile DownloadFileParams { get { return s_params_DownloadFile; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_DownloadFile
+        {
+            public readonly string fileName = "fileName";
+        }
+        static readonly ActionParamsClass_DeletePatientFile s_params_DeletePatientFile = new ActionParamsClass_DeletePatientFile();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_DeletePatientFile DeletePatientFileParams { get { return s_params_DeletePatientFile; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_DeletePatientFile
+        {
+            public readonly string fileName = "fileName";
         }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -130,12 +182,14 @@ namespace PepinoHealth.App.Controllers
                 public readonly string OPRegistration = "OPRegistration";
                 public readonly string OPRevisitRegistration = "OPRevisitRegistration";
                 public readonly string OutPatientReports = "OutPatientReports";
+                public readonly string PatientTreatment = "PatientTreatment";
             }
             public readonly string DoctorDesk = "~/Views/OutPatient/DoctorDesk.cshtml";
             public readonly string NextVisitDetails = "~/Views/OutPatient/NextVisitDetails.cshtml";
             public readonly string OPRegistration = "~/Views/OutPatient/OPRegistration.cshtml";
             public readonly string OPRevisitRegistration = "~/Views/OutPatient/OPRevisitRegistration.cshtml";
             public readonly string OutPatientReports = "~/Views/OutPatient/OutPatientReports.cshtml";
+            public readonly string PatientTreatment = "~/Views/OutPatient/PatientTreatment.cshtml";
         }
     }
 
@@ -200,6 +254,17 @@ namespace PepinoHealth.App.Controllers
         }
 
         [NonAction]
+        partial void PatientTreatmentOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult PatientTreatment()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.PatientTreatment);
+            PatientTreatmentOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
         partial void GetMaxOutPatientIdOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         [NonAction]
@@ -241,6 +306,53 @@ namespace PepinoHealth.App.Controllers
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.CRUDOPRegistrationDetails);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "outPatientRegistration", outPatientRegistration);
             CRUDOPRegistrationDetailsOverride(callInfo, outPatientRegistration);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void GetPatientDetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult GetPatientDetails()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetPatientDetails);
+            GetPatientDetailsOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void ManagePatientDetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string name);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult ManagePatientDetails(string name)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ManagePatientDetails);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "name", name);
+            ManagePatientDetailsOverride(callInfo, name);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void DownloadFileOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string fileName);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult DownloadFile(string fileName)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.DownloadFile);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "fileName", fileName);
+            DownloadFileOverride(callInfo, fileName);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void DeletePatientFileOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string fileName);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult DeletePatientFile(string fileName)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.DeletePatientFile);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "fileName", fileName);
+            DeletePatientFileOverride(callInfo, fileName);
             return callInfo;
         }
 

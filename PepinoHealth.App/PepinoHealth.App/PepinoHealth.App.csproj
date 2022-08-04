@@ -378,8 +378,10 @@
     <Content Include="Views\OPBilling\AdvanceReceipt.cshtml" />
     <Content Include="Views\OutPatient\OutPatientReports.cshtml" />
     <Content Include="Views\OutPatient\NextVisitDetails.cshtml" />
+    <Content Include="Views\OutPatient\PatientTreatment.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Files\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

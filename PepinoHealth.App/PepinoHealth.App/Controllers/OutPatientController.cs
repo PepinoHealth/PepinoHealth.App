@@ -12,14 +12,13 @@ using System;
 using PepinoHealth.BL;
 using PepinoHealth.CL.OPModal;
 using System.Web;
+using System.Linq;
 
 namespace PepinoHealth.App.Controllers
 {
     public partial class OutPatientController : Controller
     {
         #region View Action Methods
-
-
 
         [SessionExpire]
         [NoCache]
@@ -67,6 +66,16 @@ namespace PepinoHealth.App.Controllers
         [HttpGet]
         [Route(Helper.NextVisitDetails)]
         public virtual ActionResult NextVisitDetails()
+        {
+            return View();
+        }
+
+        [SessionExpire]
+        [NoCache]
+        [URAC(PepinoHealth.CL.Common.Roles.Admin)]
+        [HttpGet]
+        [Route(Helper.PatientTreatment)]
+        public virtual ActionResult PatientTreatment()
         {
             return View();
         }
@@ -201,7 +210,7 @@ namespace PepinoHealth.App.Controllers
             try
             {
                 outPatientRegistration.Barcode_Image = (byte[])TempData["barcodeImg"];
-               
+
                 var result = OutPatientRepositary().CRUDOPRegistrationDetails(outPatientRegistration);
 
                 var jsonResult = Json(result, JsonRequestBehavior.AllowGet);
@@ -219,6 +228,94 @@ namespace PepinoHealth.App.Controllers
             return returnNull;
         }
         #endregion
+
+        #region Patient Treatment
+
+        [HttpGet]
+        public virtual ActionResult GetPatientDetails()
+        {
+            string folderPath = Server.MapPath("~/Files/");
+            string[] files = null;
+
+            if (Directory.Exists(folderPath))
+            {
+                files = Directory.GetFiles(folderPath)
+                                 .Select(file => Path.GetFileName(file))
+                                 .ToArray();
+            }
+
+            return Json(files, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public virtual ActionResult ManagePatientDetails(string name)
+        {
+            try
+            {
+                if (Request.Files.Count > 0)
+                {
+                    HttpFileCollectionBase files = Request.Files;
+
+                    for (int index = 0; index < files.Count; index++)
+                    {
+                        HttpPostedFileBase file = files[index];
+
+                        string
+                        fileName = string.Empty,
+                        browserName = Request.Browser.Browser.ToUpper();
+
+                        if (browserName == "IE" || browserName == "INTERNETEXPLORER")
+                        {
+                            string[] uFiles = file.FileName.Split(new char[] { '\\' });
+                            fileName = uFiles[uFiles.Length - 1];
+                        }
+                        else
+                        {
+                            fileName = file.FileName;
+                        }
+
+                        fileName = Path.Combine(Server.MapPath("~/Files/"), fileName);
+                        file.SaveAs(fileName);
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                Helper.Log(exception);
+            }
+
+            return Json(true, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public virtual ActionResult DownloadFile(string fileName)
+        {
+            string
+            folderPath = Server.MapPath("~/Files/"),
+            filePath = Path.Combine(folderPath, fileName);
+
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
+
+            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
+        }
+
+        [HttpPost]
+        public virtual ActionResult DeletePatientFile(string fileName)
+        {
+            string
+            folderPath = Server.MapPath("~/Files/"),
+            filePath = Path.Combine(folderPath, fileName);
+
+            if (System.IO.File.Exists(filePath))
+            {
+                System.IO.File.Delete(filePath);
+            }
+
+            return Json(true, JsonRequestBehavior.AllowGet);
+        }
+
+        #endregion
+
         #endregion
     }
 }
