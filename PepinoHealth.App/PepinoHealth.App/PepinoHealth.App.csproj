@@ -379,6 +379,11 @@
     <Content Include="Views\OutPatient\OutPatientReports.cshtml" />
     <Content Include="Views\OutPatient\NextVisitDetails.cshtml" />
     <Content Include="Views\OutPatient\PatientTreatment.cshtml" />
+    <Content Include="Views\IPModule\IPReports.cshtml" />
+    <Content Include="Views\IPModule\IPCaseSheet.cshtml" />
+    <Content Include="Views\IPModule\Page1.cshtml" />
+    <Content Include="Views\IPModule\Page2.cshtml" />
+    <Content Include="Views\IPModule\ObstetricsSonography.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Files\" />

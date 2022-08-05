@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewBag.Title = "IP Reports";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        hideModal('loader');
+    });
+</script>
+
+<div class="p-block v2">
+    <div class="p-header">
+        <div class="title">
+            IP Reports
+        </div>
+    </div>
+    <div class="p-body">
+        <div class="p-body-content">
+            <form id="formIPReports">
+                <section>
+                    <div class="header">
+                        <div class="title">
+                            Report Details:
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="radio radio-report-type cursor-default">
+                                        <label class="mr-2">Report Type:</label>
+                                        <label class="custom-control custom-radio">
+                                            <input name="report-type" type="radio" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Date Wise</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input name="report-type" type="radio" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Department Wise</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input name="report-type" type="radio" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Category</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input name="report-type" type="radio" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Gender Wise</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input name="report-type" type="radio" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Ward Wise</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input name="report-type" type="radio" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Unit No Wise</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>From Date</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="txtFromDate" name="txtFromDate" />
+                                        <button class="btn btn-info btn-sm btn-search-icon" type="button" onclick="hideModal(" mdl-id-details\");>
+                                            <i class="material-icons">date_range</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>To Date</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="txtToDate" name="txtToDate" />
+                                        <button class="btn btn-info btn-sm btn-search-icon" type="button">
+                                            <i class="material-icons">date_range</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <div class="p-card">
+                    <div class="p-card-header">
+                        <ul class="nav nav-tabs list tab-menu">
+                            <li><a id="summary1-tab" href="#summary1" data-toggle="tab" aria-controls="summary1" aria-selected="true" class="active">Category Wise</a></li>
+                        </ul>
+                    </div>
+                    <div class="p-card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane show active" role="tabpanel" id="summary1" aria-labelledby="summary1-tab">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>Category</label>
+                                                <section class="form-control"></section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="button-block">
+                            <button type="button" class="btn btn-info btn-sm">
+                                IPD Registration
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                Pt. Remained
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                Pt. Discharged
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-sm">
+                                Refresh [New]
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

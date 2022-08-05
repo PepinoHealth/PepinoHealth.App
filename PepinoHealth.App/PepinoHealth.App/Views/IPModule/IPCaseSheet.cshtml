@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "IP Casesheet";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        hideModal('loader');
+    });
+</script>
+
+<div class="p-block v2">
+    <div class="p-header">
+        <div class="title">
+            IP Casesheet
+        </div>
+    </div>
+    <div class="p-body">
+        <div class="p-body-content">
+            <form id="formIPCasesheet">
+                <section>
+                    <div class="header">
+                        <div class="title">
+                            Report Details:
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label>UHID</label>
+                                    <div class="input-group report-action-group">
+                                        <select class="form-control" id="ddlUHID" name="ddlUHID"></select>
+                                        <div class="dropdown">
+                                            <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
+                                                Report Action
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Case Sheet Front Page</a></li>
+                                                <li><a href="#">Case Sheet 2 Page</a></li>
+                                                <li><a href="#">Clinical History Back</a></li>
+                                                <li><a href="#">OT Notes</a></li>
+                                                <li><a href="#">Nurse Chart</a></li>
+                                                <li><a href="#">Nurse Daily Record1</a></li>
+                                                <li><a href="#">Nurse Daily Record2</a></li>
+                                                <li><a href="#">Progress Chart</a></li>
+                                                <li><a href="#">Treatment Chart</a></li>
+                                                <li><a href="#">Consent Form1</a></li>
+                                                <li><a href="#">Consent Form2</a></li>
+                                                <li><a href="#">Discharge Summary Front</a></li>
+                                                <li><a href="#">Discharge 2nd Page</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <div class="p-card">
+                    <div class="p-card-header">
+                        <ul class="nav nav-tabs list tab-menu">
+                            <li><a id="summary1-tab" href="#summary1" data-toggle="tab" aria-controls="summary1" aria-selected="true" class="active">Report</a></li>                            
+                        </ul>
+                    </div>
+                    <div class="p-card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane show active" role="tabpanel" id="summary1" aria-labelledby="summary1-tab">
+                                <div>
+                                    
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

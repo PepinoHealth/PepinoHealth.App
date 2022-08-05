@@ -1,0 +1,233 @@
+﻿
+@{
+    ViewBag.Title = "Page 2";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        hideModal('loader');
+    });
+</script>
+
+<div class="p-block v2">
+    <div class="p-header">
+        <div class="title">
+            Page 2
+        </div>
+    </div>
+    <div class="p-body">
+        <div class="p-body-content">
+            <form id="formPage2" class="ip-module">
+                <section>
+                    <div class="header">
+                        <div class="title">
+                            Appointment Details:
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>SL No</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control"
+                                               id="txtSLNo" name="txtSLNo">
+                                        <button class="btn btn-info btn-sm btn-search-icon" type="button">
+                                            <i class="material-icons">search</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>SL Year</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" />
+                                        <input type="text" class="form-control" id="txtSLYear" name="txtSLYear" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>Department Name</label>
+                                    <select class="form-control" id="ddlDepartmentName" name="ddlDepartmentName"></select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>UH ID</label>
+                                    <input type="text" class="form-control" id="txtUHID" name="txtUHID" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>Date Time</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="txtDateTime" name="txtDateTime" />
+                                        <button class="btn btn-info btn-sm btn-search-icon" type="button">
+                                            <i class="material-icons">date_range</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>Patient Name</label>
+                                    <input type="text" class="form-control" id="txtPatientName" name="txtPatientName" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>Gender <span class="required">*</span></label>
+                                            <select class="form-control" id="ddlGender" name="ddlGender">
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>Age <span class="required">*</span></label>
+                                            <input type="text" class="form-control" id="txtAge" name="txtAge" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group mb-1">
+                                    <label>Doctor Name</label>
+                                    <input type="text" class="form-control" id="txtDoctorName" name="txtDoctorName" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group mb-1">
+                                    <label>LMP</label>
+                                    <input type="text" class="form-control" id="txtLMP" name="txtLMP" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <section>
+                    <div class="header">
+                        <div class="title">
+                            Uterus:
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>Size</label>
+                                    <input type="text" class="form-control"
+                                           id="txtSize" name="txtSize">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>Echo Pattern</label>
+                                    <input type="text" class="form-control"
+                                           id="txtEchoPattern" name="txtEchoPattern">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>E T</label>
+                                    <input type="text" class="form-control"
+                                           id="txtET" name="txtET">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>Fibroids</label>
+                                    <input type="text" class="form-control"
+                                           id="txtFibroids" name="txtFibroids">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="header">
+                        <div class="title">
+                            Advance:
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-group">
+                                    <label>Right Ovary</label>
+                                    <input type="text" class="form-control"
+                                           id="txtRightOvary" name="txtRightOvary">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-group">
+                                    <label>Left Ovary</label>
+                                    <input type="text" class="form-control"
+                                           id="txtLeftOvary" name="txtLeftOvary">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-group">
+                                    <label>Pouch of Douglas</label>
+                                    <input type="text" class="form-control"
+                                           id="txtPouchOfDouglas" name="txtPouchOfDouglas">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label>Impressions</label>
+                                    <textarea class="form-control ta-2"
+                                              id="taImpressions" name="taImpressions" ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="button-block">
+                            <button type="button" class="btn btn-default btn-sm">
+                                New
+                            </button>
+                            <button type="button" class="btn btn-success btn-sm">
+                                Save
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                Delete
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-sm">
+                                Refresh [New]
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                Print
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-warning btn-sm">
+                                Modify
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

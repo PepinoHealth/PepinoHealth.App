@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Page 1";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        hideModal('loader');
+    });
+</script>
+
+<div class="p-block v2">
+    <div class="p-header">
+        <div class="title">
+            Page 1
+        </div>
+    </div>
+    <div class="p-body">
+        <div class="p-body-content">
+            <form id="formPage1" class="ip-module">
+                <section>
+                    <div class="header">
+                        <div class="title">
+                            Report Details:
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label>UHID</label>
+                                    <div class="input-group report-action-group">
+                                        <select class="form-control" id="ddlUHID" name="ddlUHID"></select>
+                                        <div class="dropdown">
+                                            <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
+                                                Report Action
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Blood Transfusion Consent</a></li>
+                                                <li><a href="#">Bone Graft Consent</a></li>
+                                                <li><a href="#">Consent for Anesthesia</a></li>
+                                                <li><a href="#">Consent for Surgery</a></li>
+                                                <li><a href="#">High Risk Consent</a></li>
+                                                <li><a href="#">On Table Death Consent</a></li>
+                                                <li><a href="#">Pre Anasthetiv Evaluation</a></li>
+                                                <li><a href="#">Ana.Record</a></li>
+                                                <li><a href="#">Activity Chart</a></li>
+                                                <li><a href="#">OT Procedure Chart</a></li>
+                                                <li><a href="#">LAB Investigations</a></li>
+                                                <li><a href="#">Diet Charges</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <div class="p-card">
+                    <div class="p-card-header">
+                        <ul class="nav nav-tabs list tab-menu">
+                            <li><a id="summary1-tab" href="#summary1" data-toggle="tab" aria-controls="summary1" aria-selected="true" class="active">Report</a></li>
+                        </ul>
+                    </div>
+                    <div class="p-card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane show active" role="tabpanel" id="summary1" aria-labelledby="summary1-tab">
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

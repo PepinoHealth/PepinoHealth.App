@@ -43,7 +43,49 @@ namespace PepinoHealth.App.Controllers
         {
             return View();
         }
-        
+
+        [SessionExpire]
+        [NoCache]
+        [URAC(PepinoHealth.CL.Common.Roles.Admin)]
+        [HttpGet]
+        [Route(Helper.IPReports)]
+        public virtual ActionResult IPReports()
+        {
+            return View();
+        }
+
+        [SessionExpire]
+        [NoCache]
+        [URAC(PepinoHealth.CL.Common.Roles.Admin)]
+        [HttpGet]
+        [Route(Helper.IPCaseSheet)]
+        public virtual ActionResult IPCaseSheet()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public virtual ActionResult Page1()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public virtual ActionResult Page2()
+        {
+            return View();
+        }
+
+        [SessionExpire]
+        [NoCache]
+        [URAC(PepinoHealth.CL.Common.Roles.Admin)]
+        [HttpGet]
+        [Route(Helper.ObstetricsSonography)]
+        public virtual ActionResult ObstetricsSonography()
+        {
+            return View();
+        }
+
         #endregion
     }
 }

@@ -1,0 +1,386 @@
+﻿
+@{
+    ViewBag.Title = "Obstetrics Sonography";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        hideModal('loader');
+    });
+</script>
+
+<div class="p-block v2">
+    <div class="p-header">
+        <div class="title">
+            Obstetrics Sonography
+        </div>
+    </div>
+    <div class="p-body">
+        <div class="p-body-content">
+            <form id="formPage2" class="ip-module">
+                <section>
+                    <div class="header">
+                        <div class="title">
+                            Appointment Details:
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>SL No</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control"
+                                               id="txtSLNo" name="txtSLNo">
+                                        <button class="btn btn-info btn-sm btn-search-icon" type="button">
+                                            <i class="material-icons">search</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>SL Year</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" />
+                                        <input type="text" class="form-control" id="txtSLYear" name="txtSLYear" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>Department Name</label>
+                                    <select class="form-control" id="ddlDepartmentName" name="ddlDepartmentName"></select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>UH ID</label>
+                                    <input type="text" class="form-control" id="txtUHID" name="txtUHID" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>Date Time</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="txtDateTime" name="txtDateTime" />
+                                        <button class="btn btn-info btn-sm btn-search-icon" type="button">
+                                            <i class="material-icons">date_range</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group">
+                                    <label>Patient Name</label>
+                                    <input type="text" class="form-control" id="txtPatientName" name="txtPatientName" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>Gender <span class="required">*</span></label>
+                                            <select class="form-control" id="ddlGender" name="ddlGender">
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>Age <span class="required">*</span></label>
+                                            <input type="text" class="form-control" id="txtAge" name="txtAge" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group mb-1">
+                                    <label>Doctor Name</label>
+                                    <input type="text" class="form-control" id="txtDoctorName" name="txtDoctorName" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <div class="p-card">
+                    <div class="p-card-header">
+                        <ul class="nav nav-tabs list tab-menu">
+                            <li><a id="summary1-tab" href="#summary1" data-toggle="tab" aria-controls="summary1" aria-selected="true" class="active">1</a></li>
+                            <li><a id="summary2-tab" href="#summary2" data-toggle="tab" aria-controls="summary2" aria-selected="false">2</a></li>
+                        </ul>
+                    </div>
+                    <div class="p-card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane show active" role="tabpanel" id="summary1" aria-labelledby="summary1-tab">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>LMP</label>
+                                                <input type="text" class="form-control" id="txtLMP" name="txtLMP" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>LMP EDD</label>
+                                                <input type="text" class="form-control" id="txtLMPEDD" name="txtLMPEDD" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>GA </label>
+                                                <input type="text" class="form-control" id="txtGA" name="txtGA" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-end">
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>EDD (USG) </label>
+                                                <input type="text" class="form-control" id="txtEDDUSG" name="txtEDDUSG" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>Single/Twins </label>
+                                                <textarea class="form-control ta-2" id="tsSingleTwins" name="tsSingleTwins"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>Fetal Position </label>
+                                                <textarea class="form-control ta-2" id="tsFetalPosition" name="tsFetalPosition"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>Fetal Movements </label>
+                                                <textarea class="form-control ta-2" id="tsFetalMovements" name="tsFetalMovements"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>FHS </label>
+                                                <textarea class="form-control ta-2" id="tsFHS" name="tsFHS"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>Placenta </label>
+                                                <textarea class="form-control ta-2" id="tsPlacenta" name="tsPlacenta"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>Amniotic Fluid </label>
+                                                <textarea class="form-control ta-2" id="tsAmnioticFluid" name="tsAmnioticFluid"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>GS</label>
+                                                <input type="text" class="form-control" id="txtGS" name="txtGS" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>BPD</label>
+                                                <input type="text" class="form-control" id="txtBPD" name="txtBPD" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>HC </label>
+                                                <input type="text" class="form-control" id="txtHC" name="txtHC" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>CRL</label>
+                                                <input type="text" class="form-control" id="txtCRL" name="txtCRL" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>AC</label>
+                                                <input type="text" class="form-control" id="txtAC" name="txtAC" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>FL </label>
+                                                <input type="text" class="form-control" id="txtFL" name="txtFL" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" role="tabpanel" id="summary2" aria-labelledby="summary2-tab">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>LMP</label>
+                                                <input type="text" class="form-control" id="txtLMP" name="txtLMP" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>LMP EDD</label>
+                                                <input type="text" class="form-control" id="txtLMPEDD" name="txtLMPEDD" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>GA </label>
+                                                <input type="text" class="form-control" id="txtGA" name="txtGA" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-end">
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>EDD (USG) </label>
+                                                <input type="text" class="form-control" id="txtEDDUSG" name="txtEDDUSG" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>Single/Twins </label>
+                                                <textarea class="form-control ta-2" id="tsSingleTwins" name="tsSingleTwins"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>Fetal Position </label>
+                                                <textarea class="form-control ta-2" id="tsFetalPosition" name="tsFetalPosition"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>Fetal Movements </label>
+                                                <textarea class="form-control ta-2" id="tsFetalMovements" name="tsFetalMovements"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>FHS </label>
+                                                <textarea class="form-control ta-2" id="tsFHS" name="tsFHS"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>Placenta </label>
+                                                <textarea class="form-control ta-2" id="tsPlacenta" name="tsPlacenta"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <label>Amniotic Fluid </label>
+                                                <textarea class="form-control ta-2" id="tsAmnioticFluid" name="tsAmnioticFluid"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>GS</label>
+                                                <input type="text" class="form-control" id="txtGS" name="txtGS" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>BPD</label>
+                                                <input type="text" class="form-control" id="txtBPD" name="txtBPD" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>HC </label>
+                                                <input type="text" class="form-control" id="txtHC" name="txtHC" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>CRL</label>
+                                                <input type="text" class="form-control" id="txtCRL" name="txtCRL" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>AC</label>
+                                                <input type="text" class="form-control" id="txtAC" name="txtAC" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>FL </label>
+                                                <input type="text" class="form-control" id="txtFL" name="txtFL" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="button-block">
+                            <button type="button" class="btn btn-default btn-sm">
+                                New
+                            </button>
+                            <button type="button" class="btn btn-success btn-sm">
+                                Save
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                Delete
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-sm">
+                                Refresh [New]
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                Print
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-warning btn-sm">
+                                Modify
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

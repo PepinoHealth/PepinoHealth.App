@@ -44,11 +44,14 @@ namespace PepinoHealth.CL.Common
         public const string addOPRegistrationDetails = "addOPRegistrationDetails";
         public const string bindGenerateBarcode = "bindGenerateBarcode";
         public const string GetOutPatientDepartmentDetails = "getOutPatientDepartmentDetails";
+        
         //IPRegistration
         public const string IPDRegistration = "ipdRegistration";
         public const string DischargeSummary = "dischargeSummary";
         public const string ObstetricDischargeSummary = "obstetricDischargeSummary";
-
+        public const string IPReports = "ip-reports";
+        public const string IPCaseSheet = "ip-casesheet";
+        public const string ObstetricsSonography = "obstetrics-sonography";
 
         public const string DateMonthFirst = "M/d/yyyy";
 
