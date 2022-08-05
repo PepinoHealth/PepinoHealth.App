@@ -61,6 +61,20 @@ namespace PepinoHealth.BL
             }
             return result;
         }
+
+        public List<OutPatientModal.OutPatientRegistration> SearchOPDetailsByUHID(string startDate, string endDate)
+        {
+            List<OutPatientModal.OutPatientRegistration> result = null;
+
+            try
+            {
+                result = OutPatientInfo().SearchOPDetailsByUHID(startDate, endDate);
+            }
+            catch (Exception Ex)
+            {
+            }
+            return result;
+        }
         #endregion
     }
 }
