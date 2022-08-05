@@ -88,6 +88,54 @@ namespace PepinoHealth.DL
             return result;
         }
 
+        public List<OutPatientModal.OutPatientRegistration> SearchOPDetailsByUHID(string startDate, string endDate)
+        {
+            List<OutPatientModal.OutPatientRegistration> details = null;
+            if (string.IsNullOrEmpty(startDate) && string.IsNullOrEmpty(endDate))
+            {
+                startDate = DateTime.Now.ToString("MM/dd/yyyy");
+                endDate = DateTime.Now.ToString("MM/dd/yyyy");
+            }
+            try
+            {
+                sqlConnection = AccessToDB();
+
+                sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "SELECT [UHID],[OP_Name],[Op_Dept_Name] ,[Op_Gender] ,[OP_Age] FROM Out_Paitent_Registration where Op_Date between '" + DateTime.ParseExact(startDate, "dd/MM/yyyy", null) + "' and '" + DateTime.ParseExact(endDate, "dd/MM/yyyy", null) + "'";
+                sqlCommand.CommandType = CommandType.Text;
+                //sqlCommand.Parameters.AddWithValue("@StartDate", startDate);
+                //sqlCommand.Parameters.AddWithValue("@EndDate", endDate);
+                CheckNOpen();
+
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                details = new List<OutPatientModal.OutPatientRegistration>();
+                while (sqlDataReader.Read())
+                {
+                    details.Add(new OutPatientModal.OutPatientRegistration()
+                    {
+                        UHID = Convert.ToString(sqlDataReader["UHID"]),
+                        OP_NAME = Convert.ToString(sqlDataReader["OP_Name"]),
+                        OP_DEPT_NAME = Convert.ToString(sqlDataReader["Op_Dept_Name"]),
+                        OP_GENDER = Convert.ToString(sqlDataReader["Op_Gender"]),
+                        OP_AGE = Convert.ToString(sqlDataReader["OP_Age"])
+
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                ExceptionLogging.SendErrorToText(ex, "CRUDOutPatientDetails");
+            }
+            finally
+            {
+                CheckNClose();
+            }
+
+            return details;
+        }
+
         public List<OutPatientModal.OutPatientRegistration> CRUDOPRegistrationDetails(OutPatientModal.OutPatientRegistration outPatientRegistration)
         {
             List<OutPatientModal.OutPatientRegistration> details = null;

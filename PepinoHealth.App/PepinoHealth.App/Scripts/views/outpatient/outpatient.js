@@ -8,10 +8,7 @@ var validateOPUrl = null;
 var deptUrl = null;
 var addOPRegURL = null;
 var maxOPID = null;
-var getPatientDetailsUrl = null;
-var managePatientDetailsUrl = null;
-var downloadFileUrl = null;
-var deletePatientFileUrl = null;
+var searchOPUrl = null;
 // Alert  messages
 
 
@@ -131,19 +128,77 @@ function addOPRegistrationDetails() {
             }
         });
 }
+function searchOPDetailsByUHID() {
+    
+   
+    applyDateTimePicker(
+        'txtFromDate',
+        calendarFormatType.DateTime,
+        function (e) {
+        }
+    );
 
+    applyDateTimePicker(
+        'txtToDate',
+        calendarFormatType.DateTime,
+        function (e) {
+        }
+    );
+
+    //if ($("#txtStartDate").val() == "" || $("#txtEndDate").val() == "") {
+    //    alert("no date selected");
+    //    return;
+    //}
+
+    //if (Date.parse($('#txtStartDate').val()) > Date.parse($('#txtEndDate').val())) {
+    //    alert("startdate shouldn't be greater than enddate");
+    //    return;
+    //}
+    var data = JSON.stringify({ StartDate: $('#txtStartDate').val(), EndDate: $('#txtEndDate').val() });
+    callAPI(searchOPUrl, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
+        function (data) {
+            if (data != null) {
+                if ($.fn.DataTable.isDataTable('#tblOPDetails')) {
+                    $('#tblOPDetails').DataTable().destroy();
+                }
+                $("#tblOPDetails tbody").empty();
+                if (data != null) {
+
+                    $.each(data, function (key, value) {
+                        var row = '<tr>' +
+                            '<td>' + '<a href="#" id="' + value.UHID + '" onclick=getOPDetailsByUHID(this)>' + value.UHID + '</a></td>' +
+                            '<td>' + value.OP_NAME + '</td>' +
+                            '<td>' + value.OP_DEPT_NAME + '</td>' +
+                            '<td>' + value.OP_GENDER + '</td>' +
+                            '<td>' + value.OP_AGE + '</td>' +
+                            '</tr>';
+                        $("#tblOPDetails tbody").append(row);
+                    });
+                }
+                table = $('#tblOPDetails').DataTable({
+                    "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+                    responsive: true,
+                    "order": [[0, "asc"]],
+                    dom: 'Blfrtip',
+                    buttons: [
+                        'copy', 'csv', 'excel', 'pdf', 'print'
+                    ],
+                });
+            }
+        });
+    showModal('mdl-id-details');
+}
 function processOPRegistrationAction(object) {
     let actionTypeID = parseInt(object.data('action-id'));
 
     switch (actionTypeID) {
         case actionType.Save:
             addOPRegistrationDetails();
-            // alert('This action is from Save button.');
 
             break;
-        case actionType.Refresh:
+        case actionType.Popup:
 
-            alert('This action is from Refresh button.');
+            searchOPDetailsByUHID();
 
             break;
         case actionType.Print:
@@ -180,111 +235,3 @@ function registerEventsInOPRegistration() {
 //////////////////////////////
 // OPRegistration view functions end //
 //////////////////////////////
-
-
-////////////////////////////////////////////
-// Patient Treatment view functions start //
-////////////////////////////////////////////
-
-function bindControlsOnLoadInPatientTreatment() {
-    registerEventsInPatientTreatment();
-    validateNPatientDetails();
-    bindPatientDetails();
-    hideModal('loader');
-}
-
-function validateNPatientDetails() {
-    $('#formPatientTreatment').bootstrapValidator({
-        live: liveType.Disabled,
-        fields: {
-            txtName: {
-                validators: {
-                    notEmpty: {
-                        message: 'Required.'
-                    }
-                }
-            },
-            ddlGender: {
-                validators: {
-                    notEmpty: {
-                        message: 'Required.'
-                    }
-                }
-            },
-            txtAge: {
-                validators: {
-                    notEmpty: {
-                        message: 'Required.'
-                    }
-                }
-            },
-        },
-    }).on('success.form.bv', function (e) {
-        e.preventDefault();
-
-        savePatientDetails();
-    });
-}
-
-function bindPatientDetails() {
-    let filesHtml = '';
-
-    callAPI(getPatientDetailsUrl, apiType.Get, asyncType.False, cacheType.False, JSON.stringify(''), dataNature.Json,
-        function (data) {
-            $(data).each(function (key, fileName) {
-                filesHtml +=
-                    '<li>' +
-                    '<span>' + fileName + '</span> - <small onclick="downloadFile(this);">View/Download</small>' +
-                    '</li>';
-            });
-        });
-
-    if (filesHtml.length > 0) {
-        $('.p-files').html(filesHtml);
-    }
-}
-
-function savePatientDetails() {
-    if (window.FormData != undefined) {
-        let fileUpload = $('#fDocuments').get(0),
-            files = fileUpload.files,
-            formData = new FormData();
-
-        for (var index = 0; index < files.length; index++) {
-            formData.append(files[index].name, files[index]);
-        }
-
-        formData.append("name", "John Smith");
-
-        callFormAPI(managePatientDetailsUrl, apiType.Post, asyncType.False, cacheType.False, formData,
-            function (data) {
-                if (data != null) {
-                    bindPatientDetails();
-                }
-            });
-    }
-}
-
-function downloadFile(object) {
-    let requestUrl = (downloadFileUrl + '?fileName=' + $(object).parent().find('span').text().trim());
-
-    window.location.href = requestUrl;
-}
-
-////////////////////////
-// EventsRegistration //
-////////////////////////
-
-function registerEventsInPatientTreatment() {
-    $('.form-upload').on('click', function (e) {
-        $('#fDocuments').click();
-    });
-
-    $('#fDocuments').on('click', function (e) {
-        e.stopPropagation();
-    });
-}
-
-//////////////////////////////////////////
-// Patient Treatment view functions end //
-//////////////////////////////////////////

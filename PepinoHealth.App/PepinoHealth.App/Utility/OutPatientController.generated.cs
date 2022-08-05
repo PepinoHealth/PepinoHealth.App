@@ -83,6 +83,12 @@ namespace PepinoHealth.App.Controllers
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.DeletePatientFile);
         }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult SearchOPDetailsByUHID()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SearchOPDetailsByUHID);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public OutPatientController Actions { get { return MVC.OutPatient; } }
@@ -113,6 +119,7 @@ namespace PepinoHealth.App.Controllers
             public readonly string ManagePatientDetails = "ManagePatientDetails";
             public readonly string DownloadFile = "DownloadFile";
             public readonly string DeletePatientFile = "DeletePatientFile";
+            public readonly string SearchOPDetailsByUHID = "SearchOPDetailsByUHID";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -132,6 +139,7 @@ namespace PepinoHealth.App.Controllers
             public const string ManagePatientDetails = "ManagePatientDetails";
             public const string DownloadFile = "DownloadFile";
             public const string DeletePatientFile = "DeletePatientFile";
+            public const string SearchOPDetailsByUHID = "SearchOPDetailsByUHID";
         }
 
 
@@ -166,6 +174,15 @@ namespace PepinoHealth.App.Controllers
         public class ActionParamsClass_DeletePatientFile
         {
             public readonly string fileName = "fileName";
+        }
+        static readonly ActionParamsClass_SearchOPDetailsByUHID s_params_SearchOPDetailsByUHID = new ActionParamsClass_SearchOPDetailsByUHID();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_SearchOPDetailsByUHID SearchOPDetailsByUHIDParams { get { return s_params_SearchOPDetailsByUHID; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_SearchOPDetailsByUHID
+        {
+            public readonly string StartDate = "StartDate";
+            public readonly string EndDate = "EndDate";
         }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -353,6 +370,19 @@ namespace PepinoHealth.App.Controllers
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.DeletePatientFile);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "fileName", fileName);
             DeletePatientFileOverride(callInfo, fileName);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void SearchOPDetailsByUHIDOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string StartDate, string EndDate);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult SearchOPDetailsByUHID(string StartDate, string EndDate)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SearchOPDetailsByUHID);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "StartDate", StartDate);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "EndDate", EndDate);
+            SearchOPDetailsByUHIDOverride(callInfo, StartDate, EndDate);
             return callInfo;
         }
 

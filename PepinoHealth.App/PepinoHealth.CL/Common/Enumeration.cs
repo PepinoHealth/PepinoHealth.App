@@ -32,7 +32,8 @@ namespace PepinoHealth.CL.Common
         Print = 3,
         SaveAndPrint = 4,
         Modify = 5,
-        Delete = 6
+        Delete = 6,
+        Popup=7
     }
 
     public enum OperationType

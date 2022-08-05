@@ -122,6 +122,7 @@ namespace PepinoHealth.App.Controllers
             return returnNull;
         }
         #endregion
+
         #region bindGenerateBarcode
         [HttpPost]
         public virtual ActionResult GenerateBarcode()
@@ -314,6 +315,30 @@ namespace PepinoHealth.App.Controllers
             return Json(true, JsonRequestBehavior.AllowGet);
         }
 
+        #endregion
+
+        #region SearchOPDetailsByUHID
+        [HttpPost]
+        public virtual ActionResult SearchOPDetailsByUHID(string StartDate, string EndDate)
+        {
+            try
+            {
+                var result = OutPatientRepositary().SearchOPDetailsByUHID(StartDate, EndDate);
+
+                var jsonResult = Json(result, JsonRequestBehavior.AllowGet);
+                jsonResult.MaxJsonLength = int.MaxValue;
+                return jsonResult;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
+            return returnNull;
+        }
         #endregion
 
         #endregion
