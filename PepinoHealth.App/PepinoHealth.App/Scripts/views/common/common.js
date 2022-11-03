@@ -246,6 +246,14 @@ function formatDate(ms) {
     return date;
     // return formatted date time string
 }
+//////////////////////////
+// Modal close functions end //
+//////////////////////////
+$('#mdl-id-details').modal('hide');
+
+//////////////////////////
+// Modal close functions end //
+//////////////////////////
 
 //////////////////////////
 // Common functions end //

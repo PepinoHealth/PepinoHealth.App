@@ -374,10 +374,10 @@ namespace PepinoHealth.App.Controllers
         }
 
         [NonAction]
-        partial void SearchOPDetailsByUHIDOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string StartDate, string EndDate);
+        partial void SearchOPDetailsByUHIDOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, System.DateTime StartDate, System.DateTime EndDate);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult SearchOPDetailsByUHID(string StartDate, string EndDate)
+        public override System.Web.Mvc.ActionResult SearchOPDetailsByUHID(System.DateTime StartDate, System.DateTime EndDate)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SearchOPDetailsByUHID);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "StartDate", StartDate);

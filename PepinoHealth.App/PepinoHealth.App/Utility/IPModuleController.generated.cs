@@ -78,6 +78,11 @@ namespace PepinoHealth.App.Controllers
             public readonly string IPDRegistration = "IPDRegistration";
             public readonly string DischargeSummary = "DischargeSummary";
             public readonly string ObstetricDischargeSummary = "ObstetricDischargeSummary";
+            public readonly string IPReports = "IPReports";
+            public readonly string IPCaseSheet = "IPCaseSheet";
+            public readonly string Page1 = "Page1";
+            public readonly string Page2 = "Page2";
+            public readonly string ObstetricsSonography = "ObstetricsSonography";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -86,6 +91,11 @@ namespace PepinoHealth.App.Controllers
             public const string IPDRegistration = "IPDRegistration";
             public const string DischargeSummary = "DischargeSummary";
             public const string ObstetricDischargeSummary = "ObstetricDischargeSummary";
+            public const string IPReports = "IPReports";
+            public const string IPCaseSheet = "IPCaseSheet";
+            public const string Page1 = "Page1";
+            public const string Page2 = "Page2";
+            public const string ObstetricsSonography = "ObstetricsSonography";
         }
 
 
@@ -100,12 +110,22 @@ namespace PepinoHealth.App.Controllers
             public class _ViewNamesClass
             {
                 public readonly string DischargeSummary = "DischargeSummary";
+                public readonly string IPCaseSheet = "IPCaseSheet";
                 public readonly string IPDRegistration = "IPDRegistration";
+                public readonly string IPReports = "IPReports";
                 public readonly string ObstetricDischargeSummary = "ObstetricDischargeSummary";
+                public readonly string ObstetricsSonography = "ObstetricsSonography";
+                public readonly string Page1 = "Page1";
+                public readonly string Page2 = "Page2";
             }
             public readonly string DischargeSummary = "~/Views/IPModule/DischargeSummary.cshtml";
+            public readonly string IPCaseSheet = "~/Views/IPModule/IPCaseSheet.cshtml";
             public readonly string IPDRegistration = "~/Views/IPModule/IPDRegistration.cshtml";
+            public readonly string IPReports = "~/Views/IPModule/IPReports.cshtml";
             public readonly string ObstetricDischargeSummary = "~/Views/IPModule/ObstetricDischargeSummary.cshtml";
+            public readonly string ObstetricsSonography = "~/Views/IPModule/ObstetricsSonography.cshtml";
+            public readonly string Page1 = "~/Views/IPModule/Page1.cshtml";
+            public readonly string Page2 = "~/Views/IPModule/Page2.cshtml";
         }
     }
 
@@ -144,6 +164,61 @@ namespace PepinoHealth.App.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ObstetricDischargeSummary);
             ObstetricDischargeSummaryOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void IPReportsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult IPReports()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.IPReports);
+            IPReportsOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void IPCaseSheetOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult IPCaseSheet()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.IPCaseSheet);
+            IPCaseSheetOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void Page1Override(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Page1()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Page1);
+            Page1Override(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void Page2Override(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Page2()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Page2);
+            Page2Override(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void ObstetricsSonographyOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult ObstetricsSonography()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ObstetricsSonography);
+            ObstetricsSonographyOverride(callInfo);
             return callInfo;
         }
 

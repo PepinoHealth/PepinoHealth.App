@@ -319,7 +319,7 @@ namespace PepinoHealth.App.Controllers
 
         #region SearchOPDetailsByUHID
         [HttpPost]
-        public virtual ActionResult SearchOPDetailsByUHID(string StartDate, string EndDate)
+        public virtual ActionResult SearchOPDetailsByUHID(DateTime StartDate, DateTime EndDate)
         {
             try
             {

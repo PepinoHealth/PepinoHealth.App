@@ -129,7 +129,6 @@ function addOPRegistrationDetails() {
         });
 }
 function searchOPDetailsByUHID() {
-    
    
     applyDateTimePicker(
         'txtFromDate',
@@ -145,16 +144,15 @@ function searchOPDetailsByUHID() {
         }
     );
 
-    //if ($("#txtStartDate").val() == "" || $("#txtEndDate").val() == "") {
-    //    alert("no date selected");
-    //    return;
-    //}
-
-    //if (Date.parse($('#txtStartDate').val()) > Date.parse($('#txtEndDate').val())) {
-    //    alert("startdate shouldn't be greater than enddate");
-    //    return;
-    //}
-    var data = JSON.stringify({ StartDate: $('#txtStartDate').val(), EndDate: $('#txtEndDate').val() });
+    if ($("#txtStartDate").val() == "" || $("#txtEndDate").val() == "") {
+        alert("no date selected");
+        return;
+    }
+    if (Date.parse($('#txtStartDate').val()) > Date.parse($('#txtEndDate').val())) {
+        alert("startdate shouldn't be greater than enddate");
+        return;
+    }
+    var data = JSON.stringify({ StartDate: $('#txtFromDate').val(), EndDate: $('#txtToDate').val() });
     callAPI(searchOPUrl, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
         function (data) {
             if (data != null) {
