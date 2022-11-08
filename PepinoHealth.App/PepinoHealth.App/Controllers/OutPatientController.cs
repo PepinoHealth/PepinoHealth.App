@@ -341,6 +341,29 @@ namespace PepinoHealth.App.Controllers
         }
         #endregion
 
+        #region GetOPDetailsByUHID
+        [HttpPost]
+        public virtual ActionResult GetOPDetailsByUHID(string UHID)
+        {
+            try
+            {
+                var result = OutPatientRepositary().GetOPDetailsByUHID(UHID);
+
+                var jsonResult = Json(result, JsonRequestBehavior.AllowGet);
+                jsonResult.MaxJsonLength = int.MaxValue;
+                return jsonResult;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
+            return returnNull;
+        }
+        #endregion
         #endregion
     }
 }

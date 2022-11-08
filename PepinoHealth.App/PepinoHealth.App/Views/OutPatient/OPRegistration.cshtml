@@ -19,6 +19,7 @@
     addOPRegURL             = '@Url.Action(MVC.OutPatient.CRUDOPRegistrationDetails())';
     maxOPID                 = '@Url.Action(MVC.OutPatient.GetMaxOutPatientId())';
     searchOPUrl             = '@Url.Action(MVC.OutPatient.SearchOPDetailsByUHID())';
+    getByUHIDURL            = '@Url.Action(MVC.OutPatient.GetOPDetailsByUHID())';
 </script>
 <div class="p-block v2">
     <div class="p-header">
@@ -101,8 +102,12 @@
                                 <div class="form-group">
                                     <label>Token</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control mr-2" />
-                                        <select class="form-control" id="ddlToken" name="ddlToken"></select>
+                                        <input type="text" class="form-control mr-2" id="txtTokenNo" name="txtTokenNo"/>
+                                        <select class="form-control" id="ddlToken" name="ddlToken">
+                                            <option value="OPSLIP">OPSLIP</option>
+                                            <option value="BARCODE">BARCODE</option>
+                                            <option value="OPREG">OPREG</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -144,10 +149,10 @@
 
                                     <div class="input-group">
                                         <select class="form-control form-title" id="ddlNameTitle" name="ddlNameTitle">
-                                            <option value="MR" selected>MR</option>
-                                            <option value="MRs">MRs</option>
-                                            <option value="MS">MS</option>
-                                            <option value="MISS">MISS</option>
+                                            <option value="Mr" selected>Mr</option>
+                                            <option value="Mrs">Mrs</option>
+                                            <option value="Ms">Ms</option>
+                                            <option value="Miss">Miss</option>
                                         </select>
                                         <input type="text" class="form-control" id="txtName" name="txtName" />
                                     </div>
@@ -191,9 +196,9 @@
                                 <div class="form-group">
                                     <label>Marital Status <span class="required">*</span></label>
                                     <select class="form-control" id="ddlMaritalStatus" name="ddlMaritalStatus">
-                                        <option value="Married">Married</option>
-                                        <option value="Single">Single</option>
-                                        <option value="SingleParent">Single Parent</option>
+                                        <option value="MARRIED">Married</option>
+                                        <option value="SINGLE">Single</option>
+                                        <option value="SINGLEPATENT">Single Parent</option>
                                     </select>
                                 </div>
                             </div>
@@ -285,6 +290,9 @@
                                             <select type="text" class="form-control" id="ddlCustomerPhoneType2" name="ddlCustomerPhoneType2">
                                                 <option value="CASH">CASH</option>
                                                 <option value="CHECK">CHECK</option>
+                                                <option value="DD">DD</option>
+                                                <option value="CARD">CARD</option>
+                                                <option value="WALLETY PAY">WALLETY PAY</option>
                                             </select>
                                         </div>
                                     </div>

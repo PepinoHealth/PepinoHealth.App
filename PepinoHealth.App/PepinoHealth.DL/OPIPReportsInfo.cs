@@ -239,7 +239,7 @@ namespace PepinoHealth.DL
             try
             {
                 string query = string.Empty;
-                if (Department.ToUpper() == "NONE")
+                if (Department.ToUpper() == "ALL")
                 {
 
 

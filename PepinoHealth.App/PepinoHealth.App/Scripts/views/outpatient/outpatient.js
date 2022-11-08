@@ -28,6 +28,7 @@ function bindControlsOnLoadInOPRegistration() {
         }
     );
     hideModal('loader');
+   
 }
 
 function bindgenerateBarcode() {
@@ -152,6 +153,7 @@ function searchOPDetailsByUHID() {
         alert("startdate shouldn't be greater than enddate");
         return;
     }
+
     var data = JSON.stringify({ StartDate: $('#txtFromDate').val(), EndDate: $('#txtToDate').val() });
     callAPI(searchOPUrl, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
         function (data) {
@@ -186,6 +188,48 @@ function searchOPDetailsByUHID() {
         });
     showModal('mdl-id-details');
 }
+function getOPDetailsByUHID(object) {
+    
+    var data = JSON.stringify({ UHID: object.id });
+    callAPI(getByUHIDURL, apiType.Post, asyncType.False, cacheType.False, data, dataNature.Json,
+        function(data) {
+
+            if (data != "") {
+                $('#mdl-id-details').modal('hide');
+                $.each(data, function (key, value) {
+                    $('#txtOPNo').val(value.OP_NO);
+                    $('#txtUHID').val(value.UHID);
+                    $('#txtYear').val(value.OP_YEAR);
+                    $('#ddlNameTitle').val(value.NAME_SUR);
+                    $('#txtName').val(value.OP_NAME);
+                    $('#txtDateTime').val(value.OP_DATE);
+                    $('#txtFatherName').val(value.OP_FATHER_NAME);
+                    $('#txtHusbandName').val(value.OP_HUSBAND);
+                    $('#txtAddress').val(value.OP_AddRESS);
+                    $('#txtPhoneNo').val(value.OP_PHONE_NUM);
+                    $('#ddlCategory').val(value.OP_CATEGORY);
+                    $('#ddlGender').val(value.OP_GENDER);
+                    $('#ddlDepartment').val(value.OP_DEPT_NAME);
+                    $('#txtAge').val(value.OP_AGE).change();
+                    $('#txtCharge').val(value.OP_FEES);
+                    $('#ddlRefDoctor').val(value.OP_REF_DOCTOR);
+                    $('#ddlMaritalStatus').val(value.OP_MARRRIED);
+                    $('#txtAlternatePhoneNo').val(value.ALT_PHNO);
+                    $('#txtTokenNo').val(value.Token_No);
+                    $('#ddlConsultantDoctor').val(value.ConsultantDR);
+                    $('#txtAadhaarID').val(value.AadhaarID);
+                    $('#ddlPatientType').val(value.PatientType);
+                    
+                    $('#barcodeImg').attr('src', "data:image/png;base64," + value.BarcodeImage);
+                });
+            }
+            else {
+                showErrorAlert("no date found..!");
+                return;
+            }
+
+        });
+}
 function processOPRegistrationAction(object) {
     let actionTypeID = parseInt(object.data('action-id'));
 
@@ -197,6 +241,7 @@ function processOPRegistrationAction(object) {
         case actionType.Popup:
 
             searchOPDetailsByUHID();
+
 
             break;
         case actionType.Print:

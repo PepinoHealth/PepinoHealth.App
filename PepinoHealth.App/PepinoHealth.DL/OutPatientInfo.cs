@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using PepinoHealth.DL.Common;
 using PepinoHealth.CL.Admin;
 using PepinoHealth.CL.OPModal;
+using System.Globalization;
 
 namespace PepinoHealth.DL
 {
@@ -88,21 +89,33 @@ namespace PepinoHealth.DL
             return result;
         }
 
-        public List<OutPatientModal.OutPatientRegistration> SearchOPDetailsByUHID(string startDate, string endDate)
+        public List<OutPatientModal.OutPatientRegistration> SearchOPDetailsByUHID(DateTime startDate, DateTime endDate)
         {
             List<OutPatientModal.OutPatientRegistration> details = null;
-            if (string.IsNullOrEmpty(startDate) && string.IsNullOrEmpty(endDate))
-            {
-                startDate = DateTime.Now.ToString("MM/dd/yyyy");
-                endDate = DateTime.Now.ToString("MM/dd/yyyy");
-            }
+            
+            
+            
             try
             {
                 sqlConnection = AccessToDB();
 
                 sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "SELECT [UHID],[OP_Name],[Op_Dept_Name] ,[Op_Gender] ,[OP_Age] FROM Out_Paitent_Registration where Op_Date between '" + DateTime.ParseExact(startDate, "dd/MM/yyyy", null) + "' and '" + DateTime.ParseExact(endDate, "dd/MM/yyyy", null) + "'";
+                //if (string.IsNullOrEmpty(startDate) && string.IsNullOrEmpty(endDate))
+                //{
+                //    startDate = DateTime.Now.ToString("MM/dd/yyyy");
+                //    endDate = DateTime.Now.ToString("MM/dd/yyyy");
+                
+                //sqlCommand.CommandText = "SELECT [UHID],[OP_Name],[Op_Dept_Name] ,[Op_Gender] ,[OP_Age] FROM Out_Paitent_Registration where Op_Date between '" + startDate+ "' and '" + endDate+ "'";
+                //}
+                //else
+                //{
+                //    DateTime StartDate = Convert.ToDateTime(startDate, System.Globalization.CultureInfo.GetCultureInfo("hi-in").DateTimeFormat);
+
+                //    DateTime EndDate = Convert.ToDateTime(startDate, System.Globalization.CultureInfo.GetCultureInfo("hi-in").DateTimeFormat);
+
+                    sqlCommand.CommandText = "SELECT [UHID],[OP_Name],[Op_Dept_Name] ,[Op_Gender] ,[OP_Age] FROM Out_Paitent_Registration where Op_Date between '" + startDate.ToString("MM/dd/yyyy") + "'" + " and '" + endDate.ToString("MM/dd/yyyy") + "'";
+                //}
                 sqlCommand.CommandType = CommandType.Text;
                 //sqlCommand.Parameters.AddWithValue("@StartDate", startDate);
                 //sqlCommand.Parameters.AddWithValue("@EndDate", endDate);
@@ -284,6 +297,96 @@ namespace PepinoHealth.DL
             }
 
             return details;
+        }
+        public List<OutPatientModal.OutPatientRegistration> GetOPDetailsByUHID(string uHID)
+        {
+            List<OutPatientModal.OutPatientRegistration> details = null;
+
+            try
+            {
+                sqlConnection = AccessToDB();
+
+                sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "SELECT * FROM Out_Paitent_Registration with(nolock) where UHID= '" + uHID + "'";
+                sqlCommand.CommandType = CommandType.Text;
+                CheckNOpen();
+
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                details = new List<OutPatientModal.OutPatientRegistration>();
+                while (sqlDataReader.Read())
+                {
+                    details.Add(new OutPatientModal.OutPatientRegistration()
+                    {
+                        UHID = Convert.ToString(sqlDataReader["UHID"]),
+                        OP_NAME = Convert.ToString(sqlDataReader["OP_Name"]),
+                        OP_DEPT_NAME = Convert.ToString(sqlDataReader["Op_Dept_Name"]),
+                        OP_GENDER = Convert.ToString(sqlDataReader["Op_Gender"]),
+                        OP_AGE = Convert.ToString(sqlDataReader["OP_Age"]),
+                        OP_NO = Convert.ToString(sqlDataReader["OP_NO"]),
+                        OP_DATE = Convert.ToString(sqlDataReader["OP_DATE"]),
+                        OP_PREPARED_BY = Convert.ToString(sqlDataReader["OP_PREPARED_BY"]),
+                        OP_PRINT_COUNT = Convert.ToString(sqlDataReader["OP_PRINT_COUNT"]),
+                        OP_YEAR = Convert.ToString(sqlDataReader["OP_YEAR"]),
+                        OP_TIME = Convert.ToString(sqlDataReader["OP_TIME"]),
+                        OP_MODIFIED_BY = Convert.ToString(sqlDataReader["OP_MODIFIED_BY"]),
+                        NAME_SUR = Convert.ToString(sqlDataReader["NAME_SUR"]),
+                        OP_FATHER_NAME = Convert.ToString(sqlDataReader["OP_FATHER_NAME"]),
+                        OP_HUSBAND = Convert.ToString(sqlDataReader["OP_HUSBAND"]),
+                        OP_ADDRESS = Convert.ToString(sqlDataReader["OP_ADDRESS"]),
+                        OP_PLACE = Convert.ToString(sqlDataReader["OP_PLACE"]),
+                        OP_PHONE_NUM = Convert.ToString(sqlDataReader["OP_PHONE_NUM"]),
+                        OP_RELIGION = Convert.ToString(sqlDataReader["OP_RELIGION"]),
+                        OP_SUBCAST = Convert.ToString(sqlDataReader["OP_SUBCAST"]),
+                        OP_CATEGORY = Convert.ToString(sqlDataReader["OP_CATEGORY"]),
+                        OP_UNIT_NO = Convert.ToString(sqlDataReader["OP_UNIT_NO"]),
+                        OP_DOB = Convert.ToString(sqlDataReader["OP_DOB"]),
+                        OP_AGE1 = Convert.ToString(sqlDataReader["OP_AGE1"]),
+                        OP_ROOM_NO = Convert.ToString(sqlDataReader["OP_ROOM_NO"]),
+                        OP_OCCUPATION = Convert.ToString(sqlDataReader["OP_OCCUPATION"]),
+                        OP_INCOME = Convert.ToString(sqlDataReader["OP_INCOME"]),
+                        OP_FEES = Convert.ToString(sqlDataReader["OP_FEES"]),
+                        OP_REF_DOCTOR = Convert.ToString(sqlDataReader["OP_REF_DOCTOR"]),
+                        OP_MARRRIED = Convert.ToString(sqlDataReader["OP_MARRRIED"]),
+                        OP_COPERATE = Convert.ToString(sqlDataReader["OP_COPERATE"]),
+                        DUMMYYN = Convert.ToString(sqlDataReader["DUMMYYN"]),
+                        OP_MONTH = Convert.ToString(sqlDataReader["OP_MONTH"]),
+                        LABYN = Convert.ToString(sqlDataReader["LABYN"]),
+                        RAD_AGE = Convert.ToString(sqlDataReader["RAD_AGE"]),
+                        CARD_NUMBER = Convert.ToString(sqlDataReader["CARD_NUMBER"]),
+                        ALT_PHNO = Convert.ToString(sqlDataReader["ALT_PHNO"]),
+                        Token_No = Convert.ToString(sqlDataReader["Token_No"]),
+                        ConsultantDR = Convert.ToString(sqlDataReader["ConsultantDR"]),
+                        Location = Convert.ToString(sqlDataReader["Location"]),
+                        Barcode_No = Convert.ToString(sqlDataReader["Barcode_No"]),
+                        BarcodeImage = FromBase64Bytes((byte[])(sqlDataReader["Barcode_Image"])),
+                        MailID = Convert.ToString(sqlDataReader["MailID"]),
+                        AadhaarID = Convert.ToString(sqlDataReader["AadhaarID"]),
+                        OPID = Convert.ToString(sqlDataReader["OPID"]),
+                        COMPLAINTS = Convert.ToString(sqlDataReader["COMPLAINTS"]),
+                        ONEXAMINATIONS = Convert.ToString(sqlDataReader["ONEXAMINATIONS"]),
+                        ADVICE = Convert.ToString(sqlDataReader["ADVICE"]),
+                        PatientType = Convert.ToString(sqlDataReader["PatientType"])
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                ExceptionLogging.SendErrorToText(ex, "CRUDOutPatientDetails");
+            }
+            finally
+            {
+                CheckNClose();
+            }
+
+            return details;
+        }
+        public string FromBase64Bytes(byte[] barrImg)
+        {
+            string base64String = Convert.ToBase64String(barrImg, 0, barrImg.Length);
+            //string base64String = Encoding.UTF8.GetString(base64Bytes, 0, base64Bytes.Length);
+            return base64String;
         }
         #endregion
     }
